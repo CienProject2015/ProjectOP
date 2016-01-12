@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class vafdfdsafdsa : MonoBehaviour {
+public class MainButtons : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,9 +11,5 @@ public class vafdfdsafdsa : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-	}
-
-	public void Yes(){
-		Debug.Log("fdsa");
 	}
 }
