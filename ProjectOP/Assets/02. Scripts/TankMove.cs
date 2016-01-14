@@ -4,21 +4,22 @@ using System.Collections;
 public class TankMove : MonoBehaviour {
 
     public int speed = 3; // 기본 3
-    int rotateSpeed;
-    public bool outoMove = false;
-    bool outoMoveForward = false;
+    private int cycleSpeed;
+    private bool outoMove, outoMoveForward;
+
 	void Start () {
-        rotateSpeed = speed * 5;
+        cycleSpeed = speed * 5;
+        outoMove = false;
+        outoMoveForward = false;
     }
 	
-	// Update is called once per frame
 	void Update () {
         Moving();
         OutoMoving();
-        
     }
 
-    void Moving()
+    //기본 이동
+    private void Moving()
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -35,15 +36,15 @@ public class TankMove : MonoBehaviour {
         if (Input.GetKey(KeyCode.RightArrow))
         {
             outoMove = false; // 자동이동 취소
-            transform.Rotate(new Vector3(0, rotateSpeed * Time.deltaTime, 0));
+            transform.Rotate(new Vector3(0, cycleSpeed * Time.deltaTime, 0));
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             outoMove = false;
-            transform.Rotate(new Vector3(0, -rotateSpeed * Time.deltaTime, 0));
+            transform.Rotate(new Vector3(0, -cycleSpeed * Time.deltaTime, 0));
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (outoMove)
                 outoMove = false;
@@ -52,7 +53,8 @@ public class TankMove : MonoBehaviour {
         }
     } 
 
-    void OutoMoving()
+    // 자동이동
+    private void OutoMoving()
     {
         if (outoMove)
         {
