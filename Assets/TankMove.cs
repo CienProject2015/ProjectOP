@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
 
 public class TankMove : MonoBehaviour {
-	// Use this for initialization
-	void Start () {
-	
-	}
+    public int moveSpeed = 2;
+    // Use this for initialization
+    void Start () {
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        var moveSpeed = 1;
+        //var moveSpeed = 1;
 	    if(Input.GetKey(KeyCode.LeftArrow) == true)
         {
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
@@ -26,5 +28,9 @@ public class TankMove : MonoBehaviour {
         {
             transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
         }
+    }
+    void tank_stop(int speed)
+    {
+        transform.Translate(Vector3.back * speed);
     }
 }
