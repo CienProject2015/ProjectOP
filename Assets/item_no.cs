@@ -3,6 +3,7 @@ using System.Collections;
 
 public class item_no : MonoBehaviour {
     public GameObject it_panel;
+    public GameObject tank;
     // Use this for initialization
     void Start () {
 	
@@ -16,6 +17,7 @@ public class item_no : MonoBehaviour {
     public void it_onClick()
     {
         it_panel.SetActive(false);
+        tank.SendMessage("tank_start");
     }
 
 }
