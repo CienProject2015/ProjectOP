@@ -3,8 +3,8 @@ using System.Collections;
 
 public class TankMove : MonoBehaviour {
 
-    public int speed = 3; // 기본 3
-    private int cycleSpeed;
+    public float speed = 15; // 기본
+    private float cycleSpeed;
     private bool outoMove, outoMoveForward;
 
 	void Start () {

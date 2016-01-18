@@ -7,6 +7,9 @@ public class SearcherMove : MonoBehaviour {
     private bool onOff;
     private GameObject searchCamera;
 
+    public Vector2 nowPos, prePos;
+    public Vector3 movePos;
+
     void Start () {
         onOff = false;
         searchCamera = transform.Find("SearchCamera").gameObject;
@@ -19,7 +22,6 @@ public class SearcherMove : MonoBehaviour {
 
     private void Moving()
     {
-        Debug.Log("Moving",gameObject);
         if (Input.GetKey(KeyCode.W))
             searchCamera.transform.Rotate(new Vector3(-cycleSpeed * Time.deltaTime, 0, 0));
         else if (Input.GetKey(KeyCode.S))

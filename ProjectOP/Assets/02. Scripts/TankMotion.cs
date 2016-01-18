@@ -22,8 +22,9 @@ public class TankMotion : MonoBehaviour {
                 searcher.SetActive(false);
             else {
                 searcher.SetActive(true);
+                searcher.SendMessage("OnOff", true);
             }
-            searcher.SendMessage("OnOff",true);
+            
         }
     }
 }
