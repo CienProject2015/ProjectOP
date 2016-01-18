@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftWheel
   - RightWheel
+  - Camera Moving Field
   layers:
   - Default
   - TransparentFX
