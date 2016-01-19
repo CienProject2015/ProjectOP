@@ -14,7 +14,6 @@ public class ThirdPersonViewCameraMoving : MonoBehaviour {
     {
 		if (isThirdPersonView) {
 			searchCamera.enabled = true;
-			searchCamera.transform.Rotate (0, 0, 0 - searchCamera.transform.rotation.z);
 			for (int i = 0; i < Input.touchCount; i++) {
 				Ray ray = searchCamera.ScreenPointToRay (Input.GetTouch (i).position);
 				RaycastHit hit;

@@ -17,16 +17,24 @@ public class InGameButtons : MonoBehaviour {
 	}
 
 	public void FirstAnimPressed(){
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("jump",true);
-		Debug.Log ("FirstAnim");
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Wave",true);
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Jump",false);
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Swing",false);
+		//Debug.Log ("FirstAnim");
 	}
 
 	public void SecondAnimPressed(){
-		Debug.Log ("SecondAnim");
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Wave",false);
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Jump",true);
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Swing",false);
+		//Debug.Log ("SecondAnim");
 	}
 
 	public void ThirdAnimPressed(){
-		Debug.Log ("ThirdAnim");
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Wave",false);
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Jump",false);
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Swing",true);
+		//Debug.Log ("ThirdAnim");
 	}
 
 	public void MenuExtensionButtonPressed(bool isExtended){
