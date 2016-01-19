@@ -7,9 +7,6 @@ public class SearcherMove : MonoBehaviour {
     private bool onOff;
     private GameObject searchCamera;
 
-    public Vector2 nowPos, prePos;
-    public Vector3 movePos;
-
     void Start () {
         onOff = false;
         searchCamera = transform.Find("SearchCamera").gameObject;
