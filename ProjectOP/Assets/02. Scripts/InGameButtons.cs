@@ -17,6 +17,7 @@ public class InGameButtons : MonoBehaviour {
 	}
 
 	public void FirstAnimPressed(){
+		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("jump",true);
 		Debug.Log ("FirstAnim");
 	}
 

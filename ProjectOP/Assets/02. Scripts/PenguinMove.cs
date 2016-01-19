@@ -3,11 +3,11 @@ using System.Collections;
 
 public class PenguinMove : MonoBehaviour {
 
-    public float speed = 10;
+    public float speed;
 
     private Animator anim;
     private GameObject tank;
-    private float distance, distanceMin = 20, distanceMax = 30, tankSpeed;
+    private float distance, distanceMin = 20, distanceMax = 20, tankSpeed;
     
     
 	void Start () {
@@ -24,7 +24,7 @@ public class PenguinMove : MonoBehaviour {
             transform.LookAt(tank.transform);
             transform.Translate(transform.forward * speed * Time.deltaTime);
             if (distance > distanceMax)
-                speed = 25;
+                speed = 15;
             else
                 speed = 5;
         }
