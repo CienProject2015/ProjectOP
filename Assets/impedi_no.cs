@@ -12,7 +12,7 @@ public class impedi_no : MonoBehaviour {
 	void Update () {
     }
 
-    public void im_onClick ()
+    public void im_onClick_no ()
     {
         im_panel.SetActive(false);
         tank.SendMessage("tank_start");

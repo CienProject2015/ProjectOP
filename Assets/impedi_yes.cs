@@ -3,8 +3,9 @@ using System.Collections;
 
 public class impedi_yes : MonoBehaviour {
     public GameObject im_panel;
-    public GameObject impedi;
     public GameObject tank;
+    private Collider other;
+
     // Use this for initialization
     void Start () {
     }
@@ -13,10 +14,17 @@ public class impedi_yes : MonoBehaviour {
 	void Update () {
     }
 
-    public void im_onClick()
+
+    public void im_yes_start(Collider other)
     {
-        im_panel.SetActive(false);
-        Destroy(impedi);
+        this.other = other;
+    }
+
+    public void im_onClick_yes()
+    {
+        Debug.Log(other);
+        Destroy(other.gameObject);
         tank.SendMessage("tank_start");
+        im_panel.SetActive(false);
     }
 }

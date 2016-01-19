@@ -14,7 +14,7 @@ public class item_no : MonoBehaviour {
         
     }
 
-    public void it_onClick()
+    public void it_onClick_no()
     {
         it_panel.SetActive(false);
         tank.SendMessage("tank_start");

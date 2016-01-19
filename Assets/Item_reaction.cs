@@ -9,7 +9,7 @@ public class Item_reaction : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //rb = GetComponent<Rigidbody>();
+
     }
 	
 	// Update is called once per frame
@@ -18,26 +18,30 @@ public class Item_reaction : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other){
-        //rb.velocity = new Vector3(0, 0, 0);
-        if (other.gameObject.name == "Impediments")
+        string[] name = other.gameObject.name.Split('_');
+        if (name[0] == "Impedi")
         {
-            Debug.Log("crush");
-            ui_p_item();
+            ui_p_item(other);
         }
-        else if(other.gameObject.name == "Items")
+        else if(name[0] == "Items")
         {
-            Debug.Log("Nyam Nyam");
-            ui_p_impedi();
+            Debug.Log(name[0]);
+            ui_p_impedi(other);
         }
     }
 
-    private void ui_p_item() {
+    private void ui_p_item(Collider other) {
         im_panel.SetActive(true);
+        im_panel = GameObject.Find("im_panel");
+        im_panel.SendMessage("im_yes_start", other);
         SendMessage("tank_stop");
     }
 
-    private void ui_p_impedi(){
+    private void ui_p_impedi(Collider other)
+    {
         it_panel.SetActive(true);
+        it_panel = GameObject.Find("it_panel");
+        it_panel.SendMessage("it_yes_start", other);
         SendMessage("tank_stop");
     }
 }

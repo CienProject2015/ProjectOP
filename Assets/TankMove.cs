@@ -16,19 +16,19 @@ public class TankMove : MonoBehaviour {
 
     void tank_move()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) == true)
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a"))
         {
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.RightArrow) == true)
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d"))
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.UpArrow) == true)
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w"))
         {
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.DownArrow) == true)
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
         {
             transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
         }
