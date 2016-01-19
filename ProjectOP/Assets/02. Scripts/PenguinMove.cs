@@ -21,6 +21,9 @@ public class PenguinMove : MonoBehaviour {
         distance = Vector3.Distance(tank.transform.position, transform.position);
         if (distance > distanceMin)
         {
+			anim.SetBool("Wave", false);
+			anim.SetBool("Jump", false);
+			anim.SetBool("Swing", false);
             transform.LookAt(tank.transform);
             transform.Translate(transform.forward * speed * Time.deltaTime);
             if (distance > distanceMax)
