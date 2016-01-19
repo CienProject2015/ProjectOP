@@ -10,7 +10,6 @@ public class ThirdPersonViewCameraMoving : MonoBehaviour {
 
 	void Update () {
 		if (isThirdPersonView) {
-			mainCamera.transform.Rotate (0, 0, 0 - mainCamera.transform.rotation.z);
 			for (int i = 0; i < Input.touchCount; i++) {
 				Ray ray = Camera.main.ScreenPointToRay (Input.GetTouch(i).position);
 				RaycastHit hit;

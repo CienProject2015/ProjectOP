@@ -28,10 +28,10 @@ public class InGameButtons : MonoBehaviour {
 	}
 
 	public void MenuExtensionButtonPressed(bool isExtended){
-		if (isExtended == true) {
+		if (isExtended) {
 			Debug.Log ("MenuExtension");
 		} 
-		else {
+		else if (!isExtended){
 			Debug.Log ("MenuReduction");
 		}
 	}
