@@ -14,7 +14,7 @@ public class ThirdPersonViewCameraMoving : MonoBehaviour {
     void Start()
     {
         onOff = false;
-        searchCamera = transform.Find("SearchCamera").GetComponent<Camera>();
+        //searchCamera = GameObject.Find("SearchCamera").GetComponent<Camera>();
         tank = GameObject.Find("Tank");
     }
     void Update()

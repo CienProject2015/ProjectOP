@@ -3,65 +3,57 @@ using System.Collections;
 
 public class TankMove : MonoBehaviour {
 
-    public float speed = 15; // 기본
-    private float cycleSpeed;
-    private bool outoMove, outoMoveForward;
+	public float speed = 15;
+	private float cycleSpeed;
+	private int leftWheelDiret, rightWheelDiret;
 
 	void Start () {
         cycleSpeed = speed * 5;
-        outoMove = false;
-        outoMoveForward = false;
     }
 	
 	void Update () {
-        Moving();
-        OutoMoving();
+		MoveWheel ();
+		rightWheelDiret = 0;
+		leftWheelDiret = 0;
     }
 
-    //기본 이동
-    private void Moving()
-    {
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            outoMove = false;
-            outoMoveForward = true; // 앞쪽 자동이동
-            transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            outoMove = false;
-            outoMoveForward = false; // 뒤쪽 자동이동
-            transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            outoMove = false; // 자동이동 취소
-            transform.Rotate(new Vector3(0, cycleSpeed * Time.deltaTime, 0));
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            outoMove = false;
-            transform.Rotate(new Vector3(0, -cycleSpeed * Time.deltaTime, 0));
-        }
+	// direct -> 1 : forward / 0 : stop / -1 : back
+	public void MoveWheel(){
+		if (leftWheelDiret == 1) { 
+			if (rightWheelDiret == 1)
+				MoveForward ();
+			else
+				TurnRight ();
+		} else if (leftWheelDiret == 0) {
+			if (rightWheelDiret == 1)
+				TurnLeft ();
+			else if (rightWheelDiret == -1)
+				TurnRight ();
+		} else if(leftWheelDiret == -1){
+			if (rightWheelDiret == -1)
+				MoveBack ();
+			else
+				TurnLeft ();
+		}
+	}
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (outoMove)
-                outoMove = false;
-            else
-                outoMove = true;
-        }
-    } 
-
-    // 자동이동
-    private void OutoMoving()
-    {
-        if (outoMove)
-        {
-            if(outoMoveForward)
-                transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
-            else
-                transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
-        }
+    public void setLeftWheelDirect(int direct){
+		leftWheelDiret = direct;
     }
+	public void setRightWheelDirect(int direct){
+		rightWheelDiret = direct;
+    }
+
+	private void MoveForward(){
+		transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+    }
+	private void MoveBack(){
+		transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
+	}
+	private void TurnRight(){
+			transform.Rotate(new Vector3(0, cycleSpeed * Time.deltaTime, 0));
+	}
+	private void TurnLeft(){
+			transform.Rotate(new Vector3(0, -cycleSpeed * Time.deltaTime, 0));
+	}
 }
