@@ -1415,23 +1415,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420236, guid: 4c48262817206924693467bd7ccac55f, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.19012897
+      value: 0.1266396
       objectReference: {fileID: 0}
     - target: {fileID: 420236, guid: 4c48262817206924693467bd7ccac55f, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.6820811
+      value: 0.69675833
       objectReference: {fileID: 0}
     - target: {fileID: 420236, guid: 4c48262817206924693467bd7ccac55f, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.18280485
+      value: -0.11894459
       objectReference: {fileID: 0}
     - target: {fileID: 420236, guid: 4c48262817206924693467bd7ccac55f, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.6820549
+      value: 0.69594723
       objectReference: {fileID: 0}
     - target: {fileID: 2077342, guid: 4c48262817206924693467bd7ccac55f, type: 2}
       propertyPath: field of view
-      value: 88
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 122790, guid: 4c48262817206924693467bd7ccac55f, type: 2}
       propertyPath: m_IsActive
