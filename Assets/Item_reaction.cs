@@ -5,6 +5,8 @@ using System.Collections;
 public class Item_reaction : MonoBehaviour {
     public GameObject im_panel;
     public GameObject it_panel;
+    public GameObject Text_trash;
+    public GameObject Text;
     //public Rigidbody rb;
 
     // Use this for initialization
@@ -31,6 +33,17 @@ public class Item_reaction : MonoBehaviour {
     }
 
     private void ui_p_item(Collider other) {
+        string[] name = other.gameObject.name.Split('_');
+        if(name[1] == "trash")
+        {
+            Text.SetActive(false);
+            Text_trash.SetActive(true);
+        }
+        else
+        {
+            Text.SetActive(true);
+            Text_trash.SetActive(false);
+        }
         im_panel.SetActive(true);
         im_panel = GameObject.Find("im_panel");
         im_panel.SendMessage("im_yes_start", other);
