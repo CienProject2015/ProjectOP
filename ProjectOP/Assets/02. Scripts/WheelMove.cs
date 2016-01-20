@@ -19,45 +19,22 @@ public class WheelMove : MonoBehaviour {
 	public void WheelTouch(){
 		if (isFirstPersonView) {
 			for (int i = 0; i < Input.touchCount; i++) {
+				
 				Ray ray = Camera.main.ScreenPointToRay (Input.GetTouch (i).position);
 				RaycastHit hit;
-				if (Physics.Raycast (ray, out hit) && hit.collider.tag == "LeftWheel") {
-					if (Input.GetTouch (i).deltaPosition.y > draggingBuffer) {
-						moveInfo [i] = true;
-						//Debug.Log ("왼쪽 앞");
-						tank.SendMessage("setLeftWheelDirect", 1);
-					} else if (Input.GetTouch (i).deltaPosition.y < 0 - draggingBuffer) {
-						moveInfo [i] = false;
-						//Debug.Log ("왼쪽 뒤");
-						tank.SendMessage("setLeftWheelDirect", -1);
-					} else {
-						if (moveInfo [i]) {
-							//Debug.Log ("왼쪽 앞");
-							tank.SendMessage("setLeftWheelDirect", 1);
-						} else {
-							//Debug.Log ("왼쪽 뒤");
-							tank.SendMessage("setLeftWheelDirect", -1);
-						}
-					}
-				}
-				if (Physics.Raycast (ray, out hit) && hit.collider.tag == "RightWheel") {
-					if (Input.GetTouch (i).deltaPosition.y > draggingBuffer) {
-						moveInfo [i] = true;
-						//Debug.Log ("오른쪽 앞");
-						tank.SendMessage("setRightWheelDirect", 1);
-					} else if (Input.GetTouch (i).deltaPosition.y < 0 - draggingBuffer) {
-						moveInfo [i] = false;
-						//Debug.Log ("오른쪽 뒤");
-						tank.SendMessage("setRightWheelDirect", -1);
-					} else {
-						if (moveInfo [i]) {
-							//Debug.Log ("오른쪽 앞");
-							tank.SendMessage("setRightWheelDirect", 1);
-						} else {
-							//Debug.Log ("오른쪽 뒤");
-							tank.SendMessage("setRightWheelDirect", -1);
-						}
-					}
+
+				if (Physics.Raycast (ray, out hit) && hit.collider.tag == "FrontRight") {
+					Debug.Log ("오른쪽 앞");
+					tank.SendMessage("setRightWheelDirect", 1);
+				} else if (Physics.Raycast (ray, out hit) && hit.collider.tag == "BackRight") {
+					Debug.Log ("오른쪽 뒤");
+					tank.SendMessage("setRightWheelDirect", -1);
+				} else if (Physics.Raycast (ray, out hit) && hit.collider.tag == "FrontLeft") {
+					Debug.Log ("왼쪽 앞");
+					tank.SendMessage("setLeftWheelDirect", 1);
+				} else if (Physics.Raycast (ray, out hit) && hit.collider.tag == "BackLeft") {
+					Debug.Log ("왼쪽 뒤");
+					tank.SendMessage("setLeftWheelDirect", -1);
 				}
 			}
 		}

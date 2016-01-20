@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using UnityEngine.UI;
+
 public class InGameButtons : MonoBehaviour {
+
+	public GameObject settingsButton;
+	public GameObject inventoryButton;
+	public GameObject pictureButton;
 
 	public void ViewChangeButtonPressed(bool thirdPersonView){
 
@@ -38,11 +44,14 @@ public class InGameButtons : MonoBehaviour {
 	}
 
 	public void MenuExtensionButtonPressed(bool isExtended){
-		if (isExtended == true) {
+		if (isExtended) {
 			Debug.Log ("MenuExtension");
 		} 
-		else {
+		else if (!isExtended){
 			Debug.Log ("MenuReduction");
 		}
+		settingsButton.GetComponent<Button> ().interactable = isExtended;
+		inventoryButton.GetComponent<Button> ().interactable = isExtended;
+		pictureButton.GetComponent<Button> ().interactable = isExtended;
 	}
 }

@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - LeftWheel
-  - RightWheel
   - Camera Moving Field
+  - FrontRight
+  - FrontLeft
+  - BackRight
+  - BackLeft
   layers:
   - Default
   - TransparentFX
