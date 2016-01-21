@@ -13,6 +13,7 @@ public class PenguinMove : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         tank = GameObject.Find("Tank");
+		Physics.gravity  = new Vector3(0,-100f,0);
 	}
 
 	void Update () {
