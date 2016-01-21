@@ -9,18 +9,22 @@ public class InGameButtons : MonoBehaviour {
 	public GameObject inventoryButton;
 	public GameObject pictureButton;
 	public GameObject UIBackground;
+	public GameObject ExtensionButton;
 
 	public void ViewChangeButtonPressed(bool thirdPersonView){
+		Debug.Log ("Check");
 
 		if (thirdPersonView){
 			gameObject.GetComponent<WheelMove> ().isFirstPersonView = false;
 			gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = true;
 			UIBackground.SetActive (false);
+			ExtensionButton.SetActive (false);
 			//Debug.Log ("thirdPersonView");
 		} else {
 			gameObject.GetComponent<WheelMove> ().isFirstPersonView = true;
 			gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = false;
 			UIBackground.SetActive (true);
+			ExtensionButton.SetActive (true);
 			//Debug.Log ("FirstPersonView");
 		}
 	}
