@@ -1463,6 +1463,22 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.8468542
       objectReference: {fileID: 0}
+    - target: {fileID: 11465078, guid: cd7d5f3dedd722b43803171b62cd803f, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153962, guid: cd7d5f3dedd722b43803171b62cd803f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169026, guid: cd7d5f3dedd722b43803171b62cd803f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 166428, guid: cd7d5f3dedd722b43803171b62cd803f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd7d5f3dedd722b43803171b62cd803f, type: 2}
   m_IsPrefabParent: 0
@@ -2263,6 +2279,7 @@ MonoBehaviour:
   settingsButton: {fileID: 0}
   inventoryButton: {fileID: 0}
   pictureButton: {fileID: 0}
+  UIBackground: {fileID: 2119215741}
 --- !u!1001 &1803799196
 Prefab:
   m_ObjectHideFlags: 0
@@ -2537,3 +2554,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2066091481}
+--- !u!1 &2119215741 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 166428, guid: cd7d5f3dedd722b43803171b62cd803f, type: 2}
+  m_PrefabInternal: {fileID: 930503755}

@@ -9,7 +9,6 @@ public class ThirdPersonViewCameraMoving : MonoBehaviour {
 	public float cameraRotateXSpeed;
 	public float cameraRotateYSpeed;
 
-
     void Update()
     {
 		if (isThirdPersonView) {
