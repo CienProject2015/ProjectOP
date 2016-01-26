@@ -5,28 +5,16 @@ using UnityEngine.UI;
 
 public class InGameButtons : MonoBehaviour {
 
-	public GameObject settingsButton;
-	public GameObject inventoryButton;
-	public GameObject pictureButton;
 	public GameObject UIBackground;
 	public GameObject ExtensionButton;
 
 	public void ViewChangeButtonPressed(bool thirdPersonView){
 		Debug.Log ("Check");
 
-		if (thirdPersonView){
-			gameObject.GetComponent<WheelMove> ().isFirstPersonView = false;
-			gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = true;
-			UIBackground.SetActive (false);
-			ExtensionButton.SetActive (false);
-			//Debug.Log ("thirdPersonView");
-		} else {
-			gameObject.GetComponent<WheelMove> ().isFirstPersonView = true;
-			gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = false;
-			UIBackground.SetActive (true);
-			ExtensionButton.SetActive (true);
-			//Debug.Log ("FirstPersonView");
-		}
+		gameObject.GetComponent<WheelMove> ().isFirstPersonView = !thirdPersonView;
+		gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = thirdPersonView;
+		UIBackground.SetActive (!thirdPersonView);
+		ExtensionButton.SetActive (!thirdPersonView);
 	}
 
 	public void FirstAnimPressed(){
@@ -57,8 +45,8 @@ public class InGameButtons : MonoBehaviour {
 		else if (!isExtended){
 			Debug.Log ("MenuReduction");
 		}
-		settingsButton.GetComponent<Button> ().interactable = isExtended;
-		inventoryButton.GetComponent<Button> ().interactable = isExtended;
-		pictureButton.GetComponent<Button> ().interactable = isExtended;
+		GameObject.Find ("SettingsButton").GetComponent<Button> ().interactable = isExtended;
+		GameObject.Find ("InventoryButton").GetComponent<Button> ().interactable = isExtended;
+		GameObject.Find ("PictureButton").GetComponent<Button> ().interactable = isExtended;
 	}
 }
