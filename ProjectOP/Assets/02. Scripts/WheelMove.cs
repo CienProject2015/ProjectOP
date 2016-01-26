@@ -5,7 +5,6 @@ public class WheelMove : MonoBehaviour {
 
 	public bool isFirstPersonView;
 	public float draggingBuffer;
-	private bool[] moveInfo = new bool[20];
     private GameObject tank;
 
     void Start(){
