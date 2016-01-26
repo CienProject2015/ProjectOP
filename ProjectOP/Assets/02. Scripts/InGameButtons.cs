@@ -23,7 +23,6 @@ public class InGameButtons : MonoBehaviour {
 		gameObject.GetComponent<WheelMove> ().isFirstPersonView = !thirdPersonView;
 		gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = thirdPersonView;
 		UIBackground.SetActive (!thirdPersonView);
-		menuButtons.SetActive (!thirdPersonView);
 		viewRetrunButton.SetActive (thirdPersonView);
 	}
 
