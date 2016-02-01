@@ -3,7 +3,6 @@ using System.Collections;
 
 public class item_yes : MonoBehaviour {
     public GameObject it_panel;
-    public GameObject it;
     public GameObject tank;
     private Collider other;
     // Use this for initialization
