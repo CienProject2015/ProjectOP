@@ -6,13 +6,12 @@ public class PenguinMove : MonoBehaviour {
     public float speed;
 
     private Animator anim;
-    private GameObject tank;
+	public GameObject tank;
     private float distance, distanceMin = 20, distanceMax = 20, tankSpeed = 20;
     
     
 	void Start () {
         anim = GetComponent<Animator>();
-        tank = GameObject.Find("Tank");
 		Physics.gravity  = new Vector3(0,-100f,0);
 	}
 

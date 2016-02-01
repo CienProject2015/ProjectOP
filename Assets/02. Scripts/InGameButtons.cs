@@ -9,12 +9,14 @@ public class InGameButtons : MonoBehaviour {
 	public GameObject stateWindow;
 	public GameObject menuButtons;
 	public GameObject viewRetrunButton;
+	public GameObject pictureMenu,tank2Button,sheacherButton,UIButton,penguinButton;
 	public GameObject menuButtonsText1;
 	public GameObject menuButtonsText2;
 	public GameObject menuButtonsText3;
 	public GameObject menuButtonsText4;
 	public GameObject menuButtonsText5;
 	public GameObject extensionButtonsText;
+
 
 
 	public void ViewChangeButtonPressed(bool thirdPersonView){
@@ -24,6 +26,21 @@ public class InGameButtons : MonoBehaviour {
 		gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = thirdPersonView;
 		UIBackground.SetActive (!thirdPersonView);
 		viewRetrunButton.SetActive (thirdPersonView);
+	}
+
+	public void PictureButtonPressed(bool pictureMenuOpened){
+		pictureMenu.SetActive (pictureMenuOpened);
+	}
+
+	public void PictureMenuButtonsPressed(GameObject pictureMenuButton){
+		pictureMenuButton.GetComponent<Button> ().interactable = false;
+		if (pictureMenuButton.name == "Tank2Button") {
+			//GameObject.Find ("Tank2").SetActive (false);
+		}
+	}
+		
+	public void PictureTank2ButtonPressed(bool pictureTank2Button){
+		
 	}
 
 	public void FirstAnimPressed(){
