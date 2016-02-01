@@ -4,7 +4,6 @@ using System.Collections;
 public class WheelMove : MonoBehaviour {
 
 	public bool isFirstPersonView;
-	public float draggingBuffer;
     private GameObject tank;
 
     void Start(){

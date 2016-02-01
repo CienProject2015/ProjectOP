@@ -6,7 +6,16 @@ using UnityEngine.UI;
 public class InGameButtons : MonoBehaviour {
 
 	public GameObject UIBackground;
+	public GameObject stateWindow;
 	public GameObject menuButtons;
+	public GameObject viewRetrunButton;
+	public GameObject menuButtonsText1;
+	public GameObject menuButtonsText2;
+	public GameObject menuButtonsText3;
+	public GameObject menuButtonsText4;
+	public GameObject menuButtonsText5;
+	public GameObject extensionButtonsText;
+
 
 	public void ViewChangeButtonPressed(bool thirdPersonView){
 		Debug.Log ("Check");
@@ -14,8 +23,7 @@ public class InGameButtons : MonoBehaviour {
 		gameObject.GetComponent<WheelMove> ().isFirstPersonView = !thirdPersonView;
 		gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = thirdPersonView;
 		UIBackground.SetActive (!thirdPersonView);
-		menuButtons.SetActive (!thirdPersonView);
-
+		viewRetrunButton.SetActive (thirdPersonView);
 	}
 
 	public void FirstAnimPressed(){
@@ -40,5 +48,20 @@ public class InGameButtons : MonoBehaviour {
 		GameObject.Find ("SettingsButton").GetComponent<Button> ().interactable = isExtended;
 		GameObject.Find ("InventoryButton").GetComponent<Button> ().interactable = isExtended;
 		GameObject.Find ("PictureButton").GetComponent<Button> ().interactable = isExtended;
+		GameObject.Find ("ViewChangeButton").GetComponent<Button> ().interactable = isExtended;
+		GameObject.Find ("MapButton").GetComponent<Button> ().interactable = isExtended;
+		menuButtonsText1.SetActive (isExtended);
+		menuButtonsText2.SetActive (isExtended);
+		menuButtonsText3.SetActive (isExtended);
+		menuButtonsText4.SetActive (isExtended);
+		menuButtonsText5.SetActive (isExtended);
+		stateWindow.SetActive (!isExtended);
+		if (isExtended)
+			extensionButtonsText.GetComponent<Text> ().text = "축소";
+		else if (!isExtended)
+			extensionButtonsText.GetComponent<Text> ().text = "확장";
+				
+			
+			
 	}
 }
