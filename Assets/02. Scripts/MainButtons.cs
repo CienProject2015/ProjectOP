@@ -4,6 +4,6 @@ using System.Collections;
 public class MainButtons : MonoBehaviour {
 
 	public void StartPressed(){
-		Application.LoadLevel ("InGame");
+		Application.LoadLevel (1);
 	}
 }

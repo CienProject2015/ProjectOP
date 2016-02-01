@@ -7,7 +7,7 @@ public class PenguinMove : MonoBehaviour {
 
     private Animator anim;
     private GameObject tank;
-    private float distance, distanceMin = 20, distanceMax = 20, tankSpeed;
+    private float distance, distanceMin = 20, distanceMax = 20, tankSpeed = 20;
     
     
 	void Start () {
