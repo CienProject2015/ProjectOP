@@ -5,17 +5,14 @@ using UnityEngine.UI;
 
 public class InGameButtons : MonoBehaviour {
 
-	public GameObject UIBackground;
+	public GameObject UIBackground, penguinAnim;
 	public GameObject stateWindow;
 	public GameObject menuButtons;
 	public GameObject viewRetrunButton;
 	public GameObject pictureMenu,tank2Button,sheacherButton,UIButton,penguinButton;
-	public GameObject menuButtonsText1;
-	public GameObject menuButtonsText2;
-	public GameObject menuButtonsText3;
-	public GameObject menuButtonsText4;
-	public GameObject menuButtonsText5;
+	public GameObject menuButtonsText1, menuButtonsText2, menuButtonsText3, menuButtonsText4, menuButtonsText5;
 	public GameObject extensionButtonsText;
+	public GameObject penguin;
 
 
 
@@ -24,25 +21,69 @@ public class InGameButtons : MonoBehaviour {
 
 		gameObject.GetComponent<WheelMove> ().isFirstPersonView = !thirdPersonView;
 		gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = thirdPersonView;
-		UIBackground.SetActive (!thirdPersonView);
-		viewRetrunButton.SetActive (thirdPersonView);
+		if (!pictureMenu.activeSelf) {
+			UIBackground.SetActive (!thirdPersonView);
+			viewRetrunButton.SetActive (thirdPersonView);
+		}
 	}
 
 	public void PictureButtonPressed(bool pictureMenuOpened){
 		pictureMenu.SetActive (pictureMenuOpened);
+
+		if (!pictureMenuOpened) {
+			GameObject.Find ("Tank2").transform.FindChild ("Body").gameObject.SetActive (true);
+			ViewChangeButtonPressed (false);
+			UIBackground.SetActive (true);
+			penguinAnim.SetActive (true);
+			penguin.transform.position = new Vector3(penguin.transform.position.x,1.95f,penguin.transform.position.z);
+			penguin.GetComponent<Rigidbody> ().useGravity = true;
+			tank2Button.GetComponent<Image> ().enabled = true;
+			sheacherButton.GetComponent<Image> ().enabled = true;
+			UIButton.GetComponent<Image> ().enabled = true;
+			penguinButton.GetComponent<Image> ().enabled = true;
+		}
 	}
 
 	public void PictureMenuButtonsPressed(GameObject pictureMenuButton){
-		pictureMenuButton.GetComponent<Button> ().interactable = false;
-		if (pictureMenuButton.name == "Tank2Button") {
-			//GameObject.Find ("Tank2").SetActive (false);
+		if (pictureMenuButton.GetComponent<Image> ().enabled) {
+			pictureMenuButton.GetComponent<Image> ().enabled = false;
+
+			if (pictureMenuButton.name == "Tank2Button")
+				GameObject.Find ("Tank2").transform.FindChild ("Body").gameObject.SetActive (false);
+			else if (pictureMenuButton.name == "SearcherButton") {
+				ViewChangeButtonPressed (true);
+			} else if (pictureMenuButton.name == "UIButton") {
+				GameObject[] UIs = GameObject.FindGameObjectsWithTag ("MainUI");
+				foreach (GameObject UI in UIs) {
+					UI.SetActive (false);
+				}	
+			} else if (pictureMenuButton.name == "PenguinButton") {
+				penguin.transform.Translate (new Vector3 (0, -4, 0));
+				penguin.GetComponent<Rigidbody> ().useGravity = false;
+			} else if (pictureMenuButton.name == "ShootButton")
+				Application.CaptureScreenshot ("WarmyLand.png");
+					
+		} else {
+			pictureMenuButton.GetComponent<Image> ().enabled = true;
+
+			if (pictureMenuButton.name == "Tank2Button")
+				GameObject.Find ("Tank2").transform.FindChild ("Body").gameObject.SetActive (true);
+			else if (pictureMenuButton.name == "SearcherButton") {
+				ViewChangeButtonPressed (false);
+			} else if (pictureMenuButton.name == "UIButton") {
+				//GameObject[] UIs = GameObject.FindGameObjectsWithTag ("MainUI");
+				//foreach (GameObject UI in UIs) {
+				//	UI.SetActive (true);
+				//}
+				UIBackground.SetActive (true);
+				penguinAnim.SetActive (true);
+			} else if (pictureMenuButton.name == "PenguinButton") {
+				penguin.transform.position = new Vector3(penguin.transform.position.x,1.95f,penguin.transform.position.z);
+				penguin.GetComponent<Rigidbody> ().useGravity = true;
+			}
 		}
 	}
-		
-	public void PictureTank2ButtonPressed(bool pictureTank2Button){
-		
-	}
-
+		 
 	public void FirstAnimPressed(){
 		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Wave",true);
 		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Jump",false);

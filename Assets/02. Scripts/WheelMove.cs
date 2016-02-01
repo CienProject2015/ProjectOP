@@ -7,7 +7,7 @@ public class WheelMove : MonoBehaviour {
     private GameObject tank;
 
     void Start(){
-        tank = GameObject.Find("Tank");
+        tank = GameObject.Find("Tank2");
     }
 
 	void Update(){
