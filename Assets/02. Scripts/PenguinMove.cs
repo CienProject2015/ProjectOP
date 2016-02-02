@@ -6,7 +6,7 @@ public class PenguinMove : MonoBehaviour {
     public float speed;
 
     private Animator anim;
-	public GameObject tank;
+	public GameObject tank2;
     private float distance, distanceMin = 20, distanceMax = 20, tankSpeed = 20;
     
     
@@ -16,15 +16,15 @@ public class PenguinMove : MonoBehaviour {
 	}
 
 	void Update () {
-        tankSpeed = tank.GetComponent<TankMove>().speed;
+		tankSpeed = tank2.GetComponent<TankMove>().speed;
         anim.SetFloat("Speed", speed);
-        distance = Vector3.Distance(tank.transform.position, transform.position);
+		distance = Vector3.Distance(tank2.transform.position, transform.position);
         if (distance > distanceMin)
         {
 			anim.SetBool("Wave", false);
 			anim.SetBool("Jump", false);
 			anim.SetBool("Swing", false);
-            transform.LookAt(tank.transform);
+			transform.LookAt(tank2.transform);
             transform.Translate(transform.forward * speed * Time.deltaTime);
             if (distance > distanceMax)
                 speed = 15;

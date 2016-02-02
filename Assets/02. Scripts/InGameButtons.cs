@@ -59,9 +59,9 @@ public class InGameButtons : MonoBehaviour {
 			} else if (pictureMenuButton.name == "PenguinButton") {
 				penguin.transform.Translate (new Vector3 (0, -4, 0));
 				penguin.GetComponent<Rigidbody> ().useGravity = false;
-			} else if (pictureMenuButton.name == "ShootButton")
-				Application.CaptureScreenshot ("WarmyLand.png");
-					
+			} else if (pictureMenuButton.name == "ShootButton"){
+				//Application.CaptureScreenshot ("WarmyLand.png");
+			}
 		} else {
 			pictureMenuButton.GetComponent<Image> ().enabled = true;
 

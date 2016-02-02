@@ -1723,7 +1723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  tank: {fileID: 0}
+  tank2: {fileID: 1721548491}
 --- !u!136 &407799726
 CapsuleCollider:
   m_ObjectHideFlags: 0
