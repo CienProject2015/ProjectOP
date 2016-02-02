@@ -12,9 +12,9 @@ public class InGameButtons : MonoBehaviour {
 	public GameObject pictureMenu,tank2Button,sheacherButton,UIButton,penguinButton;
 	public GameObject menuButtonsText1, menuButtonsText2, menuButtonsText3, menuButtonsText4, menuButtonsText5;
 	public GameObject extensionButtonsText;
+	public GameObject SettingsMenuCanvus, SettingsMenu, CreditMenu;
+	public GameObject ItemMenuCanvus;
 	public GameObject penguin;
-
-
 
 	public void ViewChangeButtonPressed(bool thirdPersonView){
 		Debug.Log ("Check");
@@ -118,8 +118,30 @@ public class InGameButtons : MonoBehaviour {
 			extensionButtonsText.GetComponent<Text> ().text = "축소";
 		else if (!isExtended)
 			extensionButtonsText.GetComponent<Text> ().text = "확장";
-				
-			
-			
+	}
+
+	public void SettingsButtonPressed(){
+		SettingsMenuCanvus.SetActive (true);
+		SettingsMenu.SetActive (true);
+		CreditMenu.SetActive (false);
+	}
+
+	public void SettingsTapPressed(){
+		SettingsMenu.SetActive (true);
+		CreditMenu.SetActive (false);
+	}
+
+	public void CreditTapPressed(){
+		SettingsMenu.SetActive (false);
+		CreditMenu.SetActive (true);
+	}
+
+	public void ItemButtonPressed(){
+		ItemMenuCanvus.SetActive (true);
+	}
+
+	public void CloseButtonPressed(){
+		SettingsMenuCanvus.SetActive (false);
+		ItemMenuCanvus.SetActive (false);
 	}
 }
