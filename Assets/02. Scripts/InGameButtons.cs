@@ -13,8 +13,7 @@ public class InGameButtons : MonoBehaviour {
 	public GameObject menuButtonsText1, menuButtonsText2, menuButtonsText3, menuButtonsText4, menuButtonsText5;
 	public GameObject extensionButtonsText;
 	public GameObject penguin;
-
-
+	public GameObject[] UIs;
 
 	public void ViewChangeButtonPressed(bool thirdPersonView){
 		Debug.Log ("Check");
@@ -25,6 +24,7 @@ public class InGameButtons : MonoBehaviour {
 			UIBackground.SetActive (!thirdPersonView);
 			viewRetrunButton.SetActive (thirdPersonView);
 		}
+
 	}
 
 	public void PictureButtonPressed(bool pictureMenuOpened){
@@ -53,7 +53,6 @@ public class InGameButtons : MonoBehaviour {
 			else if (pictureMenuButton.name == "SearcherButton") {
 				ViewChangeButtonPressed (true);
 			} else if (pictureMenuButton.name == "UIButton") {
-				GameObject[] UIs = GameObject.FindGameObjectsWithTag ("MainUI");
 				foreach (GameObject UI in UIs) {
 					UI.SetActive (false);
 				}	
@@ -71,12 +70,9 @@ public class InGameButtons : MonoBehaviour {
 			else if (pictureMenuButton.name == "SearcherButton") {
 				ViewChangeButtonPressed (false);
 			} else if (pictureMenuButton.name == "UIButton") {
-				//GameObject[] UIs = GameObject.FindGameObjectsWithTag ("MainUI");
-				//foreach (GameObject UI in UIs) {
-				//	UI.SetActive (true);
-				//}
-				UIBackground.SetActive (true);
-				penguinAnim.SetActive (true);
+				foreach (GameObject UI in UIs) {
+					UI.SetActive (true);
+				}
 			} else if (pictureMenuButton.name == "PenguinButton") {
 				penguin.transform.position = new Vector3(penguin.transform.position.x,1.95f,penguin.transform.position.z);
 				penguin.GetComponent<Rigidbody> ().useGravity = true;
