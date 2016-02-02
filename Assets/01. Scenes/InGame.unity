@@ -2000,7 +2000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   it_panel: {fileID: 463553523}
-  tank: {fileID: 0}
+  tank: {fileID: 502650742}
 --- !u!114 &463553526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,8 +2014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   it_panel: {fileID: 463553523}
-  it: {fileID: 0}
-  tank: {fileID: 0}
+  tank: {fileID: 502650742}
 --- !u!114 &463553527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2225,6 +2224,7 @@ GameObject:
   - 114: {fileID: 502650745}
   - 54: {fileID: 502650744}
   - 65: {fileID: 502650743}
+  - 114: {fileID: 502650747}
   m_Layer: 0
   m_Name: Tank2
   m_TagString: Untagged
@@ -2290,6 +2290,21 @@ Transform:
   - {fileID: 1344604125}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &502650747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 502650742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c40af135073c34ab4a5858e0b6d259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  im_panel: {fileID: 2131456785}
+  it_panel: {fileID: 463553523}
+  Text_trash: {fileID: 1660427800}
+  Text: {fileID: 1360527689}
 --- !u!1 &508932302
 GameObject:
   m_ObjectHideFlags: 0
@@ -10275,7 +10290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   im_panel: {fileID: 2131456785}
-  tank: {fileID: 0}
+  tank: {fileID: 502650742}
 --- !u!114 &2131456788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10289,7 +10304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   im_panel: {fileID: 2131456785}
-  tank: {fileID: 0}
+  tank: {fileID: 502650742}
 --- !u!114 &2131456789
 MonoBehaviour:
   m_ObjectHideFlags: 0
