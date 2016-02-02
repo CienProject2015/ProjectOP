@@ -56,4 +56,12 @@ public class TankMove : MonoBehaviour {
 	private void TurnLeft(){
 			transform.Rotate(new Vector3(0, -cycleSpeed * Time.deltaTime, 0));
 	}
+	void tank_stop(){
+		speed = 0;
+	}
+	void tank_start()
+	{
+		Debug.Log("tank_start");
+		speed = 15;
+	}
 }
