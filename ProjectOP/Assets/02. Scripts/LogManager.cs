@@ -43,9 +43,8 @@ public class LogManager : MonoBehaviour {
 		fadeoutCount++;
 		while (latestLog.GetComponent<Text> ().color.a > 0) {
 			latestLog.GetComponent<Text> ().color -= new Color (0, 0, 0, 0.01f);
-			yield return null;
+			yield return new WaitForSeconds(0.2f);
 		}
 		fadeoutCount--;
-		yield break;
 	}
 }
