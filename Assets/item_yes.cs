@@ -3,7 +3,7 @@ using System.Collections;
 
 public class item_yes : MonoBehaviour {
     public GameObject it_panel;
-    public GameObject tank;
+    public GameObject Tank2;
     private Collider other;
     // Use this for initialization
     void Start () {
@@ -20,9 +20,9 @@ public class item_yes : MonoBehaviour {
     }
     public void it_onClick_yes()
     {
-        Debug.Log(other);
         Destroy(other.gameObject);
-        tank.SendMessage("tank_start");
+        Tank2.SendMessage("tank_start");
+        Tank2.SendMessage("GainItem", other);
         it_panel.SetActive(false);
     }
 }

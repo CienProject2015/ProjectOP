@@ -20,20 +20,23 @@ public class Item_reaction : MonoBehaviour {
 
     void OnTriggerEnter(Collider other){
         string[] name = other.gameObject.name.Split('_');
-        if (name[0] == "Impedi")
+        if (name[0].Equals("Impedi"))
+        {
+            ui_p_impedi(other);
+        }
+        else if(name[0].Equals("Items"))
         {
             ui_p_item(other);
         }
-        else if(name[0] == "Items")
+        else if(name[0].Equals("Obj"))
         {
-            Debug.Log(name[0]);
-            ui_p_impedi(other);
+            ui_p_obj(other);
         }
     }
 
-    private void ui_p_item(Collider other) {
+    private void ui_p_impedi(Collider other) {
         string[] name = other.gameObject.name.Split('_');
-        if(name[1] == "trash")
+        if(name[1].Equals("trash"))
         {
             Text.SetActive(false);
             Text_trash.SetActive(true);
@@ -42,6 +45,7 @@ public class Item_reaction : MonoBehaviour {
         {
             Text.SetActive(true);
             Text_trash.SetActive(false);
+            SendMessage("GainItem", other);
         }
         im_panel.SetActive(true);
         im_panel = GameObject.Find("im_panel");
@@ -49,11 +53,16 @@ public class Item_reaction : MonoBehaviour {
         SendMessage("tank_stop");
     }
 
-    private void ui_p_impedi(Collider other)
+    private void ui_p_item(Collider other)
     {
         it_panel.SetActive(true);
         it_panel = GameObject.Find("it_panel");
         it_panel.SendMessage("it_yes_start", other);
         SendMessage("tank_stop");
+    }
+
+    private void ui_p_obj(Collider other)
+    {
+        SendMessage("GainItem", other);
     }
 }

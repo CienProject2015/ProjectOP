@@ -3,7 +3,7 @@ using System.Collections;
 
 public class impedi_no : MonoBehaviour {
     public GameObject im_panel;
-    public GameObject tank;
+    public GameObject Tank2;
     // Use this for initialization
     void Start () {
     }
@@ -15,6 +15,6 @@ public class impedi_no : MonoBehaviour {
     public void im_onClick_no ()
     {
         im_panel.SetActive(false);
-        tank.SendMessage("tank_start");
+        Tank2.SendMessage("tank_start");
     }
 }
