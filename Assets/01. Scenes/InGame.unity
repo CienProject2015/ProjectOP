@@ -9886,7 +9886,7 @@ GameObject:
   - 114: {fileID: 1765456162}
   - 114: {fileID: 1765456165}
   m_Layer: 0
-  m_Name: .EventSystem
+  m_Name: _EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
