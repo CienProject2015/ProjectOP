@@ -1836,7 +1836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  tank: {fileID: 502650742}
+  tank2: {fileID: 502650742}
 --- !u!136 &407799726
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9253,6 +9253,7 @@ MonoBehaviour:
   menuButtonsText5: {fileID: 82806953}
   extensionButtonsText: {fileID: 790885520}
   penguin: {fileID: 407799721}
+  UIs: []
 --- !u!1 &1801238010
 GameObject:
   m_ObjectHideFlags: 0
