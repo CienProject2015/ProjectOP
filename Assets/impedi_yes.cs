@@ -3,7 +3,7 @@ using System.Collections;
 
 public class impedi_yes : MonoBehaviour {
     public GameObject im_panel;
-    public GameObject tank;
+    public GameObject Tank2;
     private Collider other;
 
     // Use this for initialization
@@ -24,7 +24,7 @@ public class impedi_yes : MonoBehaviour {
     {
         Debug.Log(other);
         Destroy(other.gameObject);
-        tank.SendMessage("tank_start");
+        Tank2.SendMessage("tank_start");
         im_panel.SetActive(false);
     }
 }
