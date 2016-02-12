@@ -6,6 +6,13 @@ TagManager:
   tags:
   - MainUI
   - PictureMenuButtons
+  - BackRight
+  - FrontLeft
+  - BackLeft
+  - Camera Moving Field
+  - FrontRight
+  - Item Image
+  - Item Slot
   layers:
   - Default
   - TransparentFX
