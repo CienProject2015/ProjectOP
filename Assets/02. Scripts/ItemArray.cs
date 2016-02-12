@@ -6,6 +6,7 @@ public class ItemArray : MonoBehaviour {
     IList item;
     public GameObject obj_panel;
     public GameObject obj_act_panel;
+    public GameObject Items_MemoryChip;
     public GameObject Text_Trash_Active;
     public GameObject Text_Trash_hint;
     public GameObject Text_SheetMusic_Active;
@@ -77,7 +78,7 @@ public class ItemArray : MonoBehaviour {
             }
             else if (name[1].Equals("Piano"))
             {
-                 if (item.Contains("Items_SheetMusic"))
+                if (item.Contains("Items_SheetMusic"))
                 {
                     obj_act_panel.SetActive(true);
                     Text_Trash_Active.SetActive(false);
@@ -94,13 +95,30 @@ public class ItemArray : MonoBehaviour {
                     obj_panel.SendMessage("obj_yes_start", other);
                 }
             }
-            else if (name[1].Equals("Sycamore"))
+            else if (name[1].Equals("ScotsPine"))
             {
                 //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "떡갈나무는 온대림에서 나는 식물이다. 과거 이 지역이 온대림이었던 것을 확인. 지금은 왜?");
                 Debug.Log("떡갈나무는 온대림에서 나는 식물이다. 과거 이 지역이 온대림이었던 것을 확인. 지금은 왜?");
             }
             else if (name[1].Equals("BaobabTree"))
             {
+                //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "이 지역과는 어울리지 않는 큰 나무다. 이런 식물이 살 수 있는 환경이라는 것은 지하에는 물이 있는 것인가? 나뭇가지에 풍경이 메달려있다.");
+                Debug.Log("이 지역과는 어울리지 않는 큰 나무다. 이런 식물이 살 수 있는 환경이라는 것은 지하에는 물이 있는 것인가? 나뭇가지에 풍경이 메달려있다.");
+            }
+            else if (name[1].Equals("CardboardBox"))
+            {
+                var random = Random.Range(0, 1);
+                if (random > 0.5)
+                {
+                    //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "메모리칩을 발견했다.");
+                    Debug.Log("메모리칩을 발견했다.");
+                    item.Add(Items_MemoryChip);
+                }
+                else
+                {
+                    //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아무것도 없다.");
+                    Debug.Log("아무것도 없다.");
+                }
                 //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "이 지역과는 어울리지 않는 큰 나무다. 이런 식물이 살 수 있는 환경이라는 것은 지하에는 물이 있는 것인가? 나뭇가지에 풍경이 메달려있다.");
                 Debug.Log("이 지역과는 어울리지 않는 큰 나무다. 이런 식물이 살 수 있는 환경이라는 것은 지하에는 물이 있는 것인가? 나뭇가지에 풍경이 메달려있다.");
             }
@@ -119,6 +137,15 @@ public class ItemArray : MonoBehaviour {
             {
                 //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아이템 " + other.gameObject.name + " 획득");
                 Debug.Log("불을 붙이는 물건이군.");
+            }
+            else if (name[1].Equals("SheetMusic"))
+            {
+                //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아이템 " + other.gameObject.name + " 획득");
+                Debug.Log("이상한 문양이 적힌 문서다. 해독할 수 없다.");
+            }
+            else if (name[1].Equals("PenguinTotem"))
+            {
+                Debug.Log("Totem");
             }
         }
         Debug.Log(other.gameObject.name);

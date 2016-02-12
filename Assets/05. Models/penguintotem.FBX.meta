@@ -1,16 +1,33 @@
 fileFormatVersion: 2
-guid: 0ba29a3edd769454fa37557896af7fc0
-timeCreated: 1455096287
+guid: 84072eb951891cc4b8f84fe127c26bd0
+timeCreated: 1455291397
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Box001
-    6400000: //RootNode
+    100000: Box001
+    100002: buri
+    100004: Cylinder001
+    100006: Cylinder002
+    100008: //RootNode
+    400000: Box001
+    400002: buri
+    400004: Cylinder001
+    400006: Cylinder002
+    400008: //RootNode
+    2300000: Box001
+    2300002: buri
+    2300004: Cylinder001
+    2300006: Cylinder002
+    3300000: Box001
+    3300002: buri
+    3300004: Cylinder001
+    3300006: Cylinder002
+    4300000: Cylinder001
+    4300002: Cylinder002
+    4300004: buri
+    4300006: Box001
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -38,10 +55,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
