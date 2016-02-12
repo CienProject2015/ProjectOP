@@ -23,14 +23,6 @@ public class obj_yes : MonoBehaviour {
 
     public void obj_onClick_yes()
     {
-        Destroy(other.gameObject);
-        Tank2.SendMessage("tank_start");
-        obj_panel.SetActive(false);
-    }
-
-    public void obj_onClick_just()
-    {
-        Debug.Log("222lglsls");
         Tank2.SendMessage("tank_start");
         obj_panel.SetActive(false);
     }
