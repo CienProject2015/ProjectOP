@@ -6,6 +6,7 @@ public class Item_reaction : MonoBehaviour {
     public GameObject it_panel;
     public GameObject Text_trash;
     public GameObject Text;
+    public GameObject Text_box;
     //public Rigidbody rb;
 
     // Use this for initialization
@@ -30,7 +31,15 @@ public class Item_reaction : MonoBehaviour {
         }
         else if(name[0].Equals("Obj"))
         {
-            ui_p_obj(other);
+            if (name[1].Equals("CardboardBox"))
+            {
+                ui_p_obj_box(other);
+            }
+            else
+            {
+                ui_p_obj(other);
+            }
+
         }
     }
 
@@ -53,9 +62,20 @@ public class Item_reaction : MonoBehaviour {
         SendMessage("tank_stop");
     }
 
+    private void ui_p_obj_box(Collider other)
+    {
+        it_panel.SetActive(true);
+        Text_box.SetActive(true);
+        Text.SetActive(false);
+        it_panel = GameObject.Find("it_panel");
+        it_panel.SendMessage("it_yes_start", other);
+        SendMessage("tank_stop");
+    }
     private void ui_p_item(Collider other)
     {
         it_panel.SetActive(true);
+        Text_box.SetActive(false);
+        Text.SetActive(true);
         it_panel = GameObject.Find("it_panel");
         it_panel.SendMessage("it_yes_start", other);
         SendMessage("tank_stop");

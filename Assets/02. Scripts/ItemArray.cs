@@ -107,8 +107,9 @@ public class ItemArray : MonoBehaviour {
             }
             else if (name[1].Equals("CardboardBox"))
             {
-                var random = Random.Range(0, 1);
-                if (random > 0.5)
+                var random = Random.Range(0, 3);
+                Debug.Log(random);
+                if (random >= 1)
                 {
                     //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "메모리칩을 발견했다.");
                     Debug.Log("메모리칩을 발견했다.");
@@ -119,8 +120,6 @@ public class ItemArray : MonoBehaviour {
                     //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아무것도 없다.");
                     Debug.Log("아무것도 없다.");
                 }
-                //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "이 지역과는 어울리지 않는 큰 나무다. 이런 식물이 살 수 있는 환경이라는 것은 지하에는 물이 있는 것인가? 나뭇가지에 풍경이 메달려있다.");
-                Debug.Log("이 지역과는 어울리지 않는 큰 나무다. 이런 식물이 살 수 있는 환경이라는 것은 지하에는 물이 있는 것인가? 나뭇가지에 풍경이 메달려있다.");
             }
         }
         else if(name[0].Equals("Items"))
@@ -149,6 +148,7 @@ public class ItemArray : MonoBehaviour {
             }
         }
         Debug.Log(other.gameObject.name);
+        //확인창 같은거 눌러서 tank_start시켜야 함
         Tank2.SendMessage("tank_start");
     }
 }
