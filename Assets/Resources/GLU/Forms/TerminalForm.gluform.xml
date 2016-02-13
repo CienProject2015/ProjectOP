@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TerminalForm type="TerminalForm" acceptsChildren="True" width="265" height="497" anchors="1010" padding="(6, 6, 0, 6)" align="center" valign="middle" name="TerminalForm" hintStyle="hint" disabledColor="(1.1,1.1,1.1,1)" id="e1392c4e-c5d0-4763-9c29-104da20d45b8" text="TerminalForm" titleHeight="24" showCloseButton="false" hasTitleBar="false">
+  <layers>
+    <GLUInternalImage width="265" height="497" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="background" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/aButton_normal)" borders="(8, 8, 8, 8)" />
+  </layers>
+  <internalCloseButton type="GLUButton" style="form_closeButton" anchors="1010" x="239" y="4" name="closeButton" visible="false" disabledColor="(1.1,1.1,1.1,1)" id="f9a58e55-6711-46e4-b391-a26251c25633" />
+  <children>
+    <GLUButton style="(GLU/Styles/new).abutton" anchors="1010" x="-2" y="268" width="256" height="36" name="Button0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="03842296-6441-4275-af90-f18e81292bc3" text="Activate the Gate #1" />
+    <GLUButton style="(GLU/Styles/new).abutton" anchors="1010" x="-2" y="300" width="256" height="36" name="Button1" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="add36edd-3f36-41b1-9536-4768b37e7ce8" text="Activate the Gate #2" />
+    <GLUButton style="(GLU/Styles/new).bbutton" anchors="1010" x="-2" y="332" width="256" height="36" name="Button2" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="58286dcc-7121-4696-96b5-45fd9e421291" text="Activate the Gate #3" />
+    <GLULabel x="-1" y="4" width="256" height="256" anchors="1010" name="Label0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="3" id="8251a8d3-744f-49af-ac5a-6d4e942587c2" text="Complex entrance">
+      <layers>
+        <GLUInternalImage width="256" height="256" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="bg" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/map)" borders="(0, 0, 0, 0)" />
+        <GLUInternalText width="137" height="18" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="bottom" autoSize="True" name="text" y="10" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_14)" textStyle="&lt;arial, 14, Bold, #ffffffff, False&gt;" textAlignment="left" textVerticalAlignment="middle" text="Complex entrance" />
+      </layers>
+    </GLULabel>
+    <GLUButton style="(GLU/Styles/new).bbutton" anchors="1010" x="-2" y="454" width="256" height="36" name="Button3" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="79d47bc8-7d52-4d4d-abbb-a897f7d0259f" text="Logout" />
+    <GLUButton style="(GLU/Styles/new).nbe" anchors="1010" x="64" y="69" width="128" height="128" name="Button4" disabledColor="(1.1,1.1,1.1,1)" tabOrder="5" id="f8fcfb89-915f-4120-b8e0-4bc0355373ff" />
+  </children>
+</TerminalForm>

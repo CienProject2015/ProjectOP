@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PressActionExampleForm type="PressActionExampleForm" style="form" anchors="1010" x="0" y="0" width="512" align="center" valign="middle" height="512" name="PressActionExampleForm" id="e69fe06e-b7fe-4614-b07a-7beec28639c6" text="PressActionExampleForm">
+  <children>
+    <GLUButton style="button" anchors="1010" x="0" y="0" width="100" align="center" valign="middle" height="24" name="Button0" tabOrder="0" id="c4ec4f53-afb0-4bd6-83af-ea85221b74f9" text="Press me" />
+  </children>
+</PressActionExampleForm>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TerminalMessageForm type="TerminalMessageForm" acceptsChildren="True" width="256" height="128" anchors="1010" padding="(6, 6, 0, 6)" align="center" valign="middle" name="TerminalMessageForm" hintStyle="hint" disabledColor="(1.1,1.1,1.1,1)" id="bdc6149a-666c-4c82-ab5a-a7f91a8f427d" text="TerminalMessageForm" titleHeight="24" showCloseButton="false" hasTitleBar="false">
+  <layers>
+    <GLUInternalImage width="256" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="bg" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/aButton_normal)" borders="(10, 10, 10, 10)" />
+  </layers>
+  <internalCloseButton type="GLUButton" style="form_closeButton" anchors="1010" x="486" y="-20" name="closeButton" visible="false" disabledColor="(1.1,1.1,1.1,1)" id="eac7ad6c-a83d-4936-8138-57a00146082c" />
+  <children>
+    <GLUButton style="(GLU/Styles/new).abutton" anchors="1010" x="60" y="84" width="128" height="32" name="Button0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="963d8aa1-40a5-40ca-9653-49d9c636dc49" text="OK" />
+    <GLULabel y="40" width="118" height="18" anchors="1010" align="center" autoSize="True" name="Label0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="1" id="392a886c-b656-42ca-afbf-3ad952992d19" text="Access granted">
+      <layers>
+        <GLUInternalText width="118" height="18" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" autoSize="True" name="text" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_14, color = #ffe19fff)" textStyle="&lt;arial, 14, Bold, #ffe19fff, False&gt;" textAlignment="left" textVerticalAlignment="middle" text="Access granted" />
+      </layers>
+    </GLULabel>
+  </children>
+</TerminalMessageForm>

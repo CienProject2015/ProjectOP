@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GLURTSMenuForm type="GLURTSMenuForm" acceptsChildren="True" width="256" height="320" anchors="1010" padding="(6, 6, 6, 6)" align="center" valign="middle" name="GLURTSMenuForm" hintStyle="hint" disabledColor="(1.1,1.1,1.1,1)" id="45144b86-31ee-4ec7-8e28-0ee3eebf742f" text="GLURTSMenuForm" titleHeight="24" showCloseButton="false" hasTitleBar="false">
+  <layers>
+    <GLUInternalImage width="244" height="308" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="bg" material="(shader = GLU/GLU Image Shader, color = #00000070)" borders="(0, 0, 0, 0)" />
+  </layers>
+  <internalCloseButton type="GLUButton" style="form_closeButton" anchors="1010" x="486" y="-26" name="closeButton" visible="false" disabledColor="(1.1,1.1,1.1,1)" id="c8057a37-e661-46b8-9d1a-729df369d57b" />
+  <children>
+    <GLUButton y="43" width="192" height="32" anchors="1010" padding="(5, 5, 5, 5)" align="center" name="Button0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="05d39080-7986-4cab-b15d-7c154ec773d3" text="Resurrect">
+      <layers>
+        <GLUInternalImage style="button_normal" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_pressed" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_hovered" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalText width="192" height="32" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="text" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_18)" textStyle="&lt;arial, 18, Bold, #ffffffff, False&gt;" textAlignment="center" textVerticalAlignment="middle" text="Resurrect" />
+      </layers>
+    </GLUButton>
+    <GLUButton y="80" width="192" height="32" anchors="1010" padding="(5, 5, 5, 5)" align="center" name="Button1" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="9fcd7c49-9cd2-4d54-bdbb-ad43e3bc34e0" text="Save">
+      <layers>
+        <GLUInternalImage style="button_normal" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_pressed" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_hovered" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalText width="192" height="32" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="text" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_18)" textStyle="&lt;arial, 18, Bold, #ffffffff, False&gt;" textAlignment="center" textVerticalAlignment="middle" text="Save" />
+      </layers>
+    </GLUButton>
+    <GLUButton y="117" width="192" height="32" anchors="1010" padding="(5, 5, 5, 5)" align="center" name="Button2" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="15f930eb-45f4-4590-ba60-fc06cc617789" text="Load">
+      <layers>
+        <GLUInternalImage style="button_normal" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_pressed" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_hovered" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalText width="192" height="32" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="text" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_18)" textStyle="&lt;arial, 18, Bold, #ffffffff, False&gt;" textAlignment="center" textVerticalAlignment="middle" text="Load" />
+      </layers>
+    </GLUButton>
+    <GLUButton y="227" width="192" height="32" anchors="1010" padding="(5, 5, 5, 5)" align="center" name="Button3" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="3a4265a4-f9f8-4d94-bd30-0a3e6be86e8d" text="Close">
+      <layers>
+        <GLUInternalImage style="button_normal" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_pressed" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_hovered" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalText width="192" height="32" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="text" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_18)" textStyle="&lt;arial, 18, Bold, #ffffffff, False&gt;" textAlignment="center" textVerticalAlignment="middle" text="Close" />
+      </layers>
+    </GLUButton>
+    <GLUButton y="154" width="192" height="32" anchors="1010" padding="(5, 5, 5, 5)" align="center" name="Button4" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="345dbb7c-0f5b-4541-8347-0629c34cc474" text="Quit">
+      <layers>
+        <GLUInternalImage style="button_normal" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_pressed" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_hovered" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalText width="192" height="32" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="text" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_18)" textStyle="&lt;arial, 18, Bold, #ffffffff, False&gt;" textAlignment="center" textVerticalAlignment="middle" text="Quit" />
+      </layers>
+    </GLUButton>
+  </children>
+</GLURTSMenuForm>

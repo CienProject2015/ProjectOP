@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListBoxExampleForm type="ListBoxExampleForm" style="form" anchors="1010" x="0" y="0" width="512" align="center" valign="middle" height="512" name="ListBoxExampleForm" id="338c1d9e-bb8f-413d-93fd-2021f9679616" text="ListBoxExampleForm">
+  <children>
+    <GLUListBox style="listBox" anchors="1010" x="126" y="67" width="250" height="250" name="ListBox0" tabOrder="0" id="ba8decfc-6c66-42e5-be28-e1d54883416d" multiSelect="False">
+      <items>
+        <GLUListItem text="One" glyph="GLU/Debug/error" />
+        <GLUListItem text="Two" glyph="GLU/Controls/Textures/ListBox/listviewitem_hover" />
+        <GLUListItem text="Three" glyph="GLU/cursor_drag" />
+        <GLUListItem text="Four" />
+        <GLUListItem text="Five" glyph="GLU/Controls/Textures/Calendar/New/dayButton_pressed" />
+        <GLUListItem text="Six" />
+        <GLUListItem text="Item" glyph="GLU/Controls/Textures/FileBrowser/file" />
+        <GLUListItem text="Seven" />
+        <GLUListItem text="Eight item" glyph="GLU/Controls/Textures/TextEditBG" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+      </items>
+    </GLUListBox>
+  </children>
+</ListBoxExampleForm>

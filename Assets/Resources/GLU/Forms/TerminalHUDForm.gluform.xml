@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TerminalHUDForm type="TerminalHUDForm" acceptsChildren="True" y="15" width="505" height="32" anchors="1010" padding="(6, 6, 0, 6)" align="center" valign="bottom" autoSize="True" name="TerminalHUDForm" hintStyle="hint" disabledColor="(1.1,1.1,1.1,1)" id="27f68459-4d4b-41bd-b486-e7b3d510c3cc" text="TerminalHUDForm" titleHeight="24" showCloseButton="false" hasTitleBar="false">
+  <internalCloseButton type="GLUButton" style="form_closeButton" anchors="1010" x="486" y="-20" name="closeButton" visible="false" disabledColor="(1.1,1.1,1.1,1)" id="3a2f861b-75b9-443f-8009-8857b057ebb2" />
+  <children>
+    <GLULabel y="10" width="493" height="16" anchors="1010" autoSize="True" name="Label0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="dff8fbbf-1c1b-4ecc-bfad-160828c80bcf" text="To activate mouse look - press left mouse button. WASD - keyboard movements">
+      <layers>
+        <GLUInternalText width="493" height="16" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" autoSize="True" name="text" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_12)" textStyle="&lt;arial, 12, Bold, #ffffffff, False&gt;" textAlignment="left" textVerticalAlignment="middle" text="To activate mouse look - press left mouse button. WASD - keyboard movements" />
+      </layers>
+    </GLULabel>
+  </children>
+</TerminalHUDForm>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NBEForm type="NBEForm" style="form" anchors="1010" x="0" y="0" width="512" height="512" name="NBEForm" disabledColor="(1.1,1.1,1.1,1)" id="c5ed6444-2573-4e85-8531-9c2b8d7cdceb" text="NBEForm">
+  <children>
+    <GLUButton style="(GLU/Styles/new).nbe" anchors="1010" x="84" y="47" width="128" height="128" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="865f7f9e-ce52-4470-9579-929eadfc563f" />
+    <GLUButton style="(GLU/Styles/new).nbe" anchors="1010" x="237" y="55" width="100" height="100" name="Button2" disabledColor="(1.1,1.1,1.1,1)" tabOrder="1" id="de3ac441-421a-4684-a758-5558f884c659" />
+    <GLUButton style="(GLU/Styles/new).nbe" anchors="1010" x="369" y="67" width="64" height="64" name="Button3" disabledColor="(1.1,1.1,1.1,1)" tabOrder="2" id="848fc192-e0bd-4d9f-b019-a134b95f00c6" />
+    <GLUButton x="149" y="274" width="138" height="48" anchors="1010" padding="(5, 5, 5, 5)" name="Button4" disabledColor="(1.1,1.1,1.1,1)" tabOrder="3" id="200e0616-29ff-4ff2-9f95-573c59528a8f">
+      <layers>
+        <GLUInternalImage width="138" height="48" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="normal" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/aButton_pressed)" borders="(12, 12, 12, 12)">
+          <aset type="GLUAnimationSet">
+            <A index="1114128" pr="0" cd="1">
+              <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65552" pr="0" cd="1">
+              <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="138" height="48" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="pressed" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/aButton_pressed)" visible="False" borders="(12, 12, 12, 12)">
+          <aset type="GLUAnimationSet">
+            <A index="1114128" pr="0" cd="1">
+              <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65552" pr="0" cd="1">
+              <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="0" pr="0" cd="1">
+              <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="138" height="48" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="hovered" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/aButton_hovered, color = #ffffff00)" visible="False" borders="(12, 12, 12, 12)">
+          <aset type="GLUAnimationSet">
+            <A index="65540" pr="0" cd="1">
+              <GLUVisibilitySequence ts="2" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="327684" pr="0" cd="1">
+              <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="9" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="589832" pr="0" cd="1">
+              <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="9" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65544" pr="0" cd="1">
+              <GLUVisibilitySequence ts="2" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="0" pr="0" cd="1">
+              <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="0" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalText style="button_text" x="0" y="0" text="" />
+      </layers>
+    </GLUButton>
+    <GLUTextEdit style="textEdit" anchors="1010" x="286" y="227" width="100" height="24" name="TextEdit0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="4" id="925b455b-32e2-4c7f-9aa7-1352f0c7bd11" text="TextEdit0" textAlignment="center" />
+    <GLUDecoratedLabel style="decoratedLabel" anchors="1010" x="330" y="285" width="100" height="120" name="DecoratedLabel0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="5" id="e8899920-6c33-461e-a21d-864b94f69db3" textAlignment="right" defaultTextStyle="&lt;arial, 12, Bold, #000000ff, False&gt;">
+      <text>DecoratedLabel00 kklmlkmm ьбтьбтбьбтьб бьт бьтьбтбь бьтьбтбьт бьт ьбт бьт бь тбьт ьб лдодо лд</text>
+    </GLUDecoratedLabel>
+  </children>
+</NBEForm>

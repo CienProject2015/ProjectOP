@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GLUStyleSheet name="GLU/Styles/new">
+  <animationSets />
+  <items>
+    <GLUInternalImageStyle name="nbe_sectors" borders="(0, 0, 0, 0)" rotation="reserved" objectName="sectors" visible="True" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/sectorBg, color = #ffffff7f)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(64, -64, 0)" verticalAlignment="fill" alignment="fill" key="nbe_sectors">
+      <animationSet type="GLUAnimationSet">
+        <A index="327684" pr="0" cd="1">
+          <GLUMaterialColorSequence ts="5" pre="8" post="8" xCurve="8, 8" yCurve="8, 8" zCurve="8, 8" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 0)" />
+        </A>
+        <A index="65540" pr="0" cd="1">
+          <GLUMaterialColorSequence ts="1" pre="8" post="8" xCurve="8, 8" yCurve="8, 8" zCurve="8, 8" wCurve="8, 8, (0, 0.5, (0, 0), (0, 0), 0)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalImageStyle name="nbe_dial" borders="(0, 0, 0, 0)" rotation="reserved" objectName="dial" visible="True" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/dial)" x="0" y="0" width="0.5*" height="0.5*" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(64, -64, 0)" verticalAlignment="middle" alignment="center" key="nbe_dial">
+      <animationSet type="GLUAnimationSet">
+        <A index="327684" pr="0" cd="1" loop="True">
+          <GLULocalRotationSequence ts="270" pre="2" post="2" xCurve="2, 2" yCurve="2, 2" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 0), (4, 360, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="65540" pr="0" cd="1">
+          <GLULocalRotationSequence ts="360" pre="8" post="8" xCurve="8, 8" yCurve="8, 8" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 0)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalImageStyle name="nbe_compass" borders="(0, 0, 0, 0)" rotation="reserved" objectName="compass" visible="True" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/compass)" x="0" y="0" width="0.72*" height="0.72*" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(64, -64, 0)" verticalAlignment="middle" alignment="center" key="nbe_compass">
+      <animationSet type="GLUAnimationSet">
+        <A index="327684" pr="0" cd="1" loop="True">
+          <GLULocalRotationSequence ts="180" pre="2" post="2" xCurve="2, 2" yCurve="2, 2" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 0), (7, -360, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="65540" pr="0" cd="1">
+          <GLULocalRotationSequence ts="180" pre="8" post="8" xCurve="8, 8" yCurve="8, 8" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 0)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalImageStyle name="nbe_satellites" borders="(0, 0, 0, 0)" rotation="reserved" objectName="satellites" visible="True" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/satellites)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(64, -64, 0)" verticalAlignment="fill" alignment="fill" key="nbe_satellites">
+      <animationSet type="GLUAnimationSet">
+        <A index="327684" pr="0" cd="1">
+          <GLULocalScaleSequence ts="1" pre="8" post="8" xCurve="8, 8, (0, 1.5, (0, 0), (0, 0), 0)" yCurve="8, 8, (0, 1.5, (0, 0), (0, 0), 0)" zCurve="8, 8" />
+        </A>
+        <A index="262148" pr="0" cd="2" loop="True">
+          <GLULocalRotationSequence ts="0" pre="2" post="2" xCurve="2, 2" yCurve="2, 2" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 0), (9, 360, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="65540" pr="0" cd="1">
+          <GLULocalRotationSequence ts="360" pre="8" post="8" xCurve="8, 8" yCurve="8, 8" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 0)" />
+        </A>
+        <A index="4" pr="0" cd="2">
+          <GLULocalScaleSequence ts="1" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 0)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 0)" zCurve="8, 8" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalImageStyle name="nbe_press" borders="(0, 0, 0, 0)" rotation="reserved" objectName="press" visible="True" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/press, color = #ffffff00)" x="0" y="0" width="118" height="118" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(64, -64, 0)" verticalAlignment="middle" alignment="center" key="nbe_press">
+      <animationSet type="GLUAnimationSet">
+        <A index="1114128" pr="0" cd="1">
+          <GLULocalScaleSequence ts="0" pre="8" post="8" xCurve="8, 8, (0, 0, (0, 0), (0, 0), 0), (0.33, 1.5, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 0, (0, 0), (0, 0), 0), (0.33, 1.5, (0, 0), (0, 0), 2)" zCurve="8, 8" />
+          <GLUMaterialColorSequence ts="0" pre="8" post="8" xCurve="8, 8" yCurve="8, 8" zCurve="8, 8" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 0), (0.25, 1, (0, 0), (0, 0), 0), (0.33, 0, (0, 0), (0, 0), 0)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalImageStyle name="nbe_starc" borders="(0, 0, 0, 0)" rotation="reserved" objectName="starc" visible="True" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/starc)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(64, -64, 0)" verticalAlignment="fill" alignment="fill" key="nbe_starc">
+      <animationSet type="GLUAnimationSet" />
+    </GLUInternalImageStyle>
+    <GLUButtonStyle name="nbe" toggle="False" pressed="False" rotation="reserved" disabledColorMultiplier="(1.1,1.1,1.1,1)" controlName="" hint="" hintStyle="hint" x="0" y="0" width="0" height="0" padding="(5, 5, 5, 5)" anchors="1010" pivotType="center" pivot="(64, -64, 0)" verticalAlignment="top" alignment="left" key="nbe">
+      <layerStyles>
+        <GLUStyleLink styleName="(GLU/Styles/new).nbe_sectors" />
+        <GLUStyleLink styleName="(GLU/Styles/new).nbe_dial" />
+        <GLUStyleLink styleName="(GLU/Styles/new).nbe_compass" />
+        <GLUStyleLink styleName="(GLU/Styles/new).nbe_satellites" />
+        <GLUStyleLink styleName="(GLU/Styles/new).nbe_press" />
+        <GLUStyleLink styleName="(GLU/Styles/new).nbe_starc" />
+      </layerStyles>
+    </GLUButtonStyle>
+    <GLUInternalImageStyle name="abutton_normal" borders="(12, 12, 12, 12)" rotation="reserved" objectName="normal" visible="True" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/aButton_normal)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(69, -24, 0)" verticalAlignment="fill" alignment="fill" key="abutton_normal">
+      <animationSet type="GLUAnimationSet">
+        <A index="1114128" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="65552" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalImageStyle name="abutton_pressed" borders="(8, 8, 8, 8)" rotation="reserved" objectName="pressed" visible="False" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/aButton_pressed)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(69, -24, 0)" verticalAlignment="fill" alignment="fill" key="abutton_pressed">
+      <animationSet type="GLUAnimationSet">
+        <A index="1114128" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="65552" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="0" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalImageStyle name="abutton_hovered" borders="(12, 12, 12, 12)" rotation="reserved" objectName="hovered" visible="False" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/aButton_hovered, color = #ffffff00)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(69, -24, 0)" verticalAlignment="fill" alignment="fill" key="abutton_hovered">
+      <animationSet type="GLUAnimationSet">
+        <A index="65540" pr="0" cd="1">
+          <GLUVisibilitySequence ts="2" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="327684" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="9" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="589832" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="9" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="65544" pr="0" cd="1">
+          <GLUVisibilitySequence ts="2" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="0" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="0" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalTextStyle name="abutton_text" textStyle="&lt;arial, 14, Bold, #99f8ffff, False&gt;" textAlignment="center" textVerticalAlignment="middle" objectName="text" visible="True" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_14, color = #99f8ffff)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(69, -24, 0)" verticalAlignment="fill" alignment="fill" key="abutton_text">
+      <animationSet type="GLUAnimationSet" />
+    </GLUInternalTextStyle>
+    <GLUButtonStyle name="abutton" toggle="False" pressed="False" rotation="reserved" disabledColorMultiplier="(1.1,1.1,1.1,1)" controlName="Button4" hint="" hintStyle="hint" x="0" y="0" width="0" height="0" padding="(5, 5, 5, 5)" anchors="1010" pivotType="center" pivot="(69, -24, 0)" verticalAlignment="top" alignment="left" key="abutton">
+      <layerStyles>
+        <GLUStyleLink styleName="(GLU/Styles/new).abutton_normal" />
+        <GLUStyleLink styleName="(GLU/Styles/new).abutton_pressed" />
+        <GLUStyleLink styleName="(GLU/Styles/new).abutton_hovered" />
+        <GLUStyleLink styleName="(GLU/Styles/new).abutton_text" />
+      </layerStyles>
+    </GLUButtonStyle>
+    <GLUInternalImageStyle name="bbutton_normal" borders="(12, 12, 12, 12)" rotation="reserved" objectName="normal" visible="True" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/bButton_normal)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(69, -24, 0)" verticalAlignment="fill" alignment="fill" key="bbutton_normal">
+      <animationSet type="GLUAnimationSet">
+        <A index="1114128" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="65552" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalImageStyle name="bbutton_pressed" borders="(8, 8, 8, 8)" rotation="reserved" objectName="pressed" visible="False" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/bButton_pressed)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(69, -24, 0)" verticalAlignment="fill" alignment="fill" key="bbutton_pressed">
+      <animationSet type="GLUAnimationSet">
+        <A index="1114128" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="65552" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="0" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalImageStyle name="bbutton_hovered" borders="(12, 12, 12, 12)" rotation="reserved" objectName="hovered" visible="False" material="(shader = GLU/GLU Image Shader, mainTexture = Sci-Fi/bButton_hovered, color = #ffffff00)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(69, -24, 0)" verticalAlignment="fill" alignment="fill" key="bbutton_hovered">
+      <animationSet type="GLUAnimationSet">
+        <A index="65540" pr="0" cd="1">
+          <GLUVisibilitySequence ts="2" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="327684" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="9" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="589832" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="9" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="65544" pr="0" cd="1">
+          <GLUVisibilitySequence ts="2" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+        <A index="0" pr="0" cd="1">
+          <GLUVisibilitySequence ts="0" pre="8" post="8" curve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+          <GLUMaterialColorSequence ts="0" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+        </A>
+      </animationSet>
+    </GLUInternalImageStyle>
+    <GLUInternalTextStyle name="bbutton_text" textStyle="&lt;arial, 14, Bold, #fdb469ff, False&gt;" textAlignment="center" textVerticalAlignment="middle" objectName="text" visible="True" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_14, color = #fdb469ff)" x="0" y="0" width="0" height="0" padding="(0, 0, 0, 0)" anchors="1010" pivotType="parent" pivot="(69, -24, 0)" verticalAlignment="fill" alignment="fill" key="bbutton_text">
+      <animationSet type="GLUAnimationSet" />
+    </GLUInternalTextStyle>
+    <GLUButtonStyle name="bbutton" toggle="False" pressed="False" rotation="reserved" disabledColorMultiplier="(1.1,1.1,1.1,1)" controlName="Button5" hint="" hintStyle="hint" x="0" y="0" width="0" height="0" padding="(5, 5, 5, 5)" anchors="1010" pivotType="center" pivot="(69, -24, 0)" verticalAlignment="top" alignment="left" key="bbutton">
+      <layerStyles>
+        <GLUStyleLink styleName="(GLU/Styles/new).bbutton_normal" />
+        <GLUStyleLink styleName="(GLU/Styles/new).bbutton_pressed" />
+        <GLUStyleLink styleName="(GLU/Styles/new).bbutton_hovered" />
+        <GLUStyleLink styleName="(GLU/Styles/new).bbutton_text" />
+      </layerStyles>
+    </GLUButtonStyle>
+  </items>
+  <textStyles />
+</GLUStyleSheet>

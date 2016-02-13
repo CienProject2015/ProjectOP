@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GLURTSGUIForm type="GLURTSGUIForm" acceptsChildren="True" width="772" height="562" anchors="1010" padding="(6, 6, 6, 6)" align="fill" valign="fill" name="RTSGUIForm" disabledColor="(1.1,1.1,1.1,1)" id="00039f99-432a-4a6f-ba3d-39d46305fe47" text="GLURTSGUIForm" titleHeight="24" showCloseButton="false" hasTitleBar="false">
+  <internalCloseButton type="GLUButton" style="form_closeButton" anchors="1010" x="486" y="-26" name="closeButton" visible="false" disabledColor="(1.1,1.1,1.1,1)" id="17448420-8369-4bb7-a008-e6aa588e41d4" />
+  <children>
+    <GLUSceneSelector width="760" height="550" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="SceneSelector0" hintStyle="hint" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="309dcb02-3e4b-4dd8-9851-557d882d6347" selectorMaterial="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/SceneView/selector)" selectorBorders="(13, 13, 13, 13)" healthBarMaterial="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/SceneView/healthBar)" healthBarBorders="(2, 2, 2, 2)" healthBarBgMaterial="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/SceneView/healthBarbg)" healthBarBgBorders="(2, 2, 2, 2)" healthBarSize="(48, 6)" healthBarOffset="(0, 36)">
+      <layers>
+        <GLUInternalText width="760" height="550" anchors="1010" padding="(0, 0, 0, 0)" valign="fill" name="label" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_12)" textStyle="&lt;arial, 12, Bold, #ffffffff, False&gt;" textAlignment="left" textVerticalAlignment="bottom" text="GLUe Framework Pattern: Run-time strategy game" />
+      </layers>
+    </GLUSceneSelector>
+    <GLUButtonsView width="106" height="406" anchors="1010" align="right" valign="fill" name="ButtonsView0" hintStyle="hint" disabledColor="(1.1,1.1,1.1,1)" tabOrder="1" id="b1280ce6-1320-4bc7-bdcf-3818c9daebb6" style="buttonView" vertical="True" itemWidth="48" itemHeight="48" horizontalInterval="2" verticalInterval="2" columnsCount="2" multiSelect="True">
+      <items>
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+        <GLUListItem text="Item" />
+      </items>
+    </GLUButtonsView>
+    <GLUButton width="64" height="64" anchors="1010" padding="(5, 5, 5, 5)" name="Button0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="2" id="dc8ee998-f0b5-4cf4-8d53-a4c7ff350b1f" text="Menu">
+      <layers>
+        <GLUInternalImage style="button_normal" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_pressed" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalImage style="button_hovered" x="0" y="0" anchors="1010" align="fill" valign="fill" />
+        <GLUInternalText width="64" height="64" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="text" material="(shader = GLU/GLU Text Shader, mainTexture = GLU/Fonts/arial_bold_18)" textStyle="&lt;arial, 18, Bold, #ffffffff, False&gt;" textAlignment="center" textVerticalAlignment="middle" text="Menu" />
+      </layers>
+    </GLUButton>
+  </children>
+</GLURTSGUIForm>

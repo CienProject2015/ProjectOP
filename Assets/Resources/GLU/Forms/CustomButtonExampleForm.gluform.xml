@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomButtonExampleForm type="CustomButtonExampleForm" style="form" anchors="1010" x="0" y="0" width="512" align="center" valign="middle" height="512" name="CustomButtonExampleForm" disabledColor="(1.1,1.1,1.1,1)" id="030fb1d2-d9ff-4c93-9106-520be812234a" text="CustomButton example">
+  <children>
+    <GLUButton x="64" y="64" width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" name="AButton0" disabledColor="(1.1,1.1,1.1,1)" tabOrder="0" id="199ac75f-0a93-4d4e-86f6-fccf6e538658">
+      <layers>
+        <GLUInternalImage width="128" height="128" anchors="1010" ldScale="(0.25, 0.25, 0.25)" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="pressLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/press, color = #ffffff00)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="0" pr="255" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="1114128" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="10" pre="1" post="1" xCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2), (0.15, 0.75, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.85, (0, 0), (0, 0), 2), (0.15, 0.85, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2), (0.15, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 1, (0, 0), (0, 0), 2), (0.15, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="sectorsLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/sectorBg, color = #ffffffbf)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="0" pr="255" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLUMaterialColorSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 0.5, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" wCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 0.75, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="starcLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/starc)" borders="(0, 0, 0, 0)" />
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="satellitesLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/satellites, color = #ffffff7f)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="1" post="1" xCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="1" pre="1" post="1" xCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="262148" pr="0" cd="1" loop="True">
+              <GLUMaterialColorSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 0.5, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 0.5, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" wCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 0.75, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 360, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.5, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="1" post="1" xCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="4" pr="0" cd="1">
+              <GLULocalScaleSequence ts="1" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="96" height="96" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="hudLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/glueHUD, color = #ffffff7f)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLULocalRotationSequence ts="180" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 360, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0.5, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="8" post="8" xCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="76" height="76" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="compassLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/compass, color = #ffffffbf)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLULocalRotationSequence ts="180" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, -360, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="8" post="8" xCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="56" height="56" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="dialLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/dial)" borders="(0, 0, 0, 0)" />
+      </layers>
+    </GLUButton>
+    <GLUButton x="305" y="62" width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" name="AButton1" hintStyle="hint" disabledColor="(1.1,1.1,1.1,1)" tabOrder="1" id="d98fe530-fb14-4b38-a5f9-19676c78021b">
+      <layers>
+        <GLUInternalImage width="128" height="128" anchors="1010" ldScale="(1.4, 1.4, 1.4)" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="pressLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/press, color = #bfd8ff00)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="0" pr="255" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="1114128" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="10" pre="1" post="1" xCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2), (0.15, 0.75, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.85, (0, 0), (0, 0), 2), (0.15, 0.85, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2), (0.15, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 1, (0, 0), (0, 0), 2), (0.15, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="sectorsLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/sectorBg, color = #ffffffbf)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="0" pr="255" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLUMaterialColorSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 0.5, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" wCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 0.75, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="starcLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/starc)" borders="(0, 0, 0, 0)" />
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="satellitesLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/satellites, color = #ffffff7f)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="1" post="1" xCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="1" pre="1" post="1" xCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="262148" pr="0" cd="1" loop="True">
+              <GLUMaterialColorSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 0.5, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 0.5, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" wCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 0.75, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 360, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.5, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="1" post="1" xCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="4" pr="0" cd="1">
+              <GLULocalScaleSequence ts="1" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="96" height="96" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="hudLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/glueHUD, color = #ffffff7f)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLULocalRotationSequence ts="180" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 360, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0.5, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="8" post="8" xCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="76" height="76" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="compassLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/compass, color = #ffffffbf)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLULocalRotationSequence ts="180" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, -360, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="8" post="8" xCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="56" height="56" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="dialLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/dial)" borders="(0, 0, 0, 0)" />
+      </layers>
+    </GLUButton>
+    <GLUButton x="64" y="290" width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" name="AButton2" disabledColor="(1.1,1.1,1.1,1)" tabOrder="2" id="a2d7fc74-a522-4294-8eac-610a9c83b6b6">
+      <layers>
+        <GLUInternalImage width="128" height="128" anchors="1010" ldScale="(0.25, 0.25, 0.25)" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="pressLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/press, color = #ffffff00)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="0" pr="255" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="1114128" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="10" pre="1" post="1" xCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2), (0.15, 0.75, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.85, (0, 0), (0, 0), 2), (0.15, 0.85, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2), (0.15, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 1, (0, 0), (0, 0), 2), (0.15, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="sectorsLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/sectorBg, color = #ffffffbf)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="0" pr="255" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLUMaterialColorSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 0.5, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" wCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 0.75, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="starcLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/starc)" borders="(0, 0, 0, 0)" />
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="satellitesLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/satellites, color = #ffffff7f)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="1" post="1" xCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="1" pre="1" post="1" xCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="262148" pr="0" cd="1" loop="True">
+              <GLUMaterialColorSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 0.5, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 0.5, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" wCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 0.75, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 360, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.5, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="1" post="1" xCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="4" pr="0" cd="1">
+              <GLULocalScaleSequence ts="1" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="96" height="96" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="hudLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/glueHUD, color = #ffffff7f)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLULocalRotationSequence ts="180" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 360, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0.5, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="8" post="8" xCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="76" height="76" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="compassLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/compass, color = #ffffffbf)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLULocalRotationSequence ts="180" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, -360, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="8" post="8" xCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="56" height="56" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="dialLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/dial)" borders="(0, 0, 0, 0)" />
+      </layers>
+    </GLUButton>
+    <GLUButton x="308" y="290" width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" name="AButton3" disabledColor="(1.1,1.1,1.1,1)" tabOrder="3" id="c0eff428-30be-4665-8a48-0b35532c1038">
+      <layers>
+        <GLUInternalImage width="128" height="128" anchors="1010" ldScale="(0.25, 0.25, 0.25)" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="pressLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/press, color = #ffffff00)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="0" pr="255" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="1114128" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="10" pre="1" post="1" xCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2), (0.15, 0.75, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.85, (0, 0), (0, 0), 2), (0.15, 0.85, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2), (0.15, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 1, (0, 0), (0, 0), 2), (0.15, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0.25, (0, 0), (0, 0), 2), (0.25, 1.4, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="sectorsLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/sectorBg, color = #ffffffbf)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="0" pr="255" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLUMaterialColorSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 0.5, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" wCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 0.75, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="0" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="starcLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/starc)" borders="(0, 0, 0, 0)" />
+        <GLUInternalImage width="128" height="128" anchors="1010" padding="(0, 0, 0, 0)" align="fill" valign="fill" name="satellitesLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/satellites, color = #ffffff7f)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="1" post="1" xCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+              <GLULocalScaleSequence ts="1" pre="1" post="1" xCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1.4, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="262148" pr="0" cd="1" loop="True">
+              <GLUMaterialColorSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 0.5, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 1, (0, 0), (0, 0), 2), (0.5, 1, (0, 0), (0, 0), 2), (0.55, 0.5, (0, 0), (0, 0), 2), (0.6, 1, (0, 0), (0, 0), 2)" wCurve="2, 2, (0, 0.75, (0, 0), (0, 0), 2), (0.5, 0.75, (0, 0), (0, 0), 2), (0.55, 1, (0, 0), (0, 0), 2), (0.6, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="0" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (9, 360, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="1" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" wCurve="1, 1, (0, 0.5, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="1" post="1" xCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="4" pr="0" cd="1">
+              <GLULocalScaleSequence ts="1" pre="1" post="1" xCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" yCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" zCurve="1, 1, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="96" height="96" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="hudLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/glueHUD, color = #ffffff7f)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLULocalRotationSequence ts="180" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 360, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0.5, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="8" post="8" xCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="76" height="76" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="compassLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/compass, color = #ffffffbf)" borders="(0, 0, 0, 0)">
+          <aset type="GLUAnimationSet">
+            <A index="327684" pr="0" cd="1" loop="True">
+              <GLULocalRotationSequence ts="180" pre="2" post="2" xCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" yCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, 0, (0, 0), (0, 0), 2)" zCurve="2, 2, (0, 0, (0, 0), (0, 0), 2), (4, -360, (0, 0), (0, 0), 2)" />
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" />
+            </A>
+            <A index="65540" pr="0" cd="1">
+              <GLUMaterialColorSequence ts="3" pre="8" post="8" xCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 1, (0, 0), (0, 0), 2)" wCurve="8, 8, (0, 0.75, (0, 0), (0, 0), 2)" />
+              <GLULocalRotationSequence ts="180" pre="8" post="8" xCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" yCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" zCurve="8, 8, (0, 0, (0, 0), (0, 0), 2)" />
+            </A>
+          </aset>
+        </GLUInternalImage>
+        <GLUInternalImage width="56" height="56" anchors="1010" padding="(0, 0, 0, 0)" align="center" valign="middle" name="dialLayer" material="(shader = GLU/GLU Image Shader, mainTexture = GLU/Controls/Textures/AButton/dial)" borders="(0, 0, 0, 0)" />
+      </layers>
+    </GLUButton>
+  </children>
+</CustomButtonExampleForm>
