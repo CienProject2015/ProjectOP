@@ -20,9 +20,11 @@ public class item_yes : MonoBehaviour {
     }
     public void it_onClick_yes()
     {
+        Debug.Log(other + "3");
         Destroy(other.gameObject);
         Tank2.SendMessage("tank_start");
         Tank2.SendMessage("GainItem", other);
+        Debug.Log(other + "4");
         it_panel.SetActive(false);
     }
 }
