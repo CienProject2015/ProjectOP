@@ -27,7 +27,7 @@ public class ItemArray : MonoBehaviour {
         SendMessage("tank_stop");
         string[] name = other.gameObject.name.Split('_');
         item = arr_item;
-
+        int random;
         if (name[0].Equals("Obj"))
         {
             //만약 오브젝트를 발동시킬 수 있는 아이템이 있다면
@@ -107,7 +107,8 @@ public class ItemArray : MonoBehaviour {
             }
             else if (name[1].Equals("CardboardBox"))
             {
-                var random = Random.Range(0, 3);
+                //만약 메모리칩 다 얻었으면 '아무것도 없다'만 떠야한다!!!!
+                random = Random.Range(0, 3);
                 Debug.Log(random);
                 if (random >= 1)
                 {
