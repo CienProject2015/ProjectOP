@@ -12,6 +12,8 @@ public class InventoryManager : MonoBehaviour {
 	private Toggle[] itemSelects;
 	public Sprite sprite_None;
 
+
+
 	void Start(){
 		itemImages = new Sprite[22];
 		for (int i = 0; i < 22; i++)
@@ -22,18 +24,14 @@ public class InventoryManager : MonoBehaviour {
 			itemSelects [i] = items [i].GetComponent <Toggle> ();
 	}
 
-	public void GetItemImage(){
+	public void GetItemInfo(){
 		if (itemToggleGroup.AnyTogglesOn ()) {
 			for (int i = 0; i < 22; i++) {
 				if (itemSelects [i].isOn)
 					selectedItemImage.GetComponent <Image> ().sprite = itemImages [i];
 			}
-		}
-		else
+		} else {
 			selectedItemImage.GetComponent <Image> ().sprite = sprite_None;
-	}
-
-	public void GetItemInfo(){
-		
+		}
 	}
 }
