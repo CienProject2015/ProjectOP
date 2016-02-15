@@ -4,6 +4,7 @@ using System.Collections;
 public class ItemArray : MonoBehaviour {
     ArrayList arr_item = new ArrayList();
     IList item;
+    int random;
     public GameObject obj_panel;
     public GameObject obj_act_panel;
     public GameObject Items_MemoryChip;
@@ -27,7 +28,6 @@ public class ItemArray : MonoBehaviour {
         SendMessage("tank_stop");
         string[] name = other.gameObject.name.Split('_');
         item = arr_item;
-        int random;
         if (name[0].Equals("Obj"))
         {
             //만약 오브젝트를 발동시킬 수 있는 아이템이 있다면
@@ -113,13 +113,13 @@ public class ItemArray : MonoBehaviour {
                 if (random >= 1)
                 {
                     //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "메모리칩을 발견했다.");
-                    Debug.Log("메모리칩을 발견했다.");
+                    Debug.Log("랜덤값" + random + ", " + other.gameObject.name + "메모리칩을 발견했다.");
                     item.Add(Items_MemoryChip);
                 }
                 else
                 {
                     //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아무것도 없다.");
-                    Debug.Log("아무것도 없다.");
+                    Debug.Log("랜덤값" + random + ", " + other.gameObject.name + "아무것도 없다.");
                 }
             }
         }

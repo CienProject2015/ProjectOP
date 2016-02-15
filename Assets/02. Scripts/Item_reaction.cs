@@ -33,7 +33,6 @@ public class Item_reaction : MonoBehaviour {
         {
             if (name[1].Equals("CardboardBox"))
             {
-                Debug.Log(other + "1");
                 ui_p_obj_box(other);
             }
             else
@@ -65,7 +64,6 @@ public class Item_reaction : MonoBehaviour {
 
     private void ui_p_obj_box(Collider other)
     {
-        Debug.Log(other+"2");
         it_panel.SetActive(true);
         Text_box.SetActive(true);
         Text.SetActive(false);
