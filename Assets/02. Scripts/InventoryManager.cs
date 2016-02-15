@@ -6,16 +6,13 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour {
 
 	public GameObject selectedItemImage;
-	private GameObject[] items;
+	public GameObject[] items;
 	private Sprite[] itemImages;
 	public ToggleGroup itemToggleGroup;
 	private Toggle[] itemSelects;
+	public Sprite sprite_None;
 
 	void Start(){
-		items = new GameObject[16];
-		for (int i = 0; i < 16; i++)
-			items [i] = GameObject.FindGameObjectsWithTag ("Item Image") [i];
-
 		itemImages = new Sprite[16];
 		for (int i = 0; i < 16; i++)
 			itemImages [i] = items [i].GetComponent <Image> ().sprite;
@@ -33,6 +30,6 @@ public class InventoryManager : MonoBehaviour {
 			}
 		}
 		else
-			selectedItemImage.GetComponent <Image> ().sprite = null;
+			selectedItemImage.GetComponent <Image> ().sprite = sprite_None;
 	}
 }

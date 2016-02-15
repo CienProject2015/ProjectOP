@@ -134,20 +134,20 @@ Material:
         second: 0
       data:
         first:
-          name: _StencilComp
-        second: 8
-      data:
-        first:
-          name: _StencilOp
-        second: 0
-      data:
-        first:
           name: _StencilReadMask
         second: 255
       data:
         first:
           name: _StencilWriteMask
         second: 255
+      data:
+        first:
+          name: _StencilComp
+        second: 8
+      data:
+        first:
+          name: _StencilOp
+        second: 0
       data:
         first:
           name: _ColorMask
@@ -164,4 +164,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 0.116}
+        second: {r: 1, g: 1, b: 1, a: 0.228}
