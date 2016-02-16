@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 
 public class InventoryManager : MonoBehaviour {
-
 	private int[] inventoryList;
 	private int inventoryLimit;
 	
@@ -24,6 +23,7 @@ public class InventoryManager : MonoBehaviour {
 	public GameObject M_Chip_Using_Question;
 
 	void Start(){
+
 		inventoryLimit = 22;
 
 		inventoryList = new int[inventoryLimit];
@@ -55,7 +55,7 @@ public class InventoryManager : MonoBehaviour {
 					itemName.text = "아이템이 선택됨";
 					itemInfo.text = "asd\noooooo\nfgd";
 					if (i < 16) {
-						item_Using_Question.SetActive (true);			
+						item_Using_Question.SetActive (true);
 						M_Chip_Using_Question.SetActive (false);
 					} else {
 						M_Chip_Using_Question.SetActive (true);
@@ -77,10 +77,21 @@ public class InventoryManager : MonoBehaviour {
 
 	public void UseItem(){
 		Debug.Log (selectedItemSlotNum + "번 슬롯의 아이템을 사용");
+		items [selectedItemSlotNum].GetComponent<Image>().sprite = sprite_None;
+		itemImages [selectedItemSlotNum] = sprite_None;
+		GetItemInfo ();
+		if (gameObject.GetComponent<TutorialManager>().isTutorial && selectedItemSlotNum == 0) {
+			gameObject.SendMessage ("Scene6");
+		}
 	}
 
 	public void LeaveItem(){
 		Debug.Log (selectedItemSlotNum + "번 슬롯의 아이템을 버림");
+		if (gameObject.GetComponent<TutorialManager> ().isTutorial && selectedItemSlotNum == 0) {
+			gameObject.SendMessage ("ReceiveLog", "이 아이템은 버릴 수 없다.");
+		} else {
+			
+		}
 	}
 
 	public void PlayM_Chip(){
