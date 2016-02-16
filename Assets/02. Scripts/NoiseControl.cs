@@ -5,16 +5,24 @@ using UnityStandardAssets.ImageEffects;
 
 public class NoiseControl : MonoBehaviour {
 	NoiseAndGrain noise;
+	bool noiseTab;
 	// Use this for initialization
 	void Start () {
 		noise = GameObject.Find ("MainCamera").GetComponent<NoiseAndGrain> ();
+		noise.generalIntensity = 10f;
+		noiseTab = false;
 		//GameObject.Find
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		//noise.generalIntensity += 1;
-	
+		if (noiseTab) {
+			noiseTab = false;
+			noise.generalIntensity = 8f;
+		} else {
+			noiseTab = true;
+			noise.generalIntensity = 10f;
+		}
+		noise.generalIntensity += 1f;
 	}
 }

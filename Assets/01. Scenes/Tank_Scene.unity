@@ -261,8 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9191284b058eef549b7108b5f04e1117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensityMultiplier: 0.25
-  generalIntensity: 0.5
+  intensityMultiplier: 0
+  generalIntensity: 1
   blackIntensity: 1
   whiteIntensity: 1
   midGrey: 0.2
@@ -339,11 +339,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 482742, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -24.983734
+      value: -11.36
       objectReference: {fileID: 0}
     - target: {fileID: 482742, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.1233177
+      value: 7.92
       objectReference: {fileID: 0}
     - target: {fileID: 482742, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -351,23 +351,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 482742, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.37340683
+      value: 0.4813304
       objectReference: {fileID: 0}
     - target: {fileID: 482742, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.21973112
+      value: -0.118558
       objectReference: {fileID: 0}
     - target: {fileID: 482742, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.09151024
+      value: 0.2757632
       objectReference: {fileID: 0}
     - target: {fileID: 482742, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.89661115
+      value: 0.823541
       objectReference: {fileID: 0}
     - target: {fileID: 482742, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
