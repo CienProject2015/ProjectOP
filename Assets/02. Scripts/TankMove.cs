@@ -45,10 +45,10 @@ public class TankMove : MonoBehaviour {
     }
 
 	private void MoveForward(){
-		transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+		transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
     }
 	private void MoveBack(){
-		transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
+		transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
 	}
 	private void TurnRight(){
 			transform.Rotate(new Vector3(0, cycleSpeed * Time.deltaTime, 0));
