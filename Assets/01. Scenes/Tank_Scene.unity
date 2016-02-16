@@ -189,7 +189,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 380370722}
   - 114: {fileID: 380370721}
-  - 114: {fileID: 380370724}
   - 114: {fileID: 380370723}
   m_Layer: 0
   m_Name: _EventSystem
@@ -235,22 +234,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   penguin: {fileID: 1822001425}
   tank2: {fileID: 805168059}
---- !u!114 &380370724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 380370720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c40b82e9c1c8ef744952e7c6e04f57d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &640482582 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 107434, guid: 1613000aa71428544b1071e1869dc631, type: 2}
   m_PrefabInternal: {fileID: 216846200}
 --- !u!114 &640482583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 640482582}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34382083ad114a07d000fbfb8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iterations: 10
+  blurSpread: 0
+  blurShader: {fileID: 4800000, guid: 57e6deea7c2924e22a5138e2b70bb4dc, type: 3}
+--- !u!114 &640482589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -262,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensityMultiplier: 0
-  generalIntensity: 1
+  generalIntensity: 0.5
   blackIntensity: 1
   whiteIntensity: 1
   midGrey: 0.2

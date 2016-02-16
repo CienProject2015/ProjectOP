@@ -1,44 +1,80 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.ImageEffects;
+
 
 public class Tutorial : MonoBehaviour {
 
+	NoiseAndGrain noiseAndGrain;
+	Blur blur;
 	public GameObject penguin, tank2;
 	private Animator anim;
 	float penguinSpeed;
 	float currentTime=0;
+	bool noiseTab = false;
+
 	// Use this for initialization
 	void Start () {
+		noiseAndGrain = GameObject.Find ("MainCamera").GetComponent<NoiseAndGrain> ();
+		blur = GameObject.Find ("MainCamera").GetComponent<Blur> ();
 		anim = penguin.GetComponent<Animator>();
 		penguinSpeed = 2;
 		anim.SetFloat ("Speed", 10);
+		noiseAndGrain.intensityMultiplier = 10;
+		blur.enabled = true;
+		blur.iterations = 10;
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		currentTime += 1*Time.deltaTime;
 
+		if (currentTime < 5) {
+			if (noiseTab) {
+				noiseTab = false;
+				noiseAndGrain.intensityMultiplier++;
+			} else {
+				noiseTab = true;
+				noiseAndGrain.intensityMultiplier--;
+			}
+
+		}
+		if (currentTime >= 5 && currentTime <= 6) {
+			noiseAndGrain.intensityMultiplier = 0;
+			noiseAndGrain.enabled = false;
+			Debug.Log ("check");
+
+		}
+		if (currentTime > 6 && currentTime < 9) {
+			blur.iterations--;
+		}
+		if (currentTime >= 9 && currentTime <= 10) {
+			blur.enabled = false;
+		}
+
 		//////// 고속도로 타고온다 ///
 		///탱크 임의 조작 막아뒤야 한다 //
 
 		//if (tank2.transform.position.z + 5 < penguin.transform.position.z) {
-		if (currentTime <= 7) {
-			anim.SetFloat ("Speed", 10);
+		if (currentTime > 10 && currentTime <= 17) {
+			anim.SetFloat ("Speed", 10);	
 			penguin.transform.LookAt (tank2.transform);
 			penguin.transform.Translate (transform.forward * penguinSpeed * Time.deltaTime);
 		}
 		//////
-		if (currentTime > 6 && currentTime <= 12) {
+		if (currentTime > 16 && currentTime <= 22) {
 			anim.SetFloat ("Speed", 0);
 			anim.SetBool ("Happy", true);
 		}
 		//////
-		if (currentTime > 10 && currentTime < 13) {
+		if (currentTime > 20 && currentTime < 23) {
 			anim.SetBool ("Happy", false);
 			tank2.transform.Translate(new Vector3(0,0,-4*Time.deltaTime)); 
 		}
 		//////
-		if (currentTime > 13 && currentTime < 19) {
+		if (currentTime > 23 && currentTime < 29) {
 				anim.SetFloat ("Speed", 20);
 			if(currentTime > 17)
 				anim.SetFloat ("Speed", 10);
@@ -46,18 +82,18 @@ public class Tutorial : MonoBehaviour {
 			penguin.transform.Translate (transform.forward * penguinSpeed * Time.deltaTime);
 		}
 		////
-		if (currentTime > 18 && currentTime < 21) {
+		if (currentTime > 28 && currentTime < 31) {
 			anim.SetFloat ("Speed", 0);
 			anim.SetBool ("Happy", true);
 		}
 		////
-		if(currentTime > 21)
+		if(currentTime > 31)
 			anim.SetBool ("Happy", false);
-		if (currentTime > 22 && currentTime < 24) {
+		if (currentTime > 32 && currentTime < 34) {
 			penguin.transform.Rotate(new Vector3(0,100*Time.deltaTime, 0));
 		}
 		//
-		if (currentTime >= 24 && currentTime < 30) {
+		if (currentTime >= 34 && currentTime < 40) {
 			anim.SetFloat ("Speed", 20);
 			penguin.transform.Translate (transform.forward * penguinSpeed * Time.deltaTime);
 		}
