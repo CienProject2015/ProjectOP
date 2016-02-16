@@ -22,16 +22,12 @@ public class WheelMove : MonoBehaviour {
 				RaycastHit hit;
 
 				if (Physics.Raycast (ray, out hit) && hit.collider.tag == "FrontRight") {
-					Debug.Log ("오른쪽 앞");
 					tank.SendMessage("setRightWheelDirect", 1);
 				} else if (Physics.Raycast (ray, out hit) && hit.collider.tag == "BackRight") {
-					Debug.Log ("오른쪽 뒤");
 					tank.SendMessage("setRightWheelDirect", -1);
 				} else if (Physics.Raycast (ray, out hit) && hit.collider.tag == "FrontLeft") {
-					Debug.Log ("왼쪽 앞");
 					tank.SendMessage("setLeftWheelDirect", 1);
 				} else if (Physics.Raycast (ray, out hit) && hit.collider.tag == "BackLeft") {
-					Debug.Log ("왼쪽 뒤");
 					tank.SendMessage("setLeftWheelDirect", -1);
 				}
 			}
