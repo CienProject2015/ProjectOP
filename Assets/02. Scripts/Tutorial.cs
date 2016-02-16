@@ -3,7 +3,8 @@ using System.Collections;
 using UnityStandardAssets.ImageEffects;
 
 
-public class Tutorial : MonoBehaviour {
+
+public class Tutorial : MonoBehaviour {	
 
 	NoiseAndGrain noiseAndGrain;
 	Blur blur;
@@ -24,7 +25,6 @@ public class Tutorial : MonoBehaviour {
 		blur.enabled = true;
 		blur.iterations = 10;
 
-
 	}
 	
 	// Update is called once per frame
@@ -39,7 +39,6 @@ public class Tutorial : MonoBehaviour {
 				noiseTab = true;
 				noiseAndGrain.intensityMultiplier--;
 			}
-
 		}
 		if (currentTime >= 5 && currentTime <= 6) {
 			noiseAndGrain.intensityMultiplier = 0;
@@ -47,11 +46,21 @@ public class Tutorial : MonoBehaviour {
 			Debug.Log ("check");
 
 		}
-		if (currentTime > 6 && currentTime < 9) {
+		if (currentTime > 6 && currentTime < 7) {
 			blur.iterations--;
 		}
-		if (currentTime >= 9 && currentTime <= 10) {
+		if (currentTime >= 7 && currentTime <= 8) {
 			blur.enabled = false;
+		}
+
+		if (currentTime > 7 && currentTime < 10) {
+			GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StartAlertAnim ();
+			GameObject target = GameObject.Find ("FrontRightWheel");
+			GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (target);
+			//	GameObject.Find ("FrontRightWheel");
+		}
+		if (currentTime >= 10 && currentTime <= 11) {
+			GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StopAlertAnim ();
 		}
 
 		//////// 고속도로 타고온다 ///
@@ -69,11 +78,17 @@ public class Tutorial : MonoBehaviour {
 			anim.SetBool ("Happy", true);
 		}
 		//////
+		if (currentTime > 19 && currentTime < 21) {
+			GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StartAlertAnim ();
+		}
+		if (currentTime >= 21 && currentTime <= 22) {
+			GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StopAlertAnim ();
+		}
 		if (currentTime > 20 && currentTime < 23) {
 			anim.SetBool ("Happy", false);
 			tank2.transform.Translate(new Vector3(0,0,-4*Time.deltaTime)); 
 		}
-		//////
+		/////
 		if (currentTime > 23 && currentTime < 29) {
 				anim.SetFloat ("Speed", 20);
 			if(currentTime > 17)
