@@ -26,7 +26,7 @@ public class TutorialButtonGuide : MonoBehaviour {
 				yield break;
 			if (fadeout) {
 				target.transform.Find("ButtonGuide").GetComponent <Image> ().color -= new Color (0, 0, 0, 0.02f);
-				if (target.transform.Find("ButtonGuide").GetComponent <Image> ().color.a < 0.3f) {
+				if (target.transform.Find("ButtonGuide").GetComponent <Image> ().color.a < 0.02f) {
 					fadeout = false;
 				}
 			} else if (!fadeout) {

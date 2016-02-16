@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour {
 
+	public int[] inventoryList;
+
 	public GameObject selectedItemImage;
 	public GameObject[] items;
 	private Sprite[] itemImages;
@@ -19,6 +21,8 @@ public class InventoryManager : MonoBehaviour {
 	public GameObject M_Chip_Using_Question;
 
 	void Start(){
+		inventoryList = new int[22];
+
 		itemImages = new Sprite[22];
 		for (int i = 0; i < 22; i++)
 			itemImages [i] = items [i].GetComponent <Image> ().sprite;
@@ -29,6 +33,9 @@ public class InventoryManager : MonoBehaviour {
 
 		itemName.text = "아이템을 선택하세요.";
 		itemInfo.text = "";
+
+		item_Using_Question.SetActive (false);
+		M_Chip_Using_Question.SetActive (false);
 	}
 
 	public void GetItemInfo(){
@@ -43,10 +50,9 @@ public class InventoryManager : MonoBehaviour {
 
 		if (selectedItemImage.GetComponent <Image> ().sprite == sprite_None) {
 			itemName.text = "아이템을 선택하세요.";
-			itemInfo.text = "";
-		} else {
-			itemName.text = "아이템 선택됨";
-			itemInfo.text = "ㅇㅇㅇㅇ\ndsfsfn\ndf";
+			itemInfo.text = "";		
+			item_Using_Question.SetActive (false);
+			M_Chip_Using_Question.SetActive (false);
 		}
 	}
 }

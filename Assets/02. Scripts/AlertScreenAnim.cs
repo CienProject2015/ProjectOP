@@ -14,7 +14,7 @@ public class AlertScreenAnim : MonoBehaviour {
 	}
 
 	public void StartAlertAnim(){
-		gameObject.GetComponent <Image> ().color = new Color (1, 1, 1, 1);
+		gameObject.GetComponent <Image> ().color = new Color (1, 1, 1, 0.7f);
 		StopCoroutine ("AlertAnim");
 		StartCoroutine ("AlertAnim");
 	}
@@ -27,13 +27,13 @@ public class AlertScreenAnim : MonoBehaviour {
 	IEnumerator AlertAnim(){
 		while (true) {
 			if (fadeout) {
-				gameObject.GetComponent <Image> ().color -= new Color (0, 0, 0, 0.05f);
+				gameObject.GetComponent <Image> ().color -= new Color (0, 0, 0, 0.03f);
 				if (gameObject.GetComponent <Image> ().color.a < 0.3f) {
 					fadeout = false;
 				}
 			} else if (!fadeout) {
-				gameObject.GetComponent <Image> ().color += new Color (0, 0, 0, 0.05f);
-				if (gameObject.GetComponent <Image> ().color.a > 1) {
+				gameObject.GetComponent <Image> ().color += new Color (0, 0, 0, 0.03f);
+				if (gameObject.GetComponent <Image> ().color.a > 0.7f) {
 					fadeout = true;
 				}
 			}
