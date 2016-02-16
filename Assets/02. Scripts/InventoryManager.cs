@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour {
 
-	public int[] inventoryList;
-
+	private int[] inventoryList;
+	private int inventoryLimit;
+	
+	public ToggleGroup itemToggleGroup;
+	private Toggle[] itemSlots;
 	public GameObject selectedItemImage;
+	public int selectedItemSlotNum;
+
 	public GameObject[] items;
 	private Sprite[] itemImages;
-	public ToggleGroup itemToggleGroup;
-	private Toggle[] itemSelects;
 	public Sprite sprite_None;
 
 	public Text itemName;
@@ -21,15 +24,19 @@ public class InventoryManager : MonoBehaviour {
 	public GameObject M_Chip_Using_Question;
 
 	void Start(){
-		inventoryList = new int[22];
+		inventoryLimit = 22;
 
-		itemImages = new Sprite[22];
-		for (int i = 0; i < 22; i++)
+		inventoryList = new int[inventoryLimit];
+		for (int i = 0; i < inventoryLimit; i++)
+			inventoryList[i] = -1;
+
+		itemImages = new Sprite[inventoryLimit];
+		for (int i = 0; i < inventoryLimit; i++)
 			itemImages [i] = items [i].GetComponent <Image> ().sprite;
 
-		itemSelects = new Toggle[22];
-		for (int i = 0; i < 22; i++)
-			itemSelects [i] = items [i].GetComponent <Toggle> ();
+		itemSlots = new Toggle[inventoryLimit];
+		for (int i = 0; i < inventoryLimit; i++)
+			itemSlots [i] = items [i].GetComponent <Toggle> ();
 
 		itemName.text = "아이템을 선택하세요.";
 		itemInfo.text = "";
@@ -41,8 +48,20 @@ public class InventoryManager : MonoBehaviour {
 	public void GetItemInfo(){
 		if (itemToggleGroup.AnyTogglesOn ()) {
 			for (int i = 0; i < 22; i++) {
-				if (itemSelects [i].isOn)
+				if (itemSlots [i].isOn) {
+					selectedItemSlotNum = i;
+
 					selectedItemImage.GetComponent <Image> ().sprite = itemImages [i];
+					itemName.text = "아이템이 선택됨";
+					itemInfo.text = "asd\noooooo\nfgd";
+					if (i < 16) {
+						item_Using_Question.SetActive (true);			
+						M_Chip_Using_Question.SetActive (false);
+					} else {
+						M_Chip_Using_Question.SetActive (true);
+						item_Using_Question.SetActive (false);
+					}
+				}
 			}
 		} else {
 			selectedItemImage.GetComponent <Image> ().sprite = sprite_None;
@@ -54,5 +73,17 @@ public class InventoryManager : MonoBehaviour {
 			item_Using_Question.SetActive (false);
 			M_Chip_Using_Question.SetActive (false);
 		}
+	}
+
+	public void UseItem(){
+		Debug.Log (selectedItemSlotNum + "번 슬롯의 아이템을 사용");
+	}
+
+	public void LeaveItem(){
+		Debug.Log (selectedItemSlotNum + "번 슬롯의 아이템을 버림");
+	}
+
+	public void PlayM_Chip(){
+		Debug.Log ((selectedItemSlotNum - 16) + "번 슬롯의 메모리칩을 재생");
 	}
 }

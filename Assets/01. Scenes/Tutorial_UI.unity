@@ -1271,7 +1271,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 159531328}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1951621397}
+        m_MethodName: PlayM_Chip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &159531328
@@ -8213,7 +8224,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1347388455}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1951621397}
+        m_MethodName: UseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1347388455
@@ -8983,7 +9005,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1463140421}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1951621397}
+        m_MethodName: LeaveItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1463140421
@@ -12295,8 +12328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46c826adc9324c6b81beae51b80d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryList: 
+  itemToggleGroup: {fileID: 849303144}
   selectedItemImage: {fileID: 318707910}
+  selectedItemSlotNum: 0
   items:
   - {fileID: 1832913589}
   - {fileID: 1985786011}
@@ -12320,7 +12354,6 @@ MonoBehaviour:
   - {fileID: 288321127}
   - {fileID: 1950957580}
   - {fileID: 1937645284}
-  itemToggleGroup: {fileID: 849303144}
   sprite_None: {fileID: 21300000, guid: 759d736bdd58643b0a4305244c8c3dda, type: 3}
   itemName: {fileID: 1806823972}
   itemInfo: {fileID: 1572714330}
