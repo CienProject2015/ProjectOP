@@ -14,4 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01. Scenes/Tank_Scene.unity
   - enabled: 1
-    path: Assets/01. Scenes/Tutorial_UI.unity
+    path: Assets/01. Scenes/Tutorial_UI_t.unity
