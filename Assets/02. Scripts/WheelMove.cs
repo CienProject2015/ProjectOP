@@ -69,7 +69,7 @@ public class WheelMove : MonoBehaviour {
 								tank.SendMessage("setRightWheelDirect", -1);
 								tank.SendMessage("setLeftWheelDirect", -1);
 								count++;
-								if (count == 90) {
+								if (count == 120) {
 									count = 0;
 									gameObject.SendMessage ("Scene13");
 								}
