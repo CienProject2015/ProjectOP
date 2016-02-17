@@ -122,6 +122,16 @@ public class ItemArray : MonoBehaviour {
                     Debug.Log("랜덤값" + random + ", " + other.gameObject.name + "아무것도 없다.");
                 }
             }
+            else if (name[1].Equals("PengRock"))
+            {
+                //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 날아다니는 전설인가?");
+                Debug.Log("펭귄이 날아다니는 전설인가?");
+            }
+            else if (name[1].Equals("SinkHole"))
+            {
+                //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "구멍에 빠져서 떨어졌다.");
+                Debug.Log("구멍에 빠져서 떨어졌다.");
+            }
         }
         else if(name[0].Equals("Items"))
         {
