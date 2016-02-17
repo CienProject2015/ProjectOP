@@ -64,7 +64,7 @@ public class TankMove : MonoBehaviour {
 			if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().onScene12) {
 				transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
 				count++;
-				if (count == 30) {
+				if (count == 60) {
 					count = 0;
 					GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().Scene13 ();
 				}
