@@ -35,7 +35,7 @@ public class LogManager : MonoBehaviour {
 			StartCoroutine ("TextFadeout");
 		for (int i = 3; i >= 0; i--) 
 			logString [i + 1] = logString [i];
-		logString [0] = count + " " + latestLogText;
+		logString [0] = latestLogText;
 		count++;
 	}
 

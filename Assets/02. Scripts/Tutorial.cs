@@ -12,6 +12,7 @@ public class Tutorial : MonoBehaviour {
 	private Animator anim;
 	float penguinSpeed;
 	float currentTime=0;
+	int timer;
 	bool noiseTab = false;
 
 	// Use this for initialization
@@ -29,8 +30,8 @@ public class Tutorial : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		currentTime += 1*Time.deltaTime;
-
+		currentTime += Time.deltaTime;
+		timer = (int)currentTime;
 		if (currentTime < 5) {
 			if (noiseTab) {
 				noiseTab = false;
@@ -42,7 +43,7 @@ public class Tutorial : MonoBehaviour {
 		}
 		if (currentTime >= 5 && currentTime <= 6) {
 			noiseAndGrain.intensityMultiplier = 0;
-			noiseAndGrain.enabled = false;
+			noiseAndGrain.enabled = false; 
 			Debug.Log ("check");
 
 		}
@@ -54,9 +55,10 @@ public class Tutorial : MonoBehaviour {
 		}
 
 		if (currentTime > 7 && currentTime < 10) {
+			gameObject.SendMessage ("ReceiveLog", "움직이지 않는다. 긴급키트를 사용하자.");
 			GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StartAlertAnim ();
 			GameObject target = GameObject.Find ("FrontRightWheel");
-			GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (target);
+			//GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (target);
 			//	GameObject.Find ("FrontRightWheel");
 		}
 		if (currentTime >= 10 && currentTime <= 11) {
@@ -113,6 +115,6 @@ public class Tutorial : MonoBehaviour {
 			penguin.transform.Translate (transform.forward * penguinSpeed * Time.deltaTime);
 		}
 		/////// 고속도로 타고 간다 ///////
-		Debug.Log (currentTime);
+		Debug.Log (timer);
 	}
 }
