@@ -100,6 +100,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07c6fb42db079e4eae6e4b3b4936f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &94805241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94805239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ba3d11b686d2841b78745597cef73f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &94805244 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d76a0cc563dc82547a491c3a0374c667, type: 3}
@@ -3353,6 +3364,10 @@ Prefab:
       propertyPath: Tank2
       value: 
       objectReference: {fileID: 1626990328}
+    - target: {fileID: 11498736, guid: b6f998761a49046488f306100719e784, type: 2}
+      propertyPath: obj_IceCube
+      value: 
+      objectReference: {fileID: 94805239}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6f998761a49046488f306100719e784, type: 2}
   m_IsPrefabParent: 0
