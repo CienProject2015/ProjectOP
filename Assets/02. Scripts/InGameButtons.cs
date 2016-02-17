@@ -13,7 +13,7 @@ public class InGameButtons : MonoBehaviour {
 	public GameObject menuButtonsText1, menuButtonsText2, menuButtonsText3, menuButtonsText4, menuButtonsText5;
 	public GameObject extensionButtonsText;
 	public GameObject SettingsMenuCanvus, SettingsMenu, CreditMenu;
-	public GameObject ItemMenuCanvus;
+	public GameObject ItemMenuCanvus, MapCanvus;
 	public GameObject penguin;
 
 	public void ViewChangeButtonPressed(bool thirdPersonView){
@@ -148,8 +148,13 @@ public class InGameButtons : MonoBehaviour {
 		}
 	}
 
+	public void MapButtonPressed(){
+		MapCanvus.SetActive (true);
+	}
+
 	public void CloseButtonPressed(){
 		SettingsMenuCanvus.SetActive (false);
 		ItemMenuCanvus.SetActive (false);
+		MapCanvus.SetActive (false);
 	}
 }

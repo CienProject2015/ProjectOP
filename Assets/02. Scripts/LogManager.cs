@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class LogManager : MonoBehaviour {
 
-	public GameObject gameLog;
+	public GameObject[] gameLogs;
+	public GameObject ObjectDetectLog;
 	public GameObject latestLog;
 	private string[] logString;
 	public int detectedObjectNumber;
@@ -25,7 +26,14 @@ public class LogManager : MonoBehaviour {
 	}
 
 	void Update(){
-		gameLog.GetComponent<Text> ().text = logString [4] + "\n" + logString [3] + "\n" + logString [2] + "\n" + logString [1] + "\n" + logString [0] + "\n" + logString [5] + "\n" + logString [6];
+		LogUpdate ();
+	}
+
+	void LogUpdate(){
+		for (int i = 0; i < 5; i++) {
+			gameLogs [i].GetComponent<Text> ().text = logString [i];
+		}
+		ObjectDetectLog.GetComponent<Text> ().text = logString [5] + "\n" + logString [6];
 	}
 
 	public void ReceiveLog(string latestLogText){
