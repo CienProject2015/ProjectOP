@@ -11,16 +11,16 @@ public class Tutorial : MonoBehaviour {
 	public GameObject penguin, tank2;
 	private Animator anim;
 	float penguinSpeed;
-	float currentTime=0;
-	int timer;
+	float deltaTime=0,timer;
 	bool noiseTab = false;
+	bool timeCount = true;
 
 	// Use this for initialization
 	void Start () {
 		noiseAndGrain = GameObject.Find ("MainCamera").GetComponent<NoiseAndGrain> ();
 		blur = GameObject.Find ("MainCamera").GetComponent<Blur> ();
 		anim = penguin.GetComponent<Animator>();
-		penguinSpeed = 2;
+		penguinSpeed = 3;
 		anim.SetFloat ("Speed", 10);
 		noiseAndGrain.intensityMultiplier = 10;
 		blur.enabled = true;
@@ -30,9 +30,13 @@ public class Tutorial : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		currentTime += Time.deltaTime;
-		timer = (int)currentTime;
-		if (currentTime < 5) {
+
+		if (timeCount) {
+			deltaTime += Time.deltaTime;
+			timer = (int)deltaTime;
+		}
+
+		if (timer < 5) {
 			if (noiseTab) {
 				noiseTab = false;
 				noiseAndGrain.intensityMultiplier++;
@@ -41,80 +45,88 @@ public class Tutorial : MonoBehaviour {
 				noiseAndGrain.intensityMultiplier--;
 			}
 		}
-		if (currentTime >= 5 && currentTime <= 6) {
+		if (timer == 5) {
 			noiseAndGrain.intensityMultiplier = 0;
 			noiseAndGrain.enabled = false; 
-			Debug.Log ("check");
-
 		}
-		if (currentTime > 6 && currentTime < 7) {
+		if (timer > 6 && timer < 7) {
 			blur.iterations--;
 		}
-		if (currentTime >= 7 && currentTime <= 8) {
+		if (timer == 7) {
 			blur.enabled = false;
 		}
 
-		if (currentTime > 7 && currentTime < 10) {
-			gameObject.SendMessage ("ReceiveLog", "움직이지 않는다. 긴급키트를 사용하자.");
-			GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StartAlertAnim ();
-			GameObject target = GameObject.Find ("FrontRightWheel");
-			//GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (target);
-			//	GameObject.Find ("FrontRightWheel");
+		if (timer == 8) {
+			timeCount = false;
+			timer++;
 		}
-		if (currentTime >= 10 && currentTime <= 11) {
-			GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StopAlertAnim ();
-		}
+
+
 
 		//////// 고속도로 타고온다 ///
-		///탱크 임의 조작 막아뒤야 한다 //
 
-		//if (tank2.transform.position.z + 5 < penguin.transform.position.z) {
-		if (currentTime > 10 && currentTime <= 17) {
-			anim.SetFloat ("Speed", 10);	
-			penguin.transform.LookAt (tank2.transform);
-			penguin.transform.Translate (transform.forward * penguinSpeed * Time.deltaTime);
+		if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().onScene10) {
+			if (tank2.transform.position.z + 20 < penguin.transform.position.z ) {
+				penguinSpeed = 10;
+				anim.SetFloat ("Speed", 20);	
+				penguin.transform.LookAt (tank2.transform);
+				penguin.transform.Translate (transform.forward * penguinSpeed * Time.deltaTime);
+			}
+			if (tank2.transform.position.z + 20 >= penguin.transform.position.z && tank2.transform.position.z + 10 < penguin.transform.position.z) {
+				penguinSpeed = 3;
+				anim.SetFloat ("Speed", 10);	
+				penguin.transform.LookAt (tank2.transform);
+				penguin.transform.Translate (transform.forward * penguinSpeed * Time.deltaTime);
+			}
+			if(tank2.transform.position.z + 10 >= penguin.transform.position.z && tank2.transform.position.z + 3 < penguin.transform.position.z){
+				anim.SetFloat ("Speed", 0);
+				anim.SetBool ("Happy", true);
+				timeCount = true;
+			}
 		}
-		//////
-		if (currentTime > 16 && currentTime <= 22) {
-			anim.SetFloat ("Speed", 0);
-			anim.SetBool ("Happy", true);
+	
+		if (timer == 10) {
+			if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().onScene10) {
+				GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().onScene10 = false;
+				GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().Scene12 ();
+			}
 		}
-		//////
-		if (currentTime > 19 && currentTime < 21) {
+
+		if (timer > 19 && timer < 21) {
 			GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StartAlertAnim ();
 		}
-		if (currentTime >= 21 && currentTime <= 22) {
+		if (timer >= 21 && timer <= 22) {
 			GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StopAlertAnim ();
 		}
-		if (currentTime > 20 && currentTime < 23) {
+		if (timer > 20 && timer < 23) {
 			anim.SetBool ("Happy", false);
 			tank2.transform.Translate(new Vector3(0,0,-4*Time.deltaTime)); 
 		}
 		/////
-		if (currentTime > 23 && currentTime < 29) {
+		if (timer > 23 && timer < 29) {
 				anim.SetFloat ("Speed", 20);
-			if(currentTime > 17)
+			if(timer > 17)
 				anim.SetFloat ("Speed", 10);
 			penguin.transform.LookAt (tank2.transform);
 			penguin.transform.Translate (transform.forward * penguinSpeed * Time.deltaTime);
 		}
 		////
-		if (currentTime > 28 && currentTime < 31) {
+		if (timer > 28 && timer < 31) {
 			anim.SetFloat ("Speed", 0);
 			anim.SetBool ("Happy", true);
 		}
 		////
-		if(currentTime > 31)
+		if(timer > 31)
 			anim.SetBool ("Happy", false);
-		if (currentTime > 32 && currentTime < 34) {
+		if (timer > 32 && timer < 34) {
 			penguin.transform.Rotate(new Vector3(0,100*Time.deltaTime, 0));
 		}
 		//
-		if (currentTime >= 34 && currentTime < 40) {
+		if (timer >= 34 && timer < 40) {
 			anim.SetFloat ("Speed", 20);
 			penguin.transform.Translate (transform.forward * penguinSpeed * Time.deltaTime);
 		}
 		/////// 고속도로 타고 간다 ///////
-		Debug.Log (timer);
+
 	}
 }

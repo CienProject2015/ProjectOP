@@ -7,6 +7,8 @@ public class TankMove : MonoBehaviour {
 	private float cycleSpeed;
 	private int leftWheelDiret, rightWheelDiret;
 
+	private int count = 0;
+
 	void Start () {
         cycleSpeed = speed * 5;
     }
@@ -44,16 +46,56 @@ public class TankMove : MonoBehaviour {
 		rightWheelDiret = direct;
     }
 
-	private void MoveForward(){
-		transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+	public void MoveForward(){
+		if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isTutorial) {
+			if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().onScene7) {
+				transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+				count++;
+				if (count == 30) {
+					count = 0;
+					GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().Scene8 ();
+				}
+			}
+		}else
+			transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
     }
-	private void MoveBack(){
-		transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
+	public void MoveBack(){
+		if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isTutorial) {
+			if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().onScene12) {
+				transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
+				count++;
+				if (count == 30) {
+					count = 0;
+					GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().Scene13 ();
+				}
+			}
+		}else
+			transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
 	}
-	private void TurnRight(){
+	public void TurnRight(){
+		if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isTutorial) {
+			if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().onScene9) {
+				transform.Rotate(new Vector3(0, cycleSpeed * Time.deltaTime, 0));
+				count++;
+				if (count == 40) {
+					count = 0;
+					GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().Scene10 ();
+				}
+			}
+		}else
 			transform.Rotate(new Vector3(0, cycleSpeed * Time.deltaTime, 0));
 	}
-	private void TurnLeft(){
+	public void TurnLeft(){
+		if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isTutorial) {
+			if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().onScene8) {
+				transform.Rotate(new Vector3(0, -cycleSpeed * Time.deltaTime, 0));
+				count++;
+				if (count == 40) {
+					count = 0;
+					GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().Scene9 ();
+				}
+			}
+		}else
 			transform.Rotate(new Vector3(0, -cycleSpeed * Time.deltaTime, 0));
 	}
 	void tank_stop(){

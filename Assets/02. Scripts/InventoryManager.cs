@@ -61,6 +61,12 @@ public class InventoryManager : MonoBehaviour {
 						M_Chip_Using_Question.SetActive (true);
 						item_Using_Question.SetActive (false);
 					}
+
+					if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
+						GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("Item Image 1"));
+						GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("UseButton"));
+
+					}
 				}
 			}
 		} else {
@@ -80,7 +86,9 @@ public class InventoryManager : MonoBehaviour {
 		items [selectedItemSlotNum].GetComponent<Image>().sprite = sprite_None;
 		itemImages [selectedItemSlotNum] = sprite_None;
 		GetItemInfo ();
+
 		if (gameObject.GetComponent<TutorialManager>().isTutorial && selectedItemSlotNum == 0) {
+			GameObject.Find ("ItemMenuCanvus").SetActive (false);
 			gameObject.SendMessage ("Scene6");
 		}
 	}

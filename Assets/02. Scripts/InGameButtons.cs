@@ -114,9 +114,13 @@ public class InGameButtons : MonoBehaviour {
 		menuButtonsText4.SetActive (isExtended);
 		menuButtonsText5.SetActive (isExtended);
 		stateWindow.SetActive (!isExtended);
-		if (isExtended)
+		if (isExtended) {
+			if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("ExtensionButton"));
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("InventoryButton"));
+			}
 			extensionButtonsText.GetComponent<Text> ().text = "축소";
-		else if (!isExtended)
+		}else if (!isExtended)
 			extensionButtonsText.GetComponent<Text> ().text = "확장";
 	}
 
@@ -138,6 +142,10 @@ public class InGameButtons : MonoBehaviour {
 
 	public void ItemButtonPressed(){
 		ItemMenuCanvus.SetActive (true);
+		if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
+			GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("InventoryButton"));
+			GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("Item Image 1"));
+		}
 	}
 
 	public void CloseButtonPressed(){
