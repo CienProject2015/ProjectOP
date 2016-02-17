@@ -132,6 +132,17 @@ public class ItemArray : MonoBehaviour {
                 //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "구멍에 빠져서 떨어졌다.");
                 Debug.Log("구멍에 빠져서 떨어졌다.");
             }
+            else if (name[1].Equals("IceCube"))
+            {
+                Destroy(other.gameObject);
+                //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 호기심어린 눈빛으로 고래의 사체를 관찰한다.");
+                Debug.Log("펭귄이 호기심어린 눈빛으로 고래의 사체를 관찰한다.");
+            }
+            else if (name[1].Equals("PenguinTotemOld"))
+            {
+                //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "세워져 있으나 많이 파손되어 있다. 별다른 기능이 없어 보인다");
+                Debug.Log("세워져 있으나 많이 파손되어 있다. 별다른 기능이 없어 보인다");
+            }
         }
         else if(name[0].Equals("Items"))
         {
