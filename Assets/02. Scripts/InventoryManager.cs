@@ -57,6 +57,17 @@ public class InventoryManager : MonoBehaviour {
 		}
 	}
 
+	private void InventorySort(){
+		int temp;
+		for (int i = 0; i < 16; i++) {
+			if (inventoryList [i] == -1) {
+				for (int j = i; j < 15; j++) {
+					inventoryList [j] = inventoryList [j + 1];
+				}
+			}
+		}
+	}
+
 	public void GetItemInfo(){
 		if (itemToggleGroup.AnyTogglesOn ()) {
 			for (int i = 0; i < 22; i++) {
