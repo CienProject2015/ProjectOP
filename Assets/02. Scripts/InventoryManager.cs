@@ -13,7 +13,6 @@ public class InventoryManager : MonoBehaviour {
 	public int selectedItemSlotNum;
 
 	public GameObject[] items;
-	private Sprite[] itemImages;
 	public Sprite sprite_None;
 
 	public Text itemName;
@@ -30,10 +29,6 @@ public class InventoryManager : MonoBehaviour {
 		for (int i = 0; i < inventoryLimit; i++)
 			inventoryList[i] = 1;
 
-		itemImages = new Sprite[inventoryLimit];
-		for (int i = 0; i < inventoryLimit; i++)
-			itemImages [i] = items [i].GetComponent <Image> ().sprite;
-
 		itemSlots = new Toggle[inventoryLimit];
 		for (int i = 0; i < inventoryLimit; i++)
 			itemSlots [i] = items [i].GetComponent <Toggle> ();
@@ -41,29 +36,42 @@ public class InventoryManager : MonoBehaviour {
 		itemName.text = "아이템을 선택하세요.";
 		itemInfo.text = "";
 
+		GetInventoryItemImage();
+
 		item_Using_Question.SetActive (false);
 		M_Chip_Using_Question.SetActive (false);
 	}
 
-	void Update(){
-		GetInventoryItemImage ();
+	private void GetInventoryItemImage(){
+		for (int i = 0; i < inventoryLimit; i++) {
+			if (items [i].GetComponent <Image> ().sprite)
+				Debug.Log ("Inven " + i);
+			if (Config.itemSprite [inventoryList [i]])
+				Debug.Log ("List " + i);
+			items [i].GetComponent <Image> ().sprite = Config.itemSprite [inventoryList [i]];
+			if (inventoryList [i] == 0)
+				items [i].GetComponent <Image> ().sprite = sprite_None;
+		}
 	}
 
-	private void GetInventoryItemImage(){
-		for (int i = 0; i < 22; i++) {
-			items [i].GetComponent <Image> ().sprite = Config.itemSprite [inventoryList [i]];
-			if (inventoryList [i] == -1)
-				items [i].GetComponent <Image> ().sprite = sprite_None;
+	private void InventorySort(){
+		for (int i = 0; i < 16; i++) {
+			if (inventoryList [i] == 0) {
+				for (int j = i; j < 15; j++) {
+					inventoryList [j] = inventoryList [j + 1];
+				}
+				inventoryList [15] = 0;
+			}
 		}
 	}
 
 	public void GetItemInfo(){
 		if (itemToggleGroup.AnyTogglesOn ()) {
-			for (int i = 0; i < 22; i++) {
+			for (int i = 0; i < inventoryLimit; i++) {
 				if (itemSlots [i].isOn) {
 					selectedItemSlotNum = i;
 
-					selectedItemImage.GetComponent <Image> ().sprite = itemImages [i];
+					selectedItemImage.GetComponent <Image> ().sprite = Config.itemSprite [inventoryList [i]];
 					itemName.text = Config.itemName [inventoryList [i]];
 					itemInfo.text = Config.itemInfo [inventoryList [i]];
 					if (Config.canUseItem [inventoryList [i]]) {
@@ -100,9 +108,9 @@ public class InventoryManager : MonoBehaviour {
 
 	public void UseItem(){
 		Debug.Log (selectedItemSlotNum + "번 슬롯의 아이템을 사용");
-		items [selectedItemSlotNum].GetComponent<Image>().sprite = sprite_None;
-		itemImages [selectedItemSlotNum] = sprite_None;
-		GetItemInfo ();
+		inventoryList [selectedItemSlotNum] = 0;
+		InventorySort ();
+		GetInventoryItemImage ();
 
 		if (gameObject.GetComponent<TutorialManager>().isTutorial && selectedItemSlotNum == 0) {
 			GameObject.Find ("ItemMenuCanvus").SetActive (false);
@@ -117,8 +125,9 @@ public class InventoryManager : MonoBehaviour {
 		} else {
 			
 		}
-		inventoryList [selectedItemSlotNum] = -1;
-		GetItemInfo ();
+		inventoryList [selectedItemSlotNum] = 0;
+		InventorySort ();
+		GetInventoryItemImage ();
 	}
 
 	public void PlayM_Chip(){

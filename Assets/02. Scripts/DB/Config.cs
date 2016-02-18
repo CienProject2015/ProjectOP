@@ -7,7 +7,7 @@ public class Config : MonoBehaviour {
 	//item info
 
 	public static string[] itemName = new string[2]				
-	{"peng","bb"};
+	{"empty","bb"};
 
 	public static string[] itemInfo = new string[2]				
 	{"fff","fff"};

@@ -12632,7 +12632,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 971d09b47acce674291e019a31772816, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 759d736bdd58643b0a4305244c8c3dda, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -13490,6 +13490,7 @@ GameObject:
   - 114: {fileID: 1951621405}
   - 114: {fileID: 1951621406}
   - 114: {fileID: 1951621407}
+  - 114: {fileID: 1951621408}
   m_Layer: 0
   m_Name: _EventSystem
   m_TagString: Untagged
@@ -13705,6 +13706,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582c5c919c92b124f9a386cb105b889c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1951621408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1951621396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4543893940b2bbb4b800aaf0b3e789d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStage: 0
+  sprite:
+  - {fileID: 21300000, guid: 9674c73c367ffc74c8d7823798b19674, type: 3}
+  - {fileID: 21300000, guid: 0e109f7832a45374983521bae6001299, type: 3}
 --- !u!1 &1985786011
 GameObject:
   m_ObjectHideFlags: 0
