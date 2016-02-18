@@ -7,10 +7,12 @@ public class Config : MonoBehaviour {
 	//item info
 
 	public static string[] itemName = new string[2]				
-	{"aa","bb"};
+	{"peng","bb"};
 
 	public static string[] itemInfo = new string[2]				
 	{"fff","fff"};
+
+	public Sprite[] itemSprite = new Sprite[2];				
 
 	public static bool[] canUseItem = new bool[2]						
 	{true,true};
@@ -32,6 +34,5 @@ public class Config : MonoBehaviour {
 
 	public static bool[] canFindObject = new bool[2]
 	{true,true};
-
 
 }
