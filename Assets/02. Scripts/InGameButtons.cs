@@ -14,10 +14,16 @@ public class InGameButtons : MonoBehaviour {
 	public GameObject extensionButtonsText;
 	public GameObject SettingsMenuCanvus, SettingsMenu, CreditMenu;
 	public GameObject ItemMenuCanvus, MapCanvus;
-	public GameObject penguin;
+	public GameObject[] UIs;
+	GameObject penguin;
+
+
+	void Start(){
+		penguin = GameObject.Find ("Penguin");
+	}
+
 
 	public void ViewChangeButtonPressed(bool thirdPersonView){
-		Debug.Log ("Check");
 
 		gameObject.GetComponent<WheelMove> ().isFirstPersonView = !thirdPersonView;
 		gameObject.GetComponent<ThirdPersonViewCameraMoving> ().isThirdPersonView = thirdPersonView;
@@ -53,7 +59,6 @@ public class InGameButtons : MonoBehaviour {
 			else if (pictureMenuButton.name == "SearcherButton") {
 				ViewChangeButtonPressed (true);
 			} else if (pictureMenuButton.name == "UIButton") {
-				GameObject[] UIs = GameObject.FindGameObjectsWithTag ("MainUI");
 				foreach (GameObject UI in UIs) {
 					UI.SetActive (false);
 				}	
@@ -71,10 +76,7 @@ public class InGameButtons : MonoBehaviour {
 			else if (pictureMenuButton.name == "SearcherButton") {
 				ViewChangeButtonPressed (false);
 			} else if (pictureMenuButton.name == "UIButton") {
-				//GameObject[] UIs = GameObject.FindGameObjectsWithTag ("MainUI");
-				//foreach (GameObject UI in UIs) {
-				//	UI.SetActive (true);
-				//}
+				
 				UIBackground.SetActive (true);
 				penguinAnim.SetActive (true);
 			} else if (pictureMenuButton.name == "PenguinButton") {

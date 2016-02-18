@@ -9,6 +9,11 @@ public class ThirdPersonViewCameraMoving : MonoBehaviour {
 	public float cameraRotateXSpeed;
 	public float cameraRotateYSpeed;
 
+	void Start(){
+		//searcher = GameObject.Find ("Searcher");
+		searchCamera = GameObject.Find ("SearchCamera").GetComponent<Camera>();
+	}
+
     void Update()
     {
 		if (isThirdPersonView) {
@@ -17,8 +22,8 @@ public class ThirdPersonViewCameraMoving : MonoBehaviour {
 				Ray ray = searchCamera.ScreenPointToRay (Input.GetTouch (i).position);
 				RaycastHit hit;
 				if (Physics.Raycast (ray, out hit) && hit.collider.tag == "Camera Moving Field") {
-					searcher.transform.Rotate (0, Input.GetTouch (i).deltaPosition.x * cameraRotateXSpeed, 0);
-					searchCamera.transform.Rotate (Input.GetTouch (i).deltaPosition.y * cameraRotateYSpeed, 0, 0);
+					searchCamera.transform.Rotate (0, Input.GetTouch (i).deltaPosition.x * cameraRotateXSpeed, 0);
+					//searchCamera.transform.Rotate (Input.GetTouch (i).deltaPosition.y * cameraRotateYSpeed, 0, 0);
 					Debug.Log (Input.GetTouch (i).deltaPosition.x);
 				}
 			}

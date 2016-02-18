@@ -9,7 +9,7 @@ public class TankMove : MonoBehaviour {
 
 
 	void Start () {
-        cycleSpeed = speed * 3;
+        cycleSpeed = speed * 2;
     }
 	
 	void Update () {

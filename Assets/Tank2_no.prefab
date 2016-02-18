@@ -3172,6 +3172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj_panel: {fileID: 0}
   obj_act_panel: {fileID: 0}
+  obj_IceCube: {fileID: 0}
   Items_MemoryChip: {fileID: 0}
   Text_Trash_Active: {fileID: 0}
   Text_Trash_hint: {fileID: 0}
