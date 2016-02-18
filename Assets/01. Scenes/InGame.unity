@@ -2271,19 +2271,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   tank2: {fileID: 1626990328}
---- !u!136 &407799726
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 407799721}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!65 &407799727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2294,8 +2281,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 1}
-  m_Center: {x: 1, y: 0.5, z: -1}
+  m_Size: {x: 3, y: 1, z: 3}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &407816375
 Prefab:
   m_ObjectHideFlags: 0
@@ -7169,8 +7156,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.93, y: 2.6, z: 1.42}
-  m_Center: {x: 0.55, y: 1.55, z: -0.45}
+  m_Size: {x: 3, y: 1, z: 3}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1056979980
 Prefab:
   m_ObjectHideFlags: 0
@@ -10690,6 +10677,18 @@ Terrain:
 GameObject:
   m_PrefabParentObject: {fileID: 169126, guid: b6f998761a49046488f306100719e784, type: 2}
   m_PrefabInternal: {fileID: 1101820497}
+--- !u!65 &1626990334
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1626990328}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1, z: 3}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1627450495
 GameObject:
   m_ObjectHideFlags: 0
@@ -11750,6 +11749,7 @@ GameObject:
   - 114: {fileID: 1765456160}
   - 114: {fileID: 1765456159}
   - 114: {fileID: 1765456163}
+  - 114: {fileID: 1765456162}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -11801,6 +11801,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1765456162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1765456158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6396bcded60b884383b6537e0f0b700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1765456163
 MonoBehaviour:
   m_ObjectHideFlags: 0
