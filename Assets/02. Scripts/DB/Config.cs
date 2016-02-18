@@ -12,7 +12,8 @@ public class Config : MonoBehaviour {
 	public static string[] itemInfo = new string[2]				
 	{"fff","fff"};
 
-	public Sprite[] itemSprite = new Sprite[2];				
+	public static Sprite[] itemSprite = new Sprite[2]
+	{ null, null };
 
 	public static bool[] canUseItem = new bool[2]						
 	{true,true};

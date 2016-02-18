@@ -28,7 +28,7 @@ public class InventoryManager : MonoBehaviour {
 
 		inventoryList = new int[inventoryLimit];
 		for (int i = 0; i < inventoryLimit; i++)
-			inventoryList[i] = -1;
+			inventoryList[i] = 1;
 
 		itemImages = new Sprite[inventoryLimit];
 		for (int i = 0; i < inventoryLimit; i++)

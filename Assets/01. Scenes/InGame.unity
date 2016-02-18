@@ -5621,7 +5621,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &1765456162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6073,6 +6073,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStage: 0
+  sprite:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1947217571
 MonoBehaviour:
   m_ObjectHideFlags: 0
