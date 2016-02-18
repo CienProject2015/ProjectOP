@@ -44,10 +44,6 @@ public class InventoryManager : MonoBehaviour {
 
 	private void GetInventoryItemImage(){
 		for (int i = 0; i < inventoryLimit; i++) {
-			if (items [i].GetComponent <Image> ().sprite)
-				Debug.Log ("Inven " + i);
-			if (Config.itemSprite [inventoryList [i]])
-				Debug.Log ("List " + i);
 			items [i].GetComponent <Image> ().sprite = Config.itemSprite [inventoryList [i]];
 			if (inventoryList [i] == 0)
 				items [i].GetComponent <Image> ().sprite = sprite_None;
@@ -111,6 +107,8 @@ public class InventoryManager : MonoBehaviour {
 		inventoryList [selectedItemSlotNum] = 0;
 		InventorySort ();
 		GetInventoryItemImage ();
+		selectedItemImage.GetComponent <Image> ().sprite = sprite_None;
+		GetItemInfo ();
 
 		if (gameObject.GetComponent<TutorialManager>().isTutorial && selectedItemSlotNum == 0) {
 			GameObject.Find ("ItemMenuCanvus").SetActive (false);
@@ -123,11 +121,12 @@ public class InventoryManager : MonoBehaviour {
 		if (gameObject.GetComponent<TutorialManager> ().isTutorial && selectedItemSlotNum == 0) {
 			gameObject.SendMessage ("ReceiveLog", "이 아이템은 버릴 수 없다.");
 		} else {
-			
+			inventoryList [selectedItemSlotNum] = 0;
+			InventorySort ();
+			GetInventoryItemImage ();
+			selectedItemImage.GetComponent <Image> ().sprite = sprite_None;
+			GetItemInfo ();
 		}
-		inventoryList [selectedItemSlotNum] = 0;
-		InventorySort ();
-		GetInventoryItemImage ();
 	}
 
 	public void PlayM_Chip(){

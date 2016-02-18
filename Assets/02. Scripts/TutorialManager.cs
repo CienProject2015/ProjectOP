@@ -76,22 +76,22 @@ public class TutorialManager : MonoBehaviour {
 
 	public void Scene7(){
 		gameObject.SendMessage ("ReceiveLog", "두 바퀴를 움직여 전진한다.");
-		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("FrontRightWheel"));
-		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("FrontLeftWheel"));
+		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_FrontRightWheel"));
+		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_FrontLeftWheel"));
 		onScene7 = true;
 	}
 
 	public void Scene8(){
 		onScene7 = false;
 		gameObject.SendMessage ("ReceiveLog", "오른쪽 바퀴를 움직여 좌회전한다.");
-		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("FrontRightWheel"));
+		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_FrontRightWheel"));
 		onScene8 = true;
 	}
 
 	public void Scene9(){
 		onScene8 = false;
 		gameObject.SendMessage ("ReceiveLog", "왼쪽 바퀴를 움직여 우회전한다.");
-		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("FrontLeftWheel"));
+		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_FrontLeftWheel"));
 		onScene9 = true;
 	}
 
@@ -103,16 +103,16 @@ public class TutorialManager : MonoBehaviour {
 
 	public void Scene12(){
 		GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StartAlertAnim ();
-		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("BackRightWheel"));
-		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("BackLeftWheel"));
+		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_BackRightWheel"));
+		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_BackLeftWheel"));
 		gameObject.SendMessage ("ReceiveLog", "이상한 생명체다. 도망가자.");
 		onScene12 = true;
 	}
 
 	public void Scene13(){
 		GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StopAlertAnim ();
-		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("BackRightWheel"));
-		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("BackLeftWheel"));
+		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("_BackRightWheel"));
+		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("_BackLeftWheel"));
 		onScene12 = false;
 		onScene13 = true;
 	}

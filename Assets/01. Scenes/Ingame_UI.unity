@@ -374,7 +374,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 26176969}
   m_Layer: 5
-  m_Name: FrontLeft
+  m_Name: _FrontLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1962,7 +1962,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 216776248}
   m_Layer: 5
-  m_Name: BackRight
+  m_Name: _BackRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8359,7 +8359,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1253234777}
   m_Layer: 5
-  m_Name: BackLeft
+  m_Name: _BackLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14071,7 +14071,7 @@ MonoBehaviour:
   CreditMenu: {fileID: 867265603}
   ItemMenuCanvus: {fileID: 142561347}
   MapCanvus: {fileID: 648358887}
-  penguin: {fileID: 0}
+  UIs: []
 --- !u!114 &1951621401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14438,7 +14438,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 2002731739}
   m_Layer: 5
-  m_Name: FrontRight
+  m_Name: _FrontRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
