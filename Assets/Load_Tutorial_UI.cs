@@ -5,7 +5,7 @@ public class Load_Tutorial_UI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Application.LoadLevelAdditive (4);
+		Application.LoadLevelAdditive ("InGame_UI");
 	}
 	
 	// Update is called once per frame

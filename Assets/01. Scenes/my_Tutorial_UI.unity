@@ -160,7 +160,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621405}
+      - m_Target: {fileID: 0}
         m_MethodName: StopTwinkle
         m_Mode: 2
         m_Arguments:
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621400}
+      - m_Target: {fileID: 0}
         m_MethodName: SettingsButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621405}
+      - m_Target: {fileID: 0}
         m_MethodName: StopTwinkle
         m_Mode: 2
         m_Arguments:
@@ -1573,7 +1573,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayM_Chip
         m_Mode: 1
         m_Arguments:
@@ -2063,7 +2063,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -2186,7 +2186,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621400}
+      - m_Target: {fileID: 0}
         m_MethodName: ItemButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -2375,7 +2375,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -2637,7 +2637,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621398}
+      - m_Target: {fileID: 0}
         m_MethodName: ReceiveLog
         m_Mode: 5
         m_Arguments:
@@ -2893,7 +2893,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621400}
+      - m_Target: {fileID: 0}
         m_MethodName: CloseButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -3014,7 +3014,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621405}
+      - m_Target: {fileID: 0}
         m_MethodName: StartTwinkle
         m_Mode: 2
         m_Arguments:
@@ -3858,7 +3858,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -5180,7 +5180,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -5377,7 +5377,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -6488,7 +6488,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -6610,7 +6610,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621400}
+      - m_Target: {fileID: 0}
         m_MethodName: SettingsTapPressed
         m_Mode: 1
         m_Arguments:
@@ -6832,7 +6832,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621400}
+      - m_Target: {fileID: 0}
         m_MethodName: CloseButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -7178,7 +7178,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -8304,7 +8304,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621405}
+      - m_Target: {fileID: 0}
         m_MethodName: StartTwinkle
         m_Mode: 2
         m_Arguments:
@@ -8606,7 +8606,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -8803,7 +8803,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -9059,7 +9059,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621400}
+      - m_Target: {fileID: 0}
         m_MethodName: CreditTapPressed
         m_Mode: 1
         m_Arguments:
@@ -9256,7 +9256,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -9379,7 +9379,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: UseItem
         m_Mode: 1
         m_Arguments:
@@ -9774,7 +9774,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -9971,7 +9971,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -10160,7 +10160,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: LeaveItem
         m_Mode: 1
         m_Arguments:
@@ -10493,7 +10493,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -10851,7 +10851,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -11462,7 +11462,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -12227,7 +12227,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -12522,7 +12522,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -12971,7 +12971,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -13641,7 +13641,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621400}
+      - m_Target: {fileID: 0}
         m_MethodName: CloseButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -13797,7 +13797,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -13921,7 +13921,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -13935,239 +13935,6 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
---- !u!1 &1951621396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1951621404}
-  - 114: {fileID: 1951621403}
-  - 114: {fileID: 1951621402}
-  - 114: {fileID: 1951621401}
-  - 114: {fileID: 1951621400}
-  - 114: {fileID: 1951621399}
-  - 114: {fileID: 1951621398}
-  - 114: {fileID: 1951621397}
-  - 114: {fileID: 1951621405}
-  - 114: {fileID: 1951621406}
-  - 114: {fileID: 1951621407}
-  m_Layer: 0
-  m_Name: _EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1951621397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f46c826adc9324c6b81beae51b80d25c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemToggleGroup: {fileID: 849303144}
-  selectedItemImage: {fileID: 318707910}
-  selectedItemSlotNum: 0
-  items:
-  - {fileID: 1832913589}
-  - {fileID: 1985786011}
-  - {fileID: 1438435057}
-  - {fileID: 989087874}
-  - {fileID: 1274652570}
-  - {fileID: 1543318454}
-  - {fileID: 1345813378}
-  - {fileID: 1767114572}
-  - {fileID: 1575188977}
-  - {fileID: 1095194197}
-  - {fileID: 1417395332}
-  - {fileID: 536079032}
-  - {fileID: 233181675}
-  - {fileID: 1277946634}
-  - {fileID: 1640840104}
-  - {fileID: 1732067954}
-  - {fileID: 716694902}
-  - {fileID: 793497923}
-  - {fileID: 2033923328}
-  - {fileID: 288321127}
-  - {fileID: 1950957580}
-  - {fileID: 1937645284}
-  sprite_None: {fileID: 21300000, guid: 759d736bdd58643b0a4305244c8c3dda, type: 3}
-  itemName: {fileID: 1806823972}
-  itemInfo: {fileID: 1572714330}
-  item_Using_Question: {fileID: 1904174071}
-  M_Chip_Using_Question: {fileID: 1823345427}
---- !u!114 &1951621398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b96feecb391ab4ef896b87612c5b3ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameLogs:
-  - {fileID: 1854511682}
-  - {fileID: 2054189749}
-  - {fileID: 1275515303}
-  - {fileID: 1702419525}
-  - {fileID: 333015697}
-  ObjectDetectLog: {fileID: 168846172}
-  latestLog: {fileID: 1197701253}
-  detectedObjectNumber: 0
---- !u!114 &1951621399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38b11d98622734561a7cdf7137e07cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isThirdPersonView: 0
-  searcher: {fileID: 189304, guid: 5ed12f77411e849d995c86f1290c4fca, type: 2}
-  searchCamera: {fileID: 2093652, guid: 5ed12f77411e849d995c86f1290c4fca, type: 2}
-  cameraRotateXSpeed: 0.3
-  cameraRotateYSpeed: -0.1
---- !u!114 &1951621400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6994f2fed32d49c58753d35372bfcda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIBackground: {fileID: 2046711029}
-  penguinAnim: {fileID: 0}
-  stateWindow: {fileID: 834226958}
-  menuButtons: {fileID: 310242797}
-  viewRetrunButton: {fileID: 0}
-  pictureMenu: {fileID: 0}
-  tank2Button: {fileID: 0}
-  sheacherButton: {fileID: 0}
-  UIButton: {fileID: 0}
-  penguinButton: {fileID: 0}
-  menuButtonsText1: {fileID: 1150280619}
-  menuButtonsText2: {fileID: 1430795035}
-  menuButtonsText3: {fileID: 912294943}
-  menuButtonsText4: {fileID: 1613195700}
-  menuButtonsText5: {fileID: 130475590}
-  extensionButtonsText: {fileID: 1838532674}
-  SettingsMenuCanvus: {fileID: 1682975168}
-  SettingsMenu: {fileID: 876158759}
-  CreditMenu: {fileID: 867265603}
-  ItemMenuCanvus: {fileID: 142561347}
-  MapCanvus: {fileID: 648358887}
-  UIs: []
---- !u!114 &1951621401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bfa91865e36b4569adfeaed478d3fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFirstPersonView: 1
---- !u!114 &1951621402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1951621403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &1951621404
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
---- !u!114 &1951621405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68922763f45d04f16b0d1fb77f2e50ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1951621406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42418241426594efd9376368b69aaf86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTutorial: 1
-  onScene7: 0
-  onScene8: 0
-  onScene9: 0
-  onScene10: 0
-  onScene12: 0
-  onScene13: 0
-  onScene15: 0
---- !u!114 &1951621407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1951621396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 582c5c919c92b124f9a386cb105b889c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1985786011
 GameObject:
   m_ObjectHideFlags: 0
@@ -14245,7 +14012,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -14367,7 +14134,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621400}
+      - m_Target: {fileID: 0}
         m_MethodName: MapButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -14705,7 +14472,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621397}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -15189,7 +14956,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1951621400}
+      - m_Target: {fileID: 0}
         m_MethodName: MenuExtensionButtonPressed
         m_Mode: 0
         m_Arguments:

@@ -17,6 +17,9 @@ public class Tutorial : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		//GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isTutorial = true;
+
 		noiseAndGrain = GameObject.Find ("MainCamera").GetComponent<NoiseAndGrain> ();
 		blur = GameObject.Find ("MainCamera").GetComponent<Blur> ();
 		anim = penguin.GetComponent<Animator>();

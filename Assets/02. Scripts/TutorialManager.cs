@@ -24,7 +24,6 @@ public class TutorialManager : MonoBehaviour {
 
 	void Start () {
 
-		isTutorial = true;
 		onScene7 = false;
 		onScene8 = false;
 		onScene9 = false;
@@ -41,12 +40,14 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	void Update () {
-		if (timeCount) {
-			deltaTime += Time.deltaTime;
-			timer = (int)deltaTime;
-		}
+		if (isTutorial) {
+			if (timeCount) {
+				deltaTime += Time.deltaTime;
+				timer = (int)deltaTime;
+			}
 
-		timeAction ();
+			timeAction ();
+		}
 
 	}
 

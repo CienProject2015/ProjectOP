@@ -599,7 +599,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: ViewChangeButtonPressed
         m_Mode: 6
         m_Arguments:
@@ -933,7 +933,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -1367,7 +1367,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: MenuExtensionButtonPressed
         m_Mode: 0
         m_Arguments:
@@ -1593,7 +1593,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -2230,7 +2230,7 @@ Prefab:
     - target: {fileID: 11427738, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1765456164}
+      objectReference: {fileID: 0}
     - target: {fileID: 11427738, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PictureButtonPressed
@@ -2362,23 +2362,23 @@ Prefab:
     - target: {fileID: 11482050, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1765456164}
+      objectReference: {fileID: 0}
     - target: {fileID: 11475392, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1765456164}
+      objectReference: {fileID: 0}
     - target: {fileID: 11495500, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1765456164}
+      objectReference: {fileID: 0}
     - target: {fileID: 11462328, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1765456164}
+      objectReference: {fileID: 0}
     - target: {fileID: 11460816, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1765456164}
+      objectReference: {fileID: 0}
     - target: {fileID: 11460816, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
@@ -2410,10 +2410,6 @@ GameObject:
 --- !u!1 &368743708 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 164098, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
-  m_PrefabInternal: {fileID: 368743703}
---- !u!1 &368743709 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 136060, guid: 72ac5e3697f057a419aa270c5066e191, type: 2}
   m_PrefabInternal: {fileID: 368743703}
 --- !u!1 &381887927
 GameObject:
@@ -2648,7 +2644,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -2955,7 +2951,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: SecondAnimPressed
         m_Mode: 1
         m_Arguments:
@@ -3113,7 +3109,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -3269,7 +3265,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: CreditTapPressed
         m_Mode: 1
         m_Arguments:
@@ -3425,7 +3421,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -3911,7 +3907,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -4139,7 +4135,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: CloseButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -4328,7 +4324,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: CloseButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -4692,7 +4688,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: ThirdAnimPressed
         m_Mode: 1
         m_Arguments:
@@ -5034,7 +5030,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: PictureButtonPressed
         m_Mode: 6
         m_Arguments:
@@ -5258,7 +5254,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -5664,7 +5660,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -5921,7 +5917,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -6629,7 +6625,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -6720,7 +6716,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: FirstAnimPressed
         m_Mode: 1
         m_Arguments:
@@ -6843,7 +6839,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456165}
+      - m_Target: {fileID: 0}
         m_MethodName: ReceiveLog
         m_Mode: 5
         m_Arguments:
@@ -6999,7 +6995,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -7088,7 +7084,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: ItemButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -7209,7 +7205,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: SettingsButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -7365,7 +7361,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -7948,7 +7944,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -8437,7 +8433,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -9408,7 +9404,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -9798,187 +9794,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1756666198}
---- !u!1 &1765456158
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1765456161}
-  - 114: {fileID: 1765456160}
-  - 114: {fileID: 1765456159}
-  - 114: {fileID: 1765456163}
-  - 114: {fileID: 1765456164}
-  - 114: {fileID: 1765456162}
-  - 114: {fileID: 1765456165}
-  - 114: {fileID: 1765456166}
-  m_Layer: 0
-  m_Name: _EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1765456159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1765456158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1765456160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1765456158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &1765456161
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1765456158}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
---- !u!114 &1765456162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1765456158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38b11d98622734561a7cdf7137e07cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isThirdPersonView: 0
-  searcher: {fileID: 189304, guid: 5ed12f77411e849d995c86f1290c4fca, type: 2}
-  searchCamera: {fileID: 2093652, guid: 5ed12f77411e849d995c86f1290c4fca, type: 2}
-  cameraRotateXSpeed: 0.3
-  cameraRotateYSpeed: -0.1
---- !u!114 &1765456163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1765456158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bfa91865e36b4569adfeaed478d3fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFirstPersonView: 1
---- !u!114 &1765456164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1765456158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6994f2fed32d49c58753d35372bfcda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIBackground: {fileID: 1699191775}
-  penguinAnim: {fileID: 0}
-  stateWindow: {fileID: 2141258809}
-  menuButtons: {fileID: 519207107}
-  viewRetrunButton: {fileID: 126533229}
-  pictureMenu: {fileID: 368743709}
-  tank2Button: {fileID: 368743708}
-  sheacherButton: {fileID: 368743707}
-  UIButton: {fileID: 368743706}
-  penguinButton: {fileID: 368743705}
-  menuButtonsText1: {fileID: 1600483654}
-  menuButtonsText2: {fileID: 888597497}
-  menuButtonsText3: {fileID: 17481987}
-  menuButtonsText4: {fileID: 1291199189}
-  menuButtonsText5: {fileID: 82806953}
-  extensionButtonsText: {fileID: 790885520}
-  SettingsMenuCanvus: {fileID: 319257145}
-  SettingsMenu: {fileID: 1071448063}
-  CreditMenu: {fileID: 1472067342}
-  ItemMenuCanvus: {fileID: 515386495}
-  MapCanvus: {fileID: 0}
-  UIs:
-  - {fileID: 1699191775}
-  - {fileID: 1344679388}
-  - {fileID: 587647422}
---- !u!114 &1765456165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1765456158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b96feecb391ab4ef896b87612c5b3ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameLogs: []
-  ObjectDetectLog: {fileID: 0}
-  latestLog: {fileID: 587647422}
-  detectedObjectNumber: 0
---- !u!114 &1765456166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1765456158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f46c826adc9324c6b81beae51b80d25c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemToggleGroup: {fileID: 1700506155}
-  selectedItemImage: {fileID: 2036182504}
-  selectedItemSlotNum: 0
-  items:
-  - {fileID: 2031198777}
-  - {fileID: 1443524787}
-  - {fileID: 1260734383}
-  - {fileID: 1138924934}
-  - {fileID: 848143913}
-  - {fileID: 271261049}
-  - {fileID: 585668755}
-  - {fileID: 1695949112}
-  - {fileID: 945867783}
-  - {fileID: 563016673}
-  - {fileID: 905085757}
-  - {fileID: 1306945010}
-  - {fileID: 1221324581}
-  - {fileID: 513655976}
-  - {fileID: 632935446}
-  - {fileID: 138803054}
-  sprite_None: {fileID: 21300000, guid: 759d736bdd58643b0a4305244c8c3dda, type: 3}
-  itemName: {fileID: 0}
-  itemInfo: {fileID: 0}
-  item_Using_Question: {fileID: 0}
-  M_Chip_Using_Question: {fileID: 0}
 --- !u!1 &1784127158
 GameObject:
   m_ObjectHideFlags: 0
@@ -11434,7 +11249,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: SettingsTapPressed
         m_Mode: 1
         m_Arguments:
@@ -11590,7 +11405,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456166}
+      - m_Target: {fileID: 0}
         m_MethodName: GetItemImage
         m_Mode: 1
         m_Arguments:
@@ -11679,7 +11494,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765456164}
+      - m_Target: {fileID: 0}
         m_MethodName: ViewChangeButtonPressed
         m_Mode: 6
         m_Arguments:
