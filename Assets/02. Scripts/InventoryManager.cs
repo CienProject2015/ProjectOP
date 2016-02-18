@@ -45,6 +45,18 @@ public class InventoryManager : MonoBehaviour {
 		M_Chip_Using_Question.SetActive (false);
 	}
 
+	void Update(){
+		GetInventoryItemImage ();
+	}
+
+	private void GetInventoryItemImage(){
+		for (int i = 0; i < 22; i++) {
+			items [i].GetComponent <Image> ().sprite = Config.itemSprite [inventoryList [i]];
+			if (inventoryList [i] == -1)
+				items [i].GetComponent <Image> ().sprite = sprite_None;
+		}
+	}
+
 	public void GetItemInfo(){
 		if (itemToggleGroup.AnyTogglesOn ()) {
 			for (int i = 0; i < 22; i++) {
@@ -52,14 +64,19 @@ public class InventoryManager : MonoBehaviour {
 					selectedItemSlotNum = i;
 
 					selectedItemImage.GetComponent <Image> ().sprite = itemImages [i];
-					itemName.text = "아이템이 선택됨";
-					itemInfo.text = "asd\noooooo\nfgd";
-					if (i < 16) {
-						item_Using_Question.SetActive (true);
-						M_Chip_Using_Question.SetActive (false);
+					itemName.text = Config.itemName [inventoryList [i]];
+					itemInfo.text = Config.itemInfo [inventoryList [i]];
+					if (Config.canUseItem [inventoryList [i]]) {
+						if (i < 16) {
+							item_Using_Question.SetActive (true);
+							M_Chip_Using_Question.SetActive (false);
+						} else {
+							M_Chip_Using_Question.SetActive (true);
+							item_Using_Question.SetActive (false);
+						}
 					} else {
-						M_Chip_Using_Question.SetActive (true);
 						item_Using_Question.SetActive (false);
+						M_Chip_Using_Question.SetActive (false);
 					}
 
 					if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
@@ -100,6 +117,8 @@ public class InventoryManager : MonoBehaviour {
 		} else {
 			
 		}
+		inventoryList [selectedItemSlotNum] = -1;
+		GetItemInfo ();
 	}
 
 	public void PlayM_Chip(){
