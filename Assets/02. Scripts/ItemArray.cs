@@ -7,6 +7,7 @@ public class ItemArray : MonoBehaviour {
     int random;
     public GameObject obj_panel;
     public GameObject obj_act_panel;
+    public GameObject obj_IceCube;
     public GameObject Items_MemoryChip;
     public GameObject Text_Trash_Active;
     public GameObject Text_Trash_hint;
@@ -137,6 +138,7 @@ public class ItemArray : MonoBehaviour {
                 Destroy(other.gameObject);
                 //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 호기심어린 눈빛으로 고래의 사체를 관찰한다.");
                 Debug.Log("펭귄이 호기심어린 눈빛으로 고래의 사체를 관찰한다.");
+                obj_IceCube.SendMessage("StartFadeIn");
             }
             else if (name[1].Equals("PenguinTotemOld"))
             {
