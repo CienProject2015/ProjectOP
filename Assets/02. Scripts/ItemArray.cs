@@ -48,8 +48,8 @@ public class ItemArray : MonoBehaviour {
             }
             else if (name[1].Equals("Trash"))
             {
-                //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 악취가 난다며 싫어 한다.없애자.");
-                Debug.Log("펭귄이 악취가 난다며 싫어 한다.없애자.");
+                GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 악취가 난다며 싫어 한다.없애자.");
+                //Debug.Log("펭귄이 악취가 난다며 싫어 한다.없애자.");
                 if (item.Contains("Items_Lighter"))
                 {
                     obj_act_panel.SetActive(true);
@@ -135,10 +135,28 @@ public class ItemArray : MonoBehaviour {
             }
             else if (name[1].Equals("IceCube"))
             {
-                Destroy(other.gameObject);
-                //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 호기심어린 눈빛으로 고래의 사체를 관찰한다.");
-                Debug.Log("펭귄이 호기심어린 눈빛으로 고래의 사체를 관찰한다.");
                 obj_IceCube.SendMessage("StartFadeIn");
+                Destroy(other.gameObject);
+                if (name[2].Equals("Whale"))
+                {
+                    //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 호기심어린 눈빛으로 고래의 사체를 관찰한다.");
+                    Debug.Log("펭귄이 호기심어린 눈빛으로 고래의 사체를 관찰한다.");
+                }
+                else if (name[2].Equals("Tank"))
+                {
+                    if (item.Contains("Items_Penguin"))
+                    {
+                        //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄에게 펭귄 마법을 써달라고 부택해야 겠다.(펭귄 인형을 건낸다.)");
+                        Debug.Log("펭귄에게 펭귄 마법을 써달라고 부택해야 겠다.(펭귄 인형을 건낸다.)");
+                        obj_IceCube.SendMessage("StartFadeIn",2);
+                        Destroy(other.gameObject);
+                    }
+                    else
+                    {
+                        //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "탐사정1이 빙하에 갇혀있다. 구해야 한다.");
+                        Debug.Log("탐사정1이 빙하에 갇혀있다. 구해야 한다.");
+                    }
+                }
             }
             else if (name[1].Equals("PenguinTotemOld"))
             {
