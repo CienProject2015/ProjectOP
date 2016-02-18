@@ -58,12 +58,12 @@ public class InventoryManager : MonoBehaviour {
 	}
 
 	private void InventorySort(){
-		int temp;
 		for (int i = 0; i < 16; i++) {
 			if (inventoryList [i] == -1) {
 				for (int j = i; j < 15; j++) {
 					inventoryList [j] = inventoryList [j + 1];
 				}
+				inventoryList [15] = -1;
 			}
 		}
 	}
@@ -111,8 +111,8 @@ public class InventoryManager : MonoBehaviour {
 
 	public void UseItem(){
 		Debug.Log (selectedItemSlotNum + "번 슬롯의 아이템을 사용");
-		items [selectedItemSlotNum].GetComponent<Image>().sprite = sprite_None;
-		itemImages [selectedItemSlotNum] = sprite_None;
+		inventoryList [selectedItemSlotNum] = -1;
+		InventorySort ();
 		GetItemInfo ();
 
 		if (gameObject.GetComponent<TutorialManager>().isTutorial && selectedItemSlotNum == 0) {
@@ -126,10 +126,10 @@ public class InventoryManager : MonoBehaviour {
 		if (gameObject.GetComponent<TutorialManager> ().isTutorial && selectedItemSlotNum == 0) {
 			gameObject.SendMessage ("ReceiveLog", "이 아이템은 버릴 수 없다.");
 		} else {
-			
+			inventoryList [selectedItemSlotNum] = -1;
+			InventorySort ();
+			GetItemInfo ();
 		}
-		inventoryList [selectedItemSlotNum] = -1;
-		GetItemInfo ();
 	}
 
 	public void PlayM_Chip(){
