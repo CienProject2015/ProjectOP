@@ -4,12 +4,11 @@ using System.Collections;
 public class TankMove : MonoBehaviour {
 
 	public float speed = 15;
-	private float cycleSpeed;
+	public float cycleSpeed = 15;
 	private int leftWheelDiret, rightWheelDiret;
 
 
 	void Start () {
-        cycleSpeed = speed * 2;
     }
 	
 	void Update () {

@@ -16,7 +16,7 @@ public class InGameButtons : MonoBehaviour {
 	public GameObject ItemMenuCanvus, MapCanvus;
 	public GameObject[] UIs;
 	GameObject penguin;
-
+	//GameObject tempPenguin;
 
 	void Start(){
 		penguin = GameObject.Find ("Penguin");
@@ -41,7 +41,7 @@ public class InGameButtons : MonoBehaviour {
 			ViewChangeButtonPressed (false);
 			UIBackground.SetActive (true);
 			penguinAnim.SetActive (true);
-			penguin.transform.position = new Vector3(penguin.transform.position.x,1.95f,penguin.transform.position.z);
+			penguin.transform.position = new Vector3(penguin.transform.position.x,0,penguin.transform.position.z);
 			penguin.GetComponent<Rigidbody> ().useGravity = true;
 			tank2Button.GetComponent<Image> ().enabled = true;
 			sheacherButton.GetComponent<Image> ().enabled = true;
@@ -80,7 +80,7 @@ public class InGameButtons : MonoBehaviour {
 				UIBackground.SetActive (true);
 				penguinAnim.SetActive (true);
 			} else if (pictureMenuButton.name == "PenguinButton") {
-				penguin.transform.position = new Vector3(penguin.transform.position.x,1.95f,penguin.transform.position.z);
+				penguin.transform.position = new Vector3(penguin.transform.position.x,0,penguin.transform.position.z);
 				penguin.GetComponent<Rigidbody> ().useGravity = true;
 			}
 		}

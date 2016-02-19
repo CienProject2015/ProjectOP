@@ -16,6 +16,7 @@ public class PenguinMove : MonoBehaviour {
 	}
 
 	void Update () {
+		transform.LookAt(tank2.transform);
 		tankSpeed = tank2.GetComponent<TankMove>().speed;
         anim.SetFloat("Speed", speed);
 		distance = Vector3.Distance(tank2.transform.position, transform.position);
