@@ -3709,7 +3709,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1951621400}
         m_MethodName: SecondAnimPressed
         m_Mode: 1
         m_Arguments:
@@ -4738,7 +4738,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1951621400}
         m_MethodName: FirstAnimPressed
         m_Mode: 1
         m_Arguments:
@@ -11169,7 +11169,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1951621400}
         m_MethodName: ThirdAnimPressed
         m_Mode: 1
         m_Arguments:

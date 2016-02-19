@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Config : MonoBehaviour {
 	
+	// code 0 : empty
 
 	//item info
 
@@ -25,7 +26,7 @@ public class Config : MonoBehaviour {
 	//objects info
 
 	public static string[] objectName = new string[2]				
-	{"gagag","gsgseg"};
+	{"empty","gsgseg"};
 
 	public static string[] massegeObject = new string[2]
 	{"djdjdj","gkssgni"};
@@ -34,6 +35,22 @@ public class Config : MonoBehaviour {
 	{true,true};
 
 	public static bool[] canFindObject = new bool[2]
+	{true,true};
+
+
+
+	//memoryChip info
+
+	public static string[] memoryChipName = new string[2]				
+	{"empty","mnmnmnm"};
+
+	public static string[] memoryChipInfo = new string[2]
+	{"asddd","ffssa"};
+
+	public static int[] totalMemoryChip = new int[2]
+	{5,3};
+
+	public static bool[] onMemoryChip = new bool[2]
 	{true,true};
 
 }
