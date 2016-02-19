@@ -10,10 +10,11 @@ public class InGameButtons : MonoBehaviour {
 	public GameObject menuButtons;
 	public GameObject viewRetrunButton;
 	public GameObject pictureMenu,tank2Button,sheacherButton,UIButton,penguinButton;
-	public GameObject menuButtonsText1, menuButtonsText2, menuButtonsText3, menuButtonsText4, menuButtonsText5;
+	public GameObject menuButtonsText1, menuButtonsText2, menuButtonsText3, menuButtonsText4, menuButtonsText5, GameCloseButtonImage;
 	public GameObject extensionButtonsText;
 	public GameObject SettingsMenuCanvus, SettingsMenu, CreditMenu;
 	public GameObject ItemMenuCanvus, MapCanvus;
+	public GameObject GameClosePopUp;
 	public GameObject[] UIs;
 	GameObject penguin;
 	//GameObject tempPenguin;
@@ -92,11 +93,13 @@ public class InGameButtons : MonoBehaviour {
 		GameObject.Find ("PictureButton").GetComponent<Button> ().interactable = isExtended;
 		GameObject.Find ("ViewChangeButton").GetComponent<Button> ().interactable = isExtended;
 		GameObject.Find ("MapButton").GetComponent<Button> ().interactable = isExtended;
+		GameObject.Find ("GameCloseButton").GetComponent <Button> ().interactable = isExtended;
 		menuButtonsText1.SetActive (isExtended);
 		menuButtonsText2.SetActive (isExtended);
 		menuButtonsText3.SetActive (isExtended);
 		menuButtonsText4.SetActive (isExtended);
 		menuButtonsText5.SetActive (isExtended);
+		GameCloseButtonImage.SetActive (isExtended);
 		stateWindow.SetActive (!isExtended);
 		if (isExtended) {
 			if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
@@ -144,5 +147,14 @@ public class InGameButtons : MonoBehaviour {
 		SettingsMenuCanvus.SetActive (false);
 		ItemMenuCanvus.SetActive (false);
 		MapCanvus.SetActive (false);
+		GameClosePopUp.SetActive (false);
+	}
+
+	public void GameCloseButtonPressed(){
+		GameClosePopUp.SetActive (true);
+	}
+
+	public void GameClose(){
+		Debug.Log ("게임 종료");
 	}
 }
