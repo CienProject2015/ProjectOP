@@ -20,6 +20,7 @@ public class Item_reaction : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other){
+        Debug.Log("collide");
         string[] name = other.gameObject.name.Split('_');
         if (name[0].Equals("Impedi"))
         {
