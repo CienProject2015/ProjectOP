@@ -7,13 +7,15 @@ public class ItemArray : MonoBehaviour {
     int random;
     public GameObject obj_panel;
     public GameObject obj_act_panel;
-    public GameObject obj_IceCube;
+    public GameObject obj_IceCube_Tank;
+    public GameObject obj_IceCube_Whale;
     public GameObject Items_MemoryChip;
     public GameObject Text_Trash_Active;
     public GameObject Text_Trash_hint;
     public GameObject Text_SheetMusic_Active;
     public GameObject Text_SheetMusic_hint;
     public GameObject Tank2;
+    public GameObject Fade;
 
     // Use this for initialization
     void Start () {
@@ -33,7 +35,7 @@ public class ItemArray : MonoBehaviour {
         {
             GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "전력을 나눠줘야 겠군.");
         }
-        if (name[0].Equals("Obj"))
+        else if (name[0].Equals("Obj"))
         {
             //만약 오브젝트를 발동시킬 수 있는 아이템이 있다면
             if (name[1].Equals("PineTree"))
@@ -126,18 +128,21 @@ public class ItemArray : MonoBehaviour {
             }
             else if (name[1].Equals("IceCube"))
             {
-                obj_IceCube.SendMessage("StartFadeIn",1);
                 if (name[2].Equals("Whale"))
                 {
+                    Fade.SetActive(true);
+                    Fade.SendMessage("Fade");
+                    Destroy(other.gameObject);
                     GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 호기심어린 눈빛으로 고래의 사체를 관찰한다.");
                 }
                 else if (name[2].Equals("Tank"))
                 {
                     if (item.Contains("Items_Penguin"))
                     {
+                        Fade.SetActive(true);
+                        Fade.SendMessage("Fade");
                         GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄에게 펭귄 마법을 써달라고 부택해야 겠다.(펭귄 인형을 건낸다.)");
-                        obj_IceCube.SendMessage("StartFadeIn");
-                        Destroy(other.gameObject,1);
+                        Destroy(other.gameObject);
                     }
                     else
                     {
