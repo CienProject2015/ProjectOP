@@ -7040,7 +7040,6 @@ GameObject:
   - 81: {fileID: 1049567854}
   - 114: {fileID: 1049567853}
   - 114: {fileID: 1049567852}
-  - 114: {fileID: 1049567858}
   m_Layer: 0
   m_Name: UICamera
   m_TagString: Untagged
@@ -7155,17 +7154,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &1049567858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1049567850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 582c5c919c92b124f9a386cb105b889c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1065840555
 Prefab:
   m_ObjectHideFlags: 0

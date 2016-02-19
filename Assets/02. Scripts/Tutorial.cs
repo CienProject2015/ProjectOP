@@ -32,7 +32,7 @@ public class Tutorial : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isTutorial = true;
 
 		if (timeCount) {
 			deltaTime += Time.deltaTime;
