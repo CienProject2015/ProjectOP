@@ -6,33 +6,33 @@ using UnityStandardAssets.ImageEffects;
 
 public class Tutorial : MonoBehaviour {	
 
-	NoiseAndGrain noiseAndGrain;
-	Blur blur;
+	NoiseAndGrain noiseAndGrainMain;
+	Blur blurMain;
 	public GameObject penguin, tank2;
 	private Animator anim;
 	float penguinSpeed;
 	float deltaTime=0,timer;
 	bool noiseTab = false;
 	bool timeCount = true;
+	GameObject UICamera;
 
 	// Use this for initialization
 	void Start () {
-
-		//GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isTutorial = true;
-
-		noiseAndGrain = GameObject.Find ("MainCamera").GetComponent<NoiseAndGrain> ();
-		blur = GameObject.Find ("MainCamera").GetComponent<Blur> ();
+		
+		noiseAndGrainMain = GameObject.Find ("MainCamera").GetComponent<NoiseAndGrain> ();
+		blurMain = GameObject.Find ("MainCamera").GetComponent<Blur> ();
 		anim = penguin.GetComponent<Animator>();
 		penguinSpeed = 3;
 		anim.SetFloat ("Speed", 10);
-		noiseAndGrain.intensityMultiplier = 10;
-		blur.enabled = true;
-		blur.iterations = 10;
+		noiseAndGrainMain.intensityMultiplier = 10;
+		blurMain.enabled = true;
+		blurMain.iterations = 5;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
 
 		if (timeCount) {
 			deltaTime += Time.deltaTime;
@@ -40,23 +40,28 @@ public class Tutorial : MonoBehaviour {
 		}
 
 		if (timer < 5) {
+			UICamera = GameObject.Find ("UICamera");
+			UICamera.GetComponent<Camera> ().enabled = false;
+
 			if (noiseTab) {
 				noiseTab = false;
-				noiseAndGrain.intensityMultiplier++;
+				noiseAndGrainMain.intensityMultiplier++;
 			} else {
 				noiseTab = true;
-				noiseAndGrain.intensityMultiplier--;
+				noiseAndGrainMain.intensityMultiplier--;
 			}
 		}
 		if (timer == 5) {
-			noiseAndGrain.intensityMultiplier = 0;
-			noiseAndGrain.enabled = false; 
+			noiseAndGrainMain.intensityMultiplier = 0;
+			noiseAndGrainMain.enabled = false; 
+			blurMain.iterations = 10;
 		}
 		if (timer > 6 && timer < 7) {
-			blur.iterations--;
+			blurMain.iterations--;
 		}
 		if (timer == 7) {
-			blur.enabled = false;
+			blurMain.enabled = false;
+			UICamera.GetComponent<Camera> ().enabled = true;
 		}
 
 		if (timer == 8) {
