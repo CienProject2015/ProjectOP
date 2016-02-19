@@ -374,7 +374,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 26176969}
   m_Layer: 5
-  m_Name: _FrontLeftWheel
+  m_Name: _FrontRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1962,7 +1962,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 216776248}
   m_Layer: 5
-  m_Name: _BackRightWheel
+  m_Name: _BackLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8635,7 +8635,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1253234777}
   m_Layer: 5
-  m_Name: _BackLeftWheel
+  m_Name: _BackRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14387,6 +14387,7 @@ MonoBehaviour:
   onScene12: 0
   onScene13: 0
   onScene15: 0
+  isItemTutorial: 0
 --- !u!114 &1951621407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14667,7 +14668,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 2002731739}
   m_Layer: 5
-  m_Name: _FrontRightWheel
+  m_Name: _FrontLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

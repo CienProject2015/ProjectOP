@@ -84,9 +84,10 @@ public class InventoryManager : MonoBehaviour {
 					}
 
 					if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
-						GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("Item Image 1"));
-						GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("UseButton"));
-
+						if (gameObject.GetComponent<TutorialManager> ().isItemTutorial) {
+							GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("Item Image 1"));
+							GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("UseButton"));
+						}
 					}
 				}
 			}
@@ -111,6 +112,7 @@ public class InventoryManager : MonoBehaviour {
 		GetItemInfo ();
 
 		if (gameObject.GetComponent<TutorialManager>().isTutorial && selectedItemSlotNum == 0) {
+			GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("UseButton"));
 			GameObject.Find ("ItemMenuCanvus").SetActive (false);
 			gameObject.SendMessage ("Scene6");
 		}

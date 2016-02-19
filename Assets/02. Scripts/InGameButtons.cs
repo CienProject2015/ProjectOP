@@ -85,25 +85,7 @@ public class InGameButtons : MonoBehaviour {
 			}
 		}
 	}
-
-	public void FirstAnimPressed(){
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Wave",true);
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Jump",false);
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Swing",false);
-	}
-
-	public void SecondAnimPressed(){
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Wave",false);
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Jump",true);
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Swing",false);
-	}
-
-	public void ThirdAnimPressed(){
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Wave",false);
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Jump",false);
-		GameObject.Find ("Penguin").GetComponent<Animator>().SetBool("Swing",true);
-	}
-
+		
 	public void MenuExtensionButtonPressed(bool isExtended){
 		GameObject.Find ("SettingsButton").GetComponent<Button> ().interactable = isExtended;
 		GameObject.Find ("InventoryButton").GetComponent<Button> ().interactable = isExtended;
@@ -118,8 +100,10 @@ public class InGameButtons : MonoBehaviour {
 		stateWindow.SetActive (!isExtended);
 		if (isExtended) {
 			if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
-				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("ExtensionButton"));
-				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("InventoryButton"));
+				if (gameObject.GetComponent<TutorialManager> ().isItemTutorial) {
+					GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("ExtensionButton"));
+					GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("InventoryButton"));
+				}
 			}
 			extensionButtonsText.GetComponent<Text> ().text = "축소";
 		}else if (!isExtended)
@@ -145,8 +129,10 @@ public class InGameButtons : MonoBehaviour {
 	public void ItemButtonPressed(){
 		ItemMenuCanvus.SetActive (true);
 		if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
-			GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("InventoryButton"));
-			GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("Item Image 1"));
+			if (gameObject.GetComponent<TutorialManager> ().isItemTutorial) {
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("InventoryButton"));
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("Item Image 1"));
+			}
 		}
 	}
 

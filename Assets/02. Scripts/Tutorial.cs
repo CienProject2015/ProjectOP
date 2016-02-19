@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
+using UnityEngine.UI;
 
 
 
@@ -14,7 +15,7 @@ public class Tutorial : MonoBehaviour {
 	float deltaTime=0,timer;
 	bool noiseTab = false;
 	bool timeCount = true;
-	GameObject UICamera;
+	GameObject UICamera,extensionButton;
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +33,6 @@ public class Tutorial : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isTutorial = true;
 
 		if (timeCount) {
 			deltaTime += Time.deltaTime;
@@ -42,6 +42,8 @@ public class Tutorial : MonoBehaviour {
 		if (timer < 5) {
 			UICamera = GameObject.Find ("UICamera");
 			UICamera.GetComponent<Camera> ().enabled = false;
+			//extensionButton = GameObject.Find ("ExtensionButton");
+			//extensionButton.GetComponent<Button> ().interactable = false;
 
 			if (noiseTab) {
 				noiseTab = false;
@@ -62,13 +64,14 @@ public class Tutorial : MonoBehaviour {
 		if (timer == 7) {
 			blurMain.enabled = false;
 			UICamera.GetComponent<Camera> ().enabled = true;
+
 		}
 
 		if (timer == 8) {
+			//extensionButton.GetComponent<Button> ().interactable = true;
 			timeCount = false;
 			timer++;
 		}
-
 
 
 		//////// 고속도로 타고온다 ///
