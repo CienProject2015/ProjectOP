@@ -13016,7 +13016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1809979793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14303,9 +14303,8 @@ MonoBehaviour:
   ItemMenuCanvus: {fileID: 142561347}
   MapCanvus: {fileID: 648358887}
   UIs:
-  - {fileID: 1197701253}
-  - {fileID: 1809979792}
   - {fileID: 2046711029}
+  - {fileID: 1197701253}
 --- !u!114 &1951621401
 MonoBehaviour:
   m_ObjectHideFlags: 0
