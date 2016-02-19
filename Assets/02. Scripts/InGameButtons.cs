@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InGameButtons : MonoBehaviour {
 
-	public GameObject UIBackground, penguinAnim;
+	public GameObject UIBackground;
 	public GameObject stateWindow;
 	public GameObject menuButtons;
 	public GameObject viewRetrunButton;
@@ -40,8 +40,6 @@ public class InGameButtons : MonoBehaviour {
 		if (!pictureMenuOpened) {
 			GameObject.Find ("Tank2").transform.FindChild ("Body").gameObject.SetActive (true);
 			ViewChangeButtonPressed (false);
-			UIBackground.SetActive (true);
-			penguinAnim.SetActive (true);
 			penguin.transform.position = new Vector3(penguin.transform.position.x,0,penguin.transform.position.z);
 			penguin.GetComponent<Rigidbody> ().useGravity = true;
 			tank2Button.GetComponent<Image> ().enabled = true;
@@ -77,9 +75,9 @@ public class InGameButtons : MonoBehaviour {
 			else if (pictureMenuButton.name == "SearcherButton") {
 				ViewChangeButtonPressed (false);
 			} else if (pictureMenuButton.name == "UIButton") {
-				
-				UIBackground.SetActive (true);
-				penguinAnim.SetActive (true);
+				foreach (GameObject UI in UIs) {
+					UI.SetActive (true);
+				}
 			} else if (pictureMenuButton.name == "PenguinButton") {
 				penguin.transform.position = new Vector3(penguin.transform.position.x,0,penguin.transform.position.z);
 				penguin.GetComponent<Rigidbody> ().useGravity = true;
@@ -155,6 +153,7 @@ public class InGameButtons : MonoBehaviour {
 	}
 
 	public void GameClose(){
-		Debug.Log ("게임 종료");
+		GameObject.Find ("GameInfo").GetComponent<GameSaveLoad> ().SaveGame ();
+		Application.Quit();
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Load_UI_Scene : MonoBehaviour {
 
+	GameObject eventSystem;
 	// Use this for initialization
 	void Start () {
 		Application.LoadLevelAdditive ("Ingame_UI");
@@ -11,6 +12,7 @@ public class Load_UI_Scene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GameObject.Find ("_EventSystem").GetComponent<TutorialManager>().isTutorial = false;
+		eventSystem = GameObject.Find ("_EventSystem");
+		eventSystem.GetComponent<TutorialManager>().isTutorial = false;
 	}
 }
