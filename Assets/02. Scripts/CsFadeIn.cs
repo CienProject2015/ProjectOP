@@ -3,31 +3,19 @@ using System.Collections;
 
 public class CsFadeIn : MonoBehaviour
 {
-
-    // Use this for initialization
-    void Start()
+    public void Fade()
     {
-
+        StartCoroutine(FadeOut());
     }
 
-    void StartFadeIn()
+    IEnumerator FadeOut()
     {
-        StartCoroutine("FadeIn");
-    }
-
-    IEnumerator FadeIn()
-    {
-        for (float i = 1f; i >= 0; i -= 0.1f)
-        {
-            Color color = new Vector4(1, 1, 1, i);
-            transform.GetComponent<Renderer>().material.color = color;
-            yield return 0;
+        CanvasGroup canvasgroup = GetComponent<CanvasGroup>();
+        while (canvasgroup.alpha > 0) {
+            canvasgroup.alpha -= Time.deltaTime / 2;
+            yield return null;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        canvasgroup.interactable = false;
+        yield return null;
     }
 }
