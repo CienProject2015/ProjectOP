@@ -7,8 +7,11 @@ public class PenguinMove : MonoBehaviour {
 
     private Animator anim;
 	public GameObject tank2;
+	public GameObject spot;
     private float distance, distanceMin = 10, distanceMax = 20, tankSpeed =0;
-    
+	float temp, timer = 0;
+	bool isSpot = false, onRandomAnim=true;
+	int currentAnimNum =0;
     
 	void Start () {
         anim = GetComponent<Animator>();
@@ -16,36 +19,50 @@ public class PenguinMove : MonoBehaviour {
 	}
 
 	void Update () {
+		
+
 		transform.LookAt(tank2.transform);
 		tankSpeed = tank2.GetComponent<TankMove>().speed;
         anim.SetFloat("Speed", speed);
 		distance = Vector3.Distance(tank2.transform.position, transform.position);
-        if (distance > distanceMin)
-        {
-			anim.SetBool("Wave", false);
-			anim.SetBool("Jump", false);
-			anim.SetBool("Swing", false);
-			transform.LookAt(tank2.transform);
-            transform.Translate(transform.forward * speed * Time.deltaTime);
-            if (distance > distanceMax)
-                speed = 15;
-            else
-                speed = 5;
-        }
-        else
-            speed = 0;
+		if (distance > distanceMin) {
+			isSpot = false;
+			onRandomAnim = true;
+			transform.LookAt (tank2.transform);
+			transform.Translate (transform.forward * speed * Time.deltaTime);
+			if (distance > distanceMax)
+				speed = 15;
+			else
+				speed = 5;
+		} else {
+			if (!isSpot) {
+				transform.LookAt (spot.transform);
+				transform.Translate (transform.forward * speed * Time.deltaTime);
+			} else {
+				speed = 0;	
+				if (onRandomAnim) {
+					anim.SetBool (choiceAnim (currentAnimNum), false);
+					randomAnim ();
+					onRandomAnim = false;
+				} else {
+				}
+
+			}
+		}
 	}
 
 	void randomAnim(){
-		int num = Random.Range (1, 12);
-
-		anim.SetBool (choiceAnim (num), true);
-		anim.SetBool (choiceAnim (num), false);
-
+		int num=0;
+		for (int i = 0; i < 10; i++) {
+			num = Random.Range (1, 12);
+		}
+		currentAnimNum = num;
+		Debug.Log (currentAnimNum);
+		anim.SetBool (choiceAnim (currentAnimNum), true);
 	}
 
 	string choiceAnim(int num){
-		string name;
+		string name = null;
 
 		switch (num) {
 		case 1: // happy
@@ -82,9 +99,17 @@ public class PenguinMove : MonoBehaviour {
 			name = "Urge";
 			break;
 		default:
+			name = "block";
 			break;
 		}
 
 		return name;
 	}
+
+	void OnTriggerEnter(Collider other){
+		if (other.gameObject.name == "Spot") {
+			isSpot = true;
+		}
+	}
 }
+
