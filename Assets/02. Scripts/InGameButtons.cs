@@ -139,6 +139,7 @@ public class InGameButtons : MonoBehaviour {
 
 	public void MapButtonPressed(){
 		MapCanvus.SetActive (true);
+		gameObject.SendMessage ("LogUpdate");
 	}
 
 	public void CloseButtonPressed(){
