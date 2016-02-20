@@ -7,7 +7,7 @@ public class PenguinMove : MonoBehaviour {
 
     private Animator anim;
 	public GameObject tank2;
-    private float distance, distanceMin = 20, distanceMax = 20, tankSpeed = 20;
+    private float distance, distanceMin = 10, distanceMax = 20, tankSpeed =0;
     
     
 	void Start () {
@@ -34,5 +34,57 @@ public class PenguinMove : MonoBehaviour {
         }
         else
             speed = 0;
+	}
+
+	void randomAnim(){
+		int num = Random.Range (1, 12);
+
+		anim.SetBool (choiceAnim (num), true);
+		anim.SetBool (choiceAnim (num), false);
+
+	}
+
+	string choiceAnim(int num){
+		string name;
+
+		switch (num) {
+		case 1: // happy
+			name = "Happy";
+			break;
+		case 2: // wave
+			name = "Wave";
+			break;
+		case 3: // swing
+			name = "Swing";
+			break;
+		case 4: // curius
+			name = "Curius";
+			break;
+		case 5: // sullen
+			name = "Sullen";
+			break;
+		case 6: // totem
+			name = "Totem";
+			break;
+		case 7: // tool
+			name = "Tool";
+			break;
+		case 8: // hug
+			name = "Hug";
+			break;
+		case 9: // block
+			name = "Block";
+			break;
+		case 10: // sad
+			name = "Sad";
+			break;
+		case 11: // urge
+			name = "Urge";
+			break;
+		default:
+			break;
+		}
+
+		return name;
 	}
 }
