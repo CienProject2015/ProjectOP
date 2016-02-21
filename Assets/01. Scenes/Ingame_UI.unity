@@ -459,7 +459,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 26176969}
   m_Layer: 5
-  m_Name: _FrontLeftWheel
+  m_Name: _FrontRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2114,7 +2114,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 216776248}
   m_Layer: 5
-  m_Name: _BackRightWheel
+  m_Name: _BackLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10073,7 +10073,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1253234777}
   m_Layer: 5
-  m_Name: _BackLeftWheel
+  m_Name: _BackRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16290,12 +16290,6 @@ MonoBehaviour:
   sprite:
   - {fileID: 21300000, guid: 759d736bdd58643b0a4305244c8c3dda, type: 3}
   - {fileID: 21300000, guid: 0e109f7832a45374983521bae6001299, type: 3}
-  timer: 0
-  currentStage: 0
-  oldStage: 0
-  onFirstLoad: 1
-  onSave: 1
-  onLoad: 1
 --- !u!114 &1951621409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16646,7 +16640,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 2002731739}
   m_Layer: 5
-  m_Name: _FrontRightWheel
+  m_Name: _FrontLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
