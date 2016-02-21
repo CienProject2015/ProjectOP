@@ -47,10 +47,15 @@ public class Config : MonoBehaviour {
 	public static string[] memoryChipInfo = new string[2]
 	{"asddd","ffssa"};
 
+	public static int[] memoryChipNum = new int[2]
+	{0,0};
+
 	public static int[] totalMemoryChip = new int[2]
 	{5,3};
 
 	public static bool[] onMemoryChip = new bool[2]
 	{true,true};
+
+
 
 }

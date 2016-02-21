@@ -12,6 +12,7 @@ public class PenguinMove : MonoBehaviour {
 	float temp, timer = 0;
 	bool isSpot = false, onRandomAnim=true;
 	int currentAnimNum =0;
+	public bool onPenguinMove =  true;
     
 	void Start () {
         anim = GetComponent<Animator>();
@@ -19,35 +20,35 @@ public class PenguinMove : MonoBehaviour {
 	}
 
 	void Update () {
-		
-
-		transform.LookAt(tank2.transform);
-		tankSpeed = tank2.GetComponent<TankMove>().speed;
-        anim.SetFloat("Speed", speed);
-		distance = Vector3.Distance(tank2.transform.position, transform.position);
-		if (distance >= distanceMin) {
-			isSpot = false;
-			onRandomAnim = true;
+		if(onPenguinMove){
 			transform.LookAt (tank2.transform);
-			transform.Translate (transform.forward * speed * Time.deltaTime);
-		
-			if (distance > distanceMax)
-				speed = 15;
-			else
-				speed = 5;
-		} else {
-			if (!isSpot) {
-				transform.LookAt (spot.transform);
+			tankSpeed = tank2.GetComponent<TankMove> ().speed;
+			anim.SetFloat ("Speed", speed);
+			distance = Vector3.Distance (tank2.transform.position, transform.position);
+			if (distance >= distanceMin) {
+				isSpot = false;
+				onRandomAnim = true;
+				transform.LookAt (tank2.transform);
 				transform.Translate (transform.forward * speed * Time.deltaTime);
+				
+				if (distance > distanceMax)
+					speed = 15;
+				else
+					speed = 5;
 			} else {
-				speed = 0;	
-				if (onRandomAnim) {
-					anim.SetBool (choiceAnim (currentAnimNum), false);
-					randomAnim ();
-					onRandomAnim = false;
+				if (!isSpot) {
+					transform.LookAt (spot.transform);
+					transform.Translate (transform.forward * speed * Time.deltaTime);
 				} else {
-				}
+					speed = 0;	
+					if (onRandomAnim) {
+						anim.SetBool (choiceAnim (currentAnimNum), false);
+						randomAnim ();
+						onRandomAnim = false;
+					} else {
+					}
 
+				}
 			}
 		}
 	}

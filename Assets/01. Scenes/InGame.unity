@@ -888,6 +888,7 @@ MonoBehaviour:
   speed: 0
   tank2: {fileID: 1626990328}
   spot: {fileID: 806417078}
+  onPenguinMove: 1
 --- !u!65 &407799727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7451,6 +7452,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588da27e0fd63e44eb2774a3b7078ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
+  currentStage: 1
+  oldStage: 0
+  onFirstLoad: 1
+  onSave: 1
+  onLoad: 1
 --- !u!114 &1945166303
 MonoBehaviour:
   m_ObjectHideFlags: 0

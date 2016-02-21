@@ -17,10 +17,8 @@ public class InGameButtons : MonoBehaviour {
 	public GameObject GameClosePopUp;
 	public GameObject[] UIs;
 	GameObject penguin;
-	//GameObject tempPenguin;
 
 	void Start(){
-		penguin = GameObject.Find ("Penguin");
 	}
 
 
@@ -35,21 +33,29 @@ public class InGameButtons : MonoBehaviour {
 	}
 
 	public void PictureButtonPressed(bool pictureMenuOpened){
+		
+
 		pictureMenu.SetActive (pictureMenuOpened);
 
 		if (!pictureMenuOpened) {
 			GameObject.Find ("Tank2").transform.FindChild ("Body").gameObject.SetActive (true);
 			ViewChangeButtonPressed (false);
-			penguin.transform.position = new Vector3(penguin.transform.position.x,0,penguin.transform.position.z);
+			if(!penguin.GetComponent<PenguinMove> ().onPenguinMove)
+				penguin.transform.Translate (new Vector3 (0, 4f, 0));
 			penguin.GetComponent<Rigidbody> ().useGravity = true;
+			penguin.GetComponent<PenguinMove> ().onPenguinMove = true;
 			tank2Button.GetComponent<Image> ().enabled = true;
 			sheacherButton.GetComponent<Image> ().enabled = true;
 			UIButton.GetComponent<Image> ().enabled = true;
 			penguinButton.GetComponent<Image> ().enabled = true;
+		} else {
+			
 		}
 	}
 
 	public void PictureMenuButtonsPressed(GameObject pictureMenuButton){
+		penguin = GameObject.Find ("Penguin");
+
 		if (pictureMenuButton.GetComponent<Image> ().enabled) {
 			pictureMenuButton.GetComponent<Image> ().enabled = false;
 
@@ -62,8 +68,10 @@ public class InGameButtons : MonoBehaviour {
 					UI.SetActive (false);
 				}	
 			} else if (pictureMenuButton.name == "PenguinButton") {
-				penguin.transform.Translate (new Vector3 (0, -4, 0));
+				penguin.transform.Translate (new Vector3 (0, -4f, 0));
 				penguin.GetComponent<Rigidbody> ().useGravity = false;
+				penguin.GetComponent<PenguinMove> ().onPenguinMove = false;
+
 			} else if (pictureMenuButton.name == "ShootButton")
 				Application.CaptureScreenshot ("WarmyLand.png");
 
@@ -79,8 +87,9 @@ public class InGameButtons : MonoBehaviour {
 					UI.SetActive (true);
 				}
 			} else if (pictureMenuButton.name == "PenguinButton") {
-				penguin.transform.position = new Vector3(penguin.transform.position.x,0,penguin.transform.position.z);
+				penguin.transform.Translate (new Vector3 (0, 4f, 0));
 				penguin.GetComponent<Rigidbody> ().useGravity = true;
+				penguin.GetComponent<PenguinMove> ().onPenguinMove = true;
 			}
 		}
 	}
