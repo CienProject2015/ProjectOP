@@ -601,7 +601,7 @@ GameObject:
   - 65: {fileID: 6587638}
   - 114: {fileID: 11464286}
   m_Layer: 0
-  m_Name: Penguin 1
+  m_Name: Penguin_inGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
