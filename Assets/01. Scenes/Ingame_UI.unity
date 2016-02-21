@@ -2267,7 +2267,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 538652303}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0.6802409}
+  m_AnchorMin: {x: 0, y: 0.56164694}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -15213,7 +15213,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 270850435}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.31975907
+  m_Size: 0.43835306
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

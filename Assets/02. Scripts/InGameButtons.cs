@@ -147,9 +147,10 @@ public class InGameButtons : MonoBehaviour {
 		ItemMenuCanvus.SetActive (false);
 		MapCanvus.SetActive (false);
 		GameClosePopUp.SetActive (false);
-	}
+        GameObject.Find("Tank2").SendMessage("tank_start");
+    }
 
-	public void GameCloseButtonPressed(){
+    public void GameCloseButtonPressed(){
 		GameClosePopUp.SetActive (true);
 	}
 
