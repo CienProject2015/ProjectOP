@@ -247,6 +247,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a0252f9be8a0f24b9e05b11186cabbd, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1407847149 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 198534, guid: 8081aacce51e4ba428e0961bb1387839, type: 2}
+  m_PrefabInternal: {fileID: 1880020196}
+--- !u!114 &1407847156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407847149}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34382083ad114a07d000fbfb8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iterations: 0
+  blurSpread: 1
+  blurShader: {fileID: 4800000, guid: 57e6deea7c2924e22a5138e2b70bb4dc, type: 3}
 --- !u!1001 &1476363986
 Prefab:
   m_ObjectHideFlags: 0
@@ -327,6 +345,18 @@ Prefab:
     - target: {fileID: 466324, guid: 8081aacce51e4ba428e0961bb1387839, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405704, guid: 8081aacce51e4ba428e0961bb1387839, type: 2}
+      propertyPath: intensityMultiplier
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405704, guid: 8081aacce51e4ba428e0961bb1387839, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143904, guid: 8081aacce51e4ba428e0961bb1387839, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8081aacce51e4ba428e0961bb1387839, type: 2}
