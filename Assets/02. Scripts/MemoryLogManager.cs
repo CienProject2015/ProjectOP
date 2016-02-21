@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MemoryLogManager : MonoBehaviour {
 
-	public Text memoryLog;
+	public GameObject memoryLog;
 	private string[] logStr;
 	private string[,] obtainLog;
 	private int [] obtainCount;
@@ -25,9 +25,10 @@ public class MemoryLogManager : MonoBehaviour {
 
 	private void LogUpdate(){
 		int strIndex = 0;
+		RectTransform rt = memoryLog.GetComponent<RectTransform> ();
 		for (int i = 0; i < 6; i++) {
 			if (obtainCount [i] > 0) {
-				logStr [strIndex] = "MEMORY_NO " + i;
+				logStr [strIndex] = "MEMORY_NO_" + (i + 1);
 				strIndex++;
 				for (int j = 1; j <= obtainCount [i]; j++) {
 					logStr [strIndex] = obtainLog [i, j];
@@ -37,13 +38,14 @@ public class MemoryLogManager : MonoBehaviour {
 				logStr [0] = "missing_memory";
 			}
 		}
-		memoryLog.text = string.Join ("\n", logStr);
+		memoryLog.GetComponent<Text>().text = string.Join ("\n", logStr);
+		rt.sizeDelta = new Vector2 (0, strIndex * 50);
 	}
 
 	public void MemoryChipObtain(int memoryChipNum){
 		if (obtainCount [memoryChipNum - 1] < 12) {
 			obtainCount [memoryChipNum - 1]++;
-			obtainLog [memoryChipNum - 1, obtainCount [memoryChipNum - 1]] = "-" + obtainCount [memoryChipNum - 1] + ". " + time.ToString ("hh.mm.ss");
+			obtainLog [memoryChipNum - 1, obtainCount [memoryChipNum - 1]] = "-" + obtainCount [memoryChipNum - 1] + ". " + time.ToString ("hh:mm:ss");
 		}
 	}
 }

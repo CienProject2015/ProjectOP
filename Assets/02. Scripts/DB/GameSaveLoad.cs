@@ -44,7 +44,7 @@ public class GameSaveLoad : MonoBehaviour {
 		}
 		PlayerPrefs.SetString("MyObjects", _tmpStr); 
 
-		currentStage = GameObject.Find ("GameInfo").GetComponent<GameInfo> ().currentStage;
+		currentStage = GameObject.Find ("GameInfo").GetComponent<InGameInfo> ().currentStage;
 		PlayerPrefs.SetInt("stage", currentStage);
 
 		//맵 로그 저장
@@ -82,7 +82,7 @@ public class GameSaveLoad : MonoBehaviour {
 		}
 
 		currentStage = PlayerPrefs.GetInt ("stage");
-		GameObject.Find ("GameInfo").GetComponent<GameInfo> ().currentStage = currentStage;
+		GameObject.Find ("GameInfo").GetComponent<InGameInfo> ().currentStage = currentStage;
 
 		//맵 로그 불러오기
 

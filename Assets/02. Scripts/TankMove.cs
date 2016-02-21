@@ -69,6 +69,6 @@ public class TankMove : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		// stage change
-		GameObject.Find ("GameInfo").GetComponent<GameInfo> ().currentStage = 1;
+		GameObject.Find ("GameInfo").GetComponent<InGameInfo> ().currentStage = 1;
 	}
 }
