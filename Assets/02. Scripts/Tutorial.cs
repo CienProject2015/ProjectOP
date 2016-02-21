@@ -40,7 +40,7 @@ public class Tutorial : MonoBehaviour {
 		}
 
 		if (timer < 5) {
-			UICamera = GameObject.Find ("UICamera");
+			UICamera = GameObject.Find ("UI Camera");
 			UICamera.GetComponent<Camera> ().enabled = false;
 			//extensionButton = GameObject.Find ("ExtensionButton");
 			//extensionButton.GetComponent<Button> ().interactable = false;
