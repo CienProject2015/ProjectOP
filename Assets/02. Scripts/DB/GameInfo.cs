@@ -23,7 +23,7 @@ public class GameInfo : MonoBehaviour {
 
 		if (!onFirstLoad) {
 			if (onLoad){
-				GameObject.Find ("GameInfo").GetComponent<GameSaveLoad> ().LoadGame ();
+				//GameObject.Find ("GameInfo").GetComponent<GameSaveLoad> ().LoadGame ();
 				onLoad = false;
 			}
 		}
@@ -33,7 +33,7 @@ public class GameInfo : MonoBehaviour {
 
 		if (timer % 10 == 1) { //10초 저 장
 			if (onSave) {
-				GameObject.Find ("GameInfo").GetComponent<GameSaveLoad> ().SaveGame ();
+				//GameObject.Find ("GameInfo").GetComponent<GameSaveLoad> ().SaveGame ();
 				onSave = false;
 			}
 		}else{

@@ -64,7 +64,6 @@ public class TankMove : MonoBehaviour {
 	}
 	void tank_start()
 	{
-		Debug.Log("tank_start");
 		speed = 15;
 	}
 
