@@ -33,7 +33,6 @@ public class LogManager : MonoBehaviour {
 		for (int i = 0; i < 5; i++) {
 			gameLogs [i].GetComponent<Text> ().text = logString [i];
 		}
-		ObjectDetectLog.GetComponent<Text> ().text = logString [5] + "\n" + logString [6];
 	}
 
 	public void ReceiveLog(string latestLogText){
