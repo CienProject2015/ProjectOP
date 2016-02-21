@@ -58,7 +58,7 @@ public class PenguinMove : MonoBehaviour {
 			num = Random.Range (1, 12);
 		}
 		currentAnimNum = num;
-		Debug.Log (currentAnimNum);
+		Debug.Log (currentAnimNum  + "Anim");
 		anim.SetBool (choiceAnim (currentAnimNum), true);
 	}
 

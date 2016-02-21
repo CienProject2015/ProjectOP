@@ -6,9 +6,12 @@ public class TankMove : MonoBehaviour {
 	public float speed = 15;
 	public float cycleSpeed = 15;
 	private int leftWheelDiret, rightWheelDiret;
+	private int currentStage=0;
 
 
 	void Start () {
+
+
     }
 	
 	void Update () {
@@ -63,5 +66,10 @@ public class TankMove : MonoBehaviour {
 	{
 		Debug.Log("tank_start");
 		speed = 15;
+	}
+
+	void OnTriggerEnter(Collider other){
+		// stage change
+		GameObject.Find ("GameInfo").GetComponent<GameInfo> ().currentStage = 1;
 	}
 }
