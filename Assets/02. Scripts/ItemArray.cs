@@ -192,10 +192,7 @@ public class ItemArray : MonoBehaviour {
             {
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "...나를 별로 좋아하지 않는 것 같다.");
                 //미는 에니메이션
-                for (var i = 0; i < 5; i++)
-                {
-                    transform.Translate(new Vector3(1, 1, -i * Time.deltaTime));
-                }
+                Tank2.transform.Translate(new Vector3(0, 0, -15 * Time.deltaTime));
                 tankstart();
             }
         }
