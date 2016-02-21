@@ -8,7 +8,7 @@ public class PenguinMove : MonoBehaviour {
     private Animator anim;
 	public GameObject tank2;
 	public GameObject spot;
-    private float distance, distanceMin = 10, distanceMax = 20, tankSpeed =0;
+    private float distance, distanceMin = 15, distanceMax = 20, tankSpeed =0;
 	float temp, timer = 0;
 	bool isSpot = false, onRandomAnim=true;
 	int currentAnimNum =0;
@@ -25,11 +25,12 @@ public class PenguinMove : MonoBehaviour {
 		tankSpeed = tank2.GetComponent<TankMove>().speed;
         anim.SetFloat("Speed", speed);
 		distance = Vector3.Distance(tank2.transform.position, transform.position);
-		if (distance > distanceMin) {
+		if (distance >= distanceMin) {
 			isSpot = false;
 			onRandomAnim = true;
 			transform.LookAt (tank2.transform);
 			transform.Translate (transform.forward * speed * Time.deltaTime);
+		
 			if (distance > distanceMax)
 				speed = 15;
 			else

@@ -3018,7 +3018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1004244338
 Transform:
   m_ObjectHideFlags: 0
@@ -4248,6 +4248,10 @@ Prefab:
       propertyPath: spot
       value: 
       objectReference: {fileID: 1026713575}
+    - target: {fileID: 181228, guid: b374999dcf5f52b46bfd821756eb2f8e, type: 2}
+      propertyPath: m_Name
+      value: Penguin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b374999dcf5f52b46bfd821756eb2f8e, type: 2}
   m_IsPrefabParent: 0
@@ -5341,6 +5345,10 @@ Prefab:
       propertyPath: Fade
       value: 
       objectReference: {fileID: 1191211615}
+    - target: {fileID: 117200, guid: 8081aacce51e4ba428e0961bb1387839, type: 2}
+      propertyPath: m_Name
+      value: Tank2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8081aacce51e4ba428e0961bb1387839, type: 2}
   m_IsPrefabParent: 0
