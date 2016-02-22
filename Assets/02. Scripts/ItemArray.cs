@@ -4,8 +4,16 @@ using System;
 
 public class ItemArray : MonoBehaviour {
     ArrayList arr_item = new ArrayList();
+    ArrayList arr_item1 = new ArrayList();
+    ArrayList arr_item2 = new ArrayList();
+    ArrayList arr_item3 = new ArrayList();
+    ArrayList arr_item4 = new ArrayList();
     IList item;
-    int random;
+    IList Brokenitem1;
+    IList Brokenitem2;
+    IList hyupitem;
+    IList badaitem;
+    //int random;
     public GameObject obj_panel;
     public GameObject obj_act_panel;
     public GameObject obj_IceCube_Tank;
@@ -14,7 +22,8 @@ public class ItemArray : MonoBehaviour {
     public GameObject Items_MemoryChip_hyup;
     public GameObject Items_MemoryChip_maeul;
     public GameObject Items_MemoryChip_bada;
-    public GameObject Items_MemoryChip_sup;
+    public GameObject Items_MemoryChip_sup1;
+    public GameObject Items_MemoryChip_sup2;
     public GameObject Items_MemoryChip_dongul;
     public GameObject Text_Trash_Active;
     public GameObject Text_Trash_hint;
@@ -41,11 +50,81 @@ public class ItemArray : MonoBehaviour {
     public GameObject skyLight_forest2;
     public GameObject skyLight_forest3;
     public GameObject skyLight_forest4;
-
+    public GameObject forestmemory1;
+    public GameObject forestmemory2;
+    public GameObject forestmemory3;
+    public GameObject forestmemory4;
+    public GameObject forestmemory5;
+    public GameObject forestmemory6;
+    public GameObject forestmemory7;
+    public GameObject forestmemory8;
+    public GameObject forestmemory9;
+    public GameObject forestmemory10;
+    public GameObject forestmemory11;
+    public GameObject forestmemory12;
+    public GameObject forestmemory13;
+    public GameObject forestmemory14;
+    public GameObject forestmemory15;
+    public GameObject canyonmemory1;
+    public GameObject canyonmemory2;
+    public GameObject canyonmemory3;
+    public GameObject canyonmemory4;
+    public GameObject canyonmemory5;
+    public GameObject canyonmemory6;
+    public GameObject canyonmemory7;
+    public GameObject canyonmemory8;
+    public GameObject canyonmemory9;
+    public GameObject canyonmemory10;
+    public GameObject canyonmemory11;
+    public GameObject canyonmemory12;
+    public GameObject canyonmemory13;
+    public GameObject canyonmemory14;
+    public GameObject canyonmemory15;
+    public GameObject canyonmemory16;
+    public GameObject badamemory1;
+    public GameObject badamemory2;
+    public GameObject badamemory3;
+    public GameObject badamemory4;
+    public GameObject badamemory5;
+    public GameObject badamemory6;
+    public GameObject badamemory7;
+    public GameObject badamemory8;
+    public GameObject badamemory9;
+    public GameObject maeulmemory1;
+    public GameObject maeulmemory2;
+    public GameObject maeulmemory3;
+    public GameObject maeulmemory4;
+    public GameObject maeulmemory5;
+    public GameObject maeulmemory6;
+    public GameObject maeulmemory7;
+    public GameObject maeulmemory8;
+    public GameObject forest2memory1;
+    public GameObject forest2memory2;
+    public GameObject forest2memory3;
+    public GameObject forest2memory4;
+    public GameObject forest2memory5;
+    public GameObject forest2memory6;
+    public GameObject forest2memory7;
+    public GameObject forest2memory8;
+    public GameObject forest2memory9;
+    public GameObject forest2memory10;
+    public GameObject forest2memory11;
+    public GameObject forest2memory12;
+    public GameObject forest2memory13;
+    public GameObject forest2memory14;
+    public GameObject cavememory1;
+    public GameObject cavememory2;
+    public GameObject cavememory3;
+    public GameObject cavememory4;
+    public GameObject cavememory5;
+    public GameObject cavememory6;
+    public GameObject cavememory7;
+    public GameObject cavememory8;
+    int a = 1;
 
     // Use this for initialization
     void Start () {
-	    
+        
 	}
 	
 	// Update is called once per frame
@@ -212,10 +291,302 @@ public class ItemArray : MonoBehaviour {
         }
     }
 
+    void forest_memory1()
+    {
+        forestmemory1.SetActive(true);
+        Invoke("forest_memory2", 4.0f);
+    }
+    void forest_memory2()
+    {
+        forestmemory1.SetActive(false);
+        forestmemory2.SetActive(true);
+        Invoke("forest_memory3", 4.0f);
+    }
+    void forest_memory3()
+    {
+        forestmemory2.SetActive(false);
+        forestmemory3.SetActive(true);
+        Invoke("forest_memory4", 4.0f);
+    }
+    void forest_memory4()
+    {
+        forestmemory3.SetActive(false);
+        forestmemory4.SetActive(true);
+        Invoke("forest_memory5", 4.0f);
+    }
+    void forest_memory5()
+    {
+        forestmemory4.SetActive(false);
+        forestmemory5.SetActive(true);
+        Invoke("forest_memory6", 4.0f);
+    }
+    void forest_memory6()
+    {
+        forestmemory5.SetActive(false);
+        forestmemory6.SetActive(true);
+        Invoke("forest_memory7", 4.0f);
+    }
+    void forest_memory7()
+    {
+        forestmemory6.SetActive(false);
+        forestmemory7.SetActive(true);
+        Invoke("forest_memory8", 4.0f);
+    }
+    void forest_memory8()
+    {
+        forestmemory7.SetActive(false);
+        forestmemory8.SetActive(true);
+        Invoke("forest_memory9", 4.0f);
+    }
+    void forest_memory9()
+    {
+        forestmemory8.SetActive(false);
+        forestmemory9.SetActive(true);
+        Invoke("forest_memory10", 4.0f);
+    }
+    void forest_memory10()
+    {
+        forestmemory9.SetActive(false);
+        forestmemory10.SetActive(true);
+        Invoke("forest_memory11", 4.0f);
+    }
+    void forest_memory11()
+    {
+        forestmemory10.SetActive(false);
+        forestmemory11.SetActive(true);
+        Invoke("forest_memory12", 4.0f);
+    }
+    void forest_memory12()
+    {
+        forestmemory11.SetActive(false);
+        forestmemory12.SetActive(true);
+        Invoke("forest_memory13", 4.0f);
+    }
+    void forest_memory13()
+    {
+        forestmemory12.SetActive(false);
+        forestmemory13.SetActive(true);
+        Invoke("forest_memory14", 4.0f);
+    }
+    void forest_memory14()
+    {
+        forestmemory13.SetActive(false);
+        forestmemory14.SetActive(true);
+        Invoke("forest_memory15", 4.0f);
+    }
+    void forest_memory15()
+    {
+        forestmemory14.SetActive(false);
+        forestmemory15.SetActive(true);
+    }
+
+    void canyon_first()
+    {
+        int a = 1;
+        canyon_memory();
+    }
+    void canyon_memory()
+    {
+        int b = a - 1;
+        Debug.Log(a + "+" + b);
+        if(b == 0)
+        {
+            GameObject.Find("memorypanel").transform.FindChild("canyonmemory1").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("memorypanel").transform.FindChild("canyonmemory" + b.ToString()).gameObject.SetActive(false);
+            GameObject.Find("memorypanel").transform.FindChild("canyonmemory" + a.ToString()).gameObject.SetActive(true);
+        }
+
+        if (a != 16)
+        {
+            a++;
+            recursivecanyon();
+        }
+        else if (a == 16)
+        {
+            canyonmemory16.SetActive(false);
+        }
+    }
+    void recursivecanyon()
+    {
+        Invoke("canyon_memory", 4.0f);
+    }
+
+    void bada_first()
+    {
+        int a = 1;
+        bada_memory();
+    }
+    void bada_memory()
+    {
+        int b = a - 1;
+        if(b == 0)
+        {
+            GameObject.Find("memorypanel").transform.FindChild("badamemory1").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("memorypanel").transform.FindChild("badamemory" + b.ToString()).gameObject.SetActive(false);
+            GameObject.Find("memorypanel").transform.FindChild("badamemory" + a.ToString()).gameObject.SetActive(true);
+        }
+
+        if (a != 9)
+        {
+            a++;
+            recursivebada();
+        }
+        else if (a == 9)
+        {
+            badamemory9.SetActive(false);
+        }
+    }
+    void recursivebada()
+    {
+        Invoke("bada_memory", 4.0f);
+    }
+
+    void maeul_first()
+    {
+        int a = 1;
+        maeul_memory();
+    }
+    void maeul_memory()
+    {
+        int b = a - 1;
+        if(b == 0)
+        {
+            GameObject.Find("memorypanel").transform.FindChild("maeulmemory1").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("memorypanel").transform.FindChild("maeulmemory" + b.ToString()).gameObject.SetActive(false);
+            GameObject.Find("memorypanel").transform.FindChild("maeulmemory" + a.ToString()).gameObject.SetActive(true);
+        }
+
+        if (a != 8)
+        {
+            a++;
+            recursivemaeul();
+        }
+        else if (a == 8)
+        {
+            maeulmemory8.SetActive(false);
+        }
+    }
+    void recursivemaeul()
+    {
+        Invoke("maeul_memory", 4.0f);
+    }
+
+    void forest2_first()
+    {
+        int a = 1;
+        forest2_memory();
+    }
+    void forest2_memory()
+    {
+        int b = a - 1;
+        if (b == 0)
+        {
+            GameObject.Find("memorypanel").transform.FindChild("forest2memory1").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("memorypanel").transform.FindChild("forest2memory" + b.ToString()).gameObject.SetActive(false);
+            GameObject.Find("memorypanel").transform.FindChild("forest2memory" + a.ToString()).gameObject.SetActive(true);
+        }
+
+        if (a != 14)
+        {
+            a++;
+            recursiveforest2();
+        }
+        else if (a == 14)
+        {
+            forest2memory14.SetActive(false);
+        }
+    }
+    void recursiveforest2()
+    {
+        Invoke("forest2_memory", 4.0f);
+    }
+
+    void forest_first()
+    {
+        int a = 1;
+        forest_memory();
+    }
+    void forest_memory()
+    {
+        int b = a - 1;
+        if (b == 0)
+        {
+            GameObject.Find("memorypanel").transform.FindChild("forestmemory1").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("memorypanel").transform.FindChild("forestmemory" + b.ToString()).gameObject.SetActive(false);
+            GameObject.Find("memorypanel").transform.FindChild("forestmemory" + a.ToString()).gameObject.SetActive(true);
+        }
+
+        if (a != 15)
+        {
+            a++;
+            recursiveforest();
+        }
+        else if (a == 15)
+        {
+            forestmemory15.SetActive(false);
+        }
+    }
+    void recursiveforest()
+    {
+        Invoke("forest_memory", 4.0f);
+    }
+
+    void cave_first()
+    {
+        int a = 1;
+        cave_memory();
+    }
+    void cave_memory()
+    {
+        int b = a - 1;
+        if (b == 0)
+        {
+            GameObject.Find("memorypanel").transform.FindChild("cavememory1").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("memorypanel").transform.FindChild("cavememory" + b.ToString()).gameObject.SetActive(false);
+            GameObject.Find("memorypanel").transform.FindChild("cavememory" + a.ToString()).gameObject.SetActive(true);
+        }
+
+        if (a != 8)
+        {
+            a++;
+            recursivecave();
+        }
+        else if (a == 8)
+        {
+            cavememory8.SetActive(false);
+        }
+    }
+    void recursivecave()
+    {
+        Invoke("cave_memory", 4.0f);
+    }
+
     void GainItem(Collider other){
         tankstop();
         string[] name = other.gameObject.name.Split('_');
         item = arr_item;
+        Brokenitem1 = arr_item1;
+        Brokenitem2 = arr_item2;
+        hyupitem = arr_item3;
+        badaitem = arr_item4;
         if (name[0].Equals("Tank1"))
         {
             GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "전력을 나눠줘야 겠군.");
@@ -467,7 +838,42 @@ public class ItemArray : MonoBehaviour {
         }
         else if(name[0].Equals("Items"))
         {
-            item.Add(other.gameObject.name);
+            if (name[1].Equals("MemoryChipBroken"))
+            {
+                if (name[2].Equals("sup1"))
+                {
+                    Brokenitem1.Add(other.gameObject.name);
+                }
+                else
+                {
+                    Brokenitem2.Add(other.gameObject.name);
+                }
+            }
+            else if(name[1].Equals("MemoryChip"))
+            {
+                if (name[2].Equals("hyup"))
+                {
+                    hyupitem.Add(other.gameObject.name);
+                }
+                else if (name[2].Equals("bada"))
+                {
+                    badaitem.Add(other.gameObject.name);
+                }
+                else if (name[2].Equals("Maeul"))
+                {
+                    //여기에 이벤트 작성
+                    maeul_first();
+                }
+                else if (name[2].Equals("cave"))
+                {
+                    cave_first();
+                }
+            }
+            else
+            {
+                item.Add(other.gameObject.name);
+            }
+
             //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아이템 " + other.gameObject.name + " 획득");
             if (name[1].Equals("Penguin"))
             {
@@ -476,24 +882,71 @@ public class ItemArray : MonoBehaviour {
             }
             else if (name[1].Equals("MemoryChip"))
             {
+                if (name[2].Equals("canyon"))
+                {
+                    object myObject = hyupitem;
+                    if (myObject is IList)
+                    {
+                        int listCount = ((IList)myObject).Count;
+                        Debug.Log(listCount);
+                        if (listCount == 6)
+                        {
+                            canyon_first();
+                        }
+                    }
+                }
+                else if (name[2].Equals("bada"))
+                {
+                    object myObject = badaitem;
+                    if (myObject is IList)
+                    {
+                        int listCount = ((IList)myObject).Count;
+                        Debug.Log(listCount);
+                        if (listCount == 6)
+                        {
+                            bada_first();
+                        }
+                    }
+                }
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "메모리칩을 획득했다.");
             }
             else if (name[1].Equals("MemoryChipBroken"))
             {
                 if (name[2].Equals("sup1"))
                 {
-                    foreach (string findname in item)
+                    object myObject = Brokenitem1;
+                    if (myObject is IList)
                     {
-                        if (findname.Equals("Items_MemoryChipBroken_sup1"))
+                        int listCount = ((IList)myObject).Count;
+                        Debug.Log(listCount);
+                        if(listCount == 6)
                         {
-                            GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "조각난 메모리칩 6개를 모아 온전한 메모리칩을 획득하였다.");
-                            //메모리칩1개로 변경
+                            //메모리칩 1개 얻음
+                            GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "조각난 메모리칩 6개를 모두 모아 온전한 메모리칩을 획득하였다.");
+                        }
+                        else
+                        {
+                            GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "메모리칩 No.1 조각" + listCount + "개 획득");
                         }
                     }
                 }
                 else if (name[2].Equals("sup2"))
                 {
-
+                    object myObject = Brokenitem2;
+                    if (myObject is IList)
+                    {
+                        int listCount = ((IList)myObject).Count;
+                        Debug.Log(listCount);
+                        if (listCount == 6)
+                        {
+                            //메모리칩 1개 얻음
+                            GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "조각난 메모리칩 6개를 모두 모아 온전한 메모리칩을 획득하였다.");
+                        }
+                        else
+                        {
+                            GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "메모리칩 No.2 조각" + listCount + "개 획득");
+                        }
+                    }
                 }
             }
             else if (name[1].Equals("Lighter"))
