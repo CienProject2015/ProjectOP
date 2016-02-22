@@ -7,21 +7,22 @@ public class Config : MonoBehaviour {
 
 	//item info
 
-	public static string[] itemName = new string[3]
-	{"empty","Items_lighter","Items_Penguin"};
+	public static string[] itemName = new string[4]
+	{"empty","긴급키트","Items_lighter","Items_Penguin"};
 
-	public static string[] itemInfo = new string[3]
+	public static string[] itemInfo = new string[4]
 	{
 		"empty",
+		"탐사선을 고칠 수 있다",
   	"불을 붙이는 물건이다. 지구에 있는 라이터와 거의 똑같은 것. 이걸로 쓰레기 더미를 소각한다.",
     "알 수 없는 문양이 나열되어 있는 문서다."
   };
 
-	public static Sprite[] itemSprite = new Sprite[3]
-	{ null, null,null };
+	public static Sprite[] itemSprite = new Sprite[4]
+	{ null,null, null,null };
 
-	public static bool[] canUseItem = new bool[3]
-	{false,false,false};
+	public static bool[] canUseItem = new bool[4]
+	{false,true,false,false};
 
 
 	//memoryChip info

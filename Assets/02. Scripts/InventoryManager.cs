@@ -36,10 +36,16 @@ public class InventoryManager : MonoBehaviour {
 		itemName.text = "아이템을 선택하세요.";
 		itemInfo.text = "";
 
+
 		GetInventoryItemImage();
 
 		item_Using_Question.SetActive (false);
 		M_Chip_Using_Question.SetActive (false);
+
+	}
+		
+	void Update(){
+		GetInventoryItemImage ();
 	}
 
 	private void GetInventoryItemImage(){
