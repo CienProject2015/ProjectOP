@@ -10,11 +10,10 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource wheel;	//tank2->Body->Box003
 	public AudioSource wind;
 	public AudioSource windChimes;
-	public AudioClip[] Clips;
+	public AudioClip[] clips;
 
 	void Start () {
-		bgm.clip = Clips [0];
-		bgm.Play ();
+		bgm.PlayOneShot (clips [0], 3f);
 	}
 
 	void Update () {
@@ -22,6 +21,10 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void bgmPlay1(){
-		bgm.clip = Clips [1];
+		bgm.clip = clips [1];
+	}
+
+	public void ClickSound(){
+		ui.PlayOneShot (clips[15]);
 	}
 }

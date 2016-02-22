@@ -132,7 +132,7 @@ MonoBehaviour:
   wheel: {fileID: 1405344857}
   wind: {fileID: 1406144498}
   windChimes: {fileID: 1946540401}
-  Clips:
+  clips:
   - {fileID: 8300000, guid: 72b9ffd57a2d24d05ab26dca7c2d79a8, type: 3}
   - {fileID: 8300000, guid: 5ccd402ba37b84e5c9c0c87493b9f242, type: 3}
   - {fileID: 8300000, guid: f75ab5c40daea47ffbdbdbe727a08e71, type: 3}
