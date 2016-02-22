@@ -9,7 +9,12 @@ public class ItemArray : MonoBehaviour {
     public GameObject obj_act_panel;
     public GameObject obj_IceCube_Tank;
     public GameObject obj_IceCube_Whale;
-    public GameObject Items_MemoryChip;
+    //public GameObject Items_MemoryChip;
+    public GameObject Items_MemoryChip_hyup;
+    public GameObject Items_MemoryChip_maeul;
+    public GameObject Items_MemoryChip_bada;
+    public GameObject Items_MemoryChip_sup;
+    public GameObject Items_MemoryChip_dongul;
     public GameObject Text_Trash_Active;
     public GameObject Text_Trash_hint;
     public GameObject Text_SheetMusic_Active;
@@ -208,6 +213,10 @@ public class ItemArray : MonoBehaviour {
             {
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "너무 귀엽다.");
                 //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아이템 " + other.gameObject.name + " 획득");
+            }
+            else if (name[1].Equals("MemoryChip"))
+            {
+                GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "메모리칩을 획득했다.");
             }
             else if (name[1].Equals("Lighter"))
             {
