@@ -692,6 +692,14 @@ public class ItemArray : MonoBehaviour {
             }
             else if (name[1].Equals("SinkHole"))
             {
+                if (name[2].Equals("1"))
+                {
+                    Tank2.transform.position = new Vector3(1250, 36, 340);
+                }
+                else
+                {
+                    Tank2.transform.position = new Vector3(1007, 36, 340);
+                }
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "구멍에 빠져서 떨어졌다.");
                 tankstart();
             }
