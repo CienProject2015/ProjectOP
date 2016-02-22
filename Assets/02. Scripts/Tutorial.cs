@@ -36,7 +36,7 @@ public class Tutorial : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		GameObject.Find ("Sun").SetActive (true);
+		//GameObject.Find ("Sun").SetActive (true);
 		
 		if (timeCount) {
 			deltaTime += Time.deltaTime;

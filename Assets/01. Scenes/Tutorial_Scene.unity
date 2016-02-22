@@ -96,7 +96,7 @@ GameObject:
   - 114: {fileID: 380370721}
   - 114: {fileID: 380370724}
   - 114: {fileID: 380370723}
-  - 114: {fileID: 380370725}
+  - 114: {fileID: 380370726}
   m_Layer: 0
   m_Name: _EventSystem_tank
   m_TagString: Untagged
@@ -152,13 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b9a61685dc38a4985c402cab861539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &380370725
+--- !u!114 &380370726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 380370720}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 136908e1f2a1e27459cac1d0f3101987, type: 3}
   m_Name: 
@@ -290,7 +290,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 175348, guid: 19860e8ed29ba8c4fa632715c2b3cdeb, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 423906, guid: 19860e8ed29ba8c4fa632715c2b3cdeb, type: 2}
       propertyPath: m_LocalScale.x
@@ -370,7 +370,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 191308, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 262b6f76911bfc74f8be16dd8a7c545e, type: 2}

@@ -13,7 +13,7 @@ public class Config : MonoBehaviour {
 	public static string[] itemInfo = new string[3]
 	{
 		"empty",
-  	"불을 붙이는 물건이다. 지구에 있는 라이터와 거의 똑같은걸. 이걸로 쓰레기 더미를 소각한다.",
+  	"불을 붙이는 물건이다. 지구에 있는 라이터와 거의 똑같은 것. 이걸로 쓰레기 더미를 소각한다.",
     "알 수 없는 문양이 나열되어 있는 문서다."
   };
 

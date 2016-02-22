@@ -23,7 +23,6 @@ public class PenguinMove : MonoBehaviour {
 		if(onPenguinMove){
 			anim.SetFloat ("Speed", speed);
 			distance = Vector3.Distance (tank2.transform.position, transform.position);
-			Debug.Log (distance);
 			if (distance >= distanceMin) {
 				isSpot = false;
 				onRandomAnim = true;
