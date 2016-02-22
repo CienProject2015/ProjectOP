@@ -7,8 +7,11 @@ public class obj_act_yes : MonoBehaviour {
     private Collider other;
     string[] name;
     // Use this for initialization
-    void Start () {
-	
+	void Start () {			
+		GameObject.Find ("SoundManager").GetComponent<SoundManager> ().piano.Play ();
+		GameObject.Find ("SoundManager").GetComponent<SoundManager> ().wind.Play ();
+		GameObject.Find ("SoundManager").GetComponent<SoundManager> ().windChimes.Play ();
+
 	}
 	
 	// Update is called once per frame
@@ -33,7 +36,10 @@ public class obj_act_yes : MonoBehaviour {
         {
             //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "...바람이 불어온다.");
             Debug.Log(" ...바람이 불어온다.");
-        }
+			GameObject.Find ("SoundManager").GetComponent<SoundManager> ().piano.Play ();
+			GameObject.Find ("SoundManager").GetComponent<SoundManager> ().wind.Play ();
+			GameObject.Find ("SoundManager").GetComponent<SoundManager> ().windChimes.Play ();
+		}
         Tank2.SendMessage("tank_start");
         obj_act_panel.SetActive(false);
     }

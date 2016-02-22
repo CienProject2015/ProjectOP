@@ -3,16 +3,25 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour {
 
-	private AudioSource audioSource;
-	public AudioClip[] AudioClips;
+	public AudioSource bgm;
+	public AudioSource piano;	//temp->Obj_Piano
+	public AudioSource penguin;
+	public AudioSource ui;
+	public AudioSource wheel;	//tank2->Body->Box003
+	public AudioSource wind;
+	public AudioSource windChimes;
+	public AudioClip[] Clips;
 
-	// Use this for initialization
 	void Start () {
-		audioSource = gameObject.GetComponent<AudioSource> ();
+		bgm.clip = Clips [0];
+		bgm.Play ();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-	
+		
+	}
+
+	public void bgmPlay1(){
+		bgm.clip = Clips [1];
 	}
 }

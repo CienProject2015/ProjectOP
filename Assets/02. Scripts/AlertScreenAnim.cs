@@ -33,7 +33,7 @@ public class AlertScreenAnim : MonoBehaviour {
 				}
 			} else if (!fadeout) {
 				gameObject.GetComponent <Image> ().color += new Color (0, 0, 0, 0.03f);
-				if (gameObject.GetComponent <Image> ().color.a > 0.7f) {
+				if (gameObject.GetComponent <Image> ().color.a > 0.9f) {
 					fadeout = true;
 				}
 			}
