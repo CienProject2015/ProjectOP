@@ -9,8 +9,10 @@ EditorBuildSettings:
     path: Assets/01. Scenes/Main.unity
   - enabled: 1
     path: Assets/01. Scenes/InGame.unity
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Assets/Assets/Assets/ing/Assets/\uAD11\uC7A51.unity"
+  - enabled: 1
+    path: "Assets/Assets/Assets/Assets/Assets/ing/Assets/\uAD11\uC7A51.unity"
   - enabled: 1
     path: Assets/01. Scenes/Ingame_UI.unity
   - enabled: 1

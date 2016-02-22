@@ -121,6 +121,7 @@ public class ItemArray : MonoBehaviour {
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "이 지역과는 어울리지 않는 큰 나무다. 이런 식물이 살 수 있는 환경이라는 것은 지하에는 물이 있는 것인가? 나뭇가지에 풍경이 메달려있다.");
                 tankstart();
             }
+            /*
             else if (name[1].Equals("CardboardBox"))
             {
                 //만약 메모리칩 다 얻었으면 '아무것도 없다'만 떠야한다!!!!
@@ -137,6 +138,7 @@ public class ItemArray : MonoBehaviour {
                 }
                 tankstart();
             }
+            */
             else if (name[1].Equals("PengRock"))
             {
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 날아다니는 전설인가?");
