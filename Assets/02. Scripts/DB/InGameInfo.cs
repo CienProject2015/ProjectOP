@@ -10,10 +10,12 @@ public class InGameInfo : MonoBehaviour {
 
 	void Start(){
 		// PlayerPrefs test tool
-		PlayerPrefs.DeleteAll();
+		//PlayerPrefs.DeleteAll();
 		oldStage = PlayerPrefs.GetInt ("stage",0);
 	}
 	void Update(){
+		GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isItemTutorial = false;
+
 		timer = (int)Time.time;
 
 		if (oldStage > 0) {

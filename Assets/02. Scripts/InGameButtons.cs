@@ -19,6 +19,7 @@ public class InGameButtons : MonoBehaviour {
 	GameObject penguin;
 
 	void Start(){
+		penguin = GameObject.Find ("Penguin");
 	}
 
 

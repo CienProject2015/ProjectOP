@@ -10,7 +10,7 @@ public class TutorialTankMove : MonoBehaviour {
 	private int count = 0;
 
 	void Start () {
-		cycleSpeed = 10;
+		cycleSpeed = 20;
 	}
 
 	void Update () {

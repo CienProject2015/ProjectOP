@@ -36,6 +36,8 @@ public class Tutorial : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		GameObject.Find ("Sun").SetActive (true);
+		
 		if (timeCount) {
 			deltaTime += Time.deltaTime;
 			timer = (int)deltaTime;
@@ -151,6 +153,8 @@ public class Tutorial : MonoBehaviour {
 			tank2.GetComponent<TutorialTankMove> ().speed = 0;
 			noiseAndGrainMain.enabled = true;
 			if (timer == 34) {
+				UICamera = GameObject.Find ("UI Camera");
+				UICamera.GetComponent<Camera> ().enabled = false;
 				noiseAndGrainMain.intensityMultiplier++;
 			}
 
