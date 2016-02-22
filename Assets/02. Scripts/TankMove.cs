@@ -69,6 +69,20 @@ public class TankMove : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		// stage change
+
 		GameObject.Find ("GameInfo").GetComponent<InGameInfo> ().currentStage = 1;
+
+		if (other.name == "TerrainR") {
+			Debug.Log ("TerrainR");
+		}
+		if (other.name == "TerrainL") {
+			Debug.Log ("TerrainL");
+		}
+		if (other.name == "TerrainF") {
+			Debug.Log ("TerrainF");
+		}
+		if (other.name == "Terrain") {
+			Debug.Log ("Terrain");
+		}
 	}
 }

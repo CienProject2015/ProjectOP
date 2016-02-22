@@ -149,8 +149,14 @@ public class Tutorial : MonoBehaviour {
 
 		if (timer > 32) {
 			tank2.GetComponent<TutorialTankMove> ().speed = 0;
-			noiseAndGrainMain.intensityMultiplier--;
 			noiseAndGrainMain.enabled = true;
+			if (timer == 34) {
+				noiseAndGrainMain.intensityMultiplier++;
+			}
+
+			if (timer == 36) {
+				Application.LoadLevel ("InGame");
+			}
 		}
 			
 		/////// 고속도로 타고 간다 ///////

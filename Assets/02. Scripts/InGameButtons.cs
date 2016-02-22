@@ -109,15 +109,18 @@ public class InGameButtons : MonoBehaviour {
 		GameCloseButtonImage.SetActive (isExtended);
 		stateWindow.SetActive (!isExtended);
 		if (isExtended) {
-			if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
-				if (gameObject.GetComponent<TutorialManager> ().isItemTutorial) {
-					GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("ExtensionButton"));
-					GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("InventoryButton"));
-				}
+			if (gameObject.GetComponent<TutorialManager> ().isItemTutorial) {
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("ExtensionButton"));
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("InventoryButton"));
 			}
 			extensionButtonsText.GetComponent<Text> ().text = "축소";
-		}else if (!isExtended)
+		} else if (!isExtended) {
+			if (gameObject.GetComponent<TutorialManager> ().isItemTutorial) {
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("ExtensionButton"));
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("InventoryButton"));
+			}
 			extensionButtonsText.GetComponent<Text> ().text = "확장";
+		}
 	}
 
 	public void SettingsButtonPressed(){

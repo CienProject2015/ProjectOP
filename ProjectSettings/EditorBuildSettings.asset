@@ -5,16 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/01. Scenes/Main.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/01. Scenes/InGame.unity
   - enabled: 1
     path: "Assets/Assets/Assets/Assets/ing/Assets/\uAD11\uC7A51.unity"
-  - enabled: 1
+  - enabled: 0
     path: Assets/01. Scenes/Ingame_UI.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/01. Scenes/Tutorial_Scene.unity
+  - enabled: 0
+    path: Assets/01. Scenes/Obj_Scene.unity
   - enabled: 0
     path: Assets/01. Scenes/UI_Test.unity
   - enabled: 0
