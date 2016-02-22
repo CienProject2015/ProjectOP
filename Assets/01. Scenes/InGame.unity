@@ -589,7 +589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &709046968
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -737,7 +737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &951031117
 Light:
   m_ObjectHideFlags: 0
@@ -1676,6 +1676,7 @@ GameObject:
   - 114: {fileID: 1626990329}
   - 54: {fileID: 1626990335}
   - 65: {fileID: 1626990334}
+  - 114: {fileID: 1626990336}
   m_Layer: 0
   m_Name: Tank2
   m_TagString: Untagged
@@ -1762,7 +1763,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1626990328}
   m_LocalRotation: {x: 0, y: -0.2890919, z: 0, w: -0.9573014}
-  m_LocalPosition: {x: -10, y: 25, z: -2093.6}
+  m_LocalPosition: {x: -10, y: 40, z: -2093.6}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 98319015}
@@ -1798,6 +1799,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1626990336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1626990328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030a297ebe5e3bc43a1afa3b997d27f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1683518472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,7 +2043,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1765456158}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 136908e1f2a1e27459cac1d0f3101987, type: 3}
   m_Name: 

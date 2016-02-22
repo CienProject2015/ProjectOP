@@ -10,13 +10,15 @@ public class MapSearch : MonoBehaviour {
 	string[] tempName;
 	int row,column;
 
+	bool onFirst = true;
 
 	void Update(){
 		for (int i = 1; i < mapRowMax; i++) {
 			for (int j = 1; j < mapColumnMax; j++) {
-				map [i,j] = GameObject.Find (i + "-" + j);
+				map[i,j] = GameObject.Find ("MapAdmin").GetComponent<MapAdmin>().map[i,j];
 			}
 		}
+
 		MapSetting ();
 	}
 
@@ -26,80 +28,56 @@ public class MapSearch : MonoBehaviour {
 		for (int i = 1; i < mapRowMax; i++) {
 			for (int j = 1; j < mapColumnMax; j++) {
 
-				// 9개 로
+				// 5개 load
 
-				if(i == row -1 && j == column -1){
-					if (map [i,j] == null) {
-						Debug.Log ("No Local");
-					} else {
-						map [i,j].GetComponent<Terrain> ().enabled = true;
-					}
-				}
+			
 				if(i == row -1  && j == column){
 					if (map [i,j] == null) {
 						Debug.Log ("No Local");
 					} else {
-						map [i,j].GetComponent<Terrain> ().enabled = true;
+						map[i,j].SetActive(true);
 					}
-				}
-				if(i == row && j -1 == column + 1){
-					if (map  [i,j] == null) {
-						Debug.Log ("No Local");
-					} else {
-						map [i,j].GetComponent<Terrain> ().enabled = true;
-					}
-				}
-				if(i == row && j == column -1){
+				}else if(i == row && j == column -1){
 					if (map [i,j]== null) {
 						Debug.Log ("No Local");
 					} else {
-						map [i,j].GetComponent<Terrain> ().enabled = true;
+						map[i,j].SetActive(true);
 					}
-				}
-				if(i == row && j == column){
+				}else if(i == row && j == column){
 					if (map [i,j] == null) {
 						Debug.Log ("No Local");
 					} else {
-						map [i,j].GetComponent<Terrain> ().enabled = true;
+						map[i,j].SetActive(true);
 					}
-				}
-				if(i == row && j == column +1){
+				}else if(i == row && j == column +1){
 					if (map [i,j] == null) {
 						Debug.Log ("No Local");
 					} else {
-						map [i,j].GetComponent<Terrain> ().enabled = true;
+						map[i,j].SetActive(true);
 					}
-				}
-				if(i == row +1 && j  == column -1){
-					if (map [i,j] == null) {
+				}else if (i == row + 1 && j == column) {
+					if (map [i, j] == null) {
 						Debug.Log ("No Local");
 					} else {
-						map [i,j].GetComponent<Terrain> ().enabled = true;
+						map [i, j].SetActive (true);
 					}
-				}
-				if(i == row +1 && j == column){
-					if (map [i,j] == null) {
-						Debug.Log ("No Local");
-					} else {
-						map [i,j].GetComponent<Terrain> ().enabled = true;
-					}
-				}
-				if(i == row +1 && j == column +1){
-					if (map [i,j] == null) {
-						Debug.Log ("No Local");
-					} else {
-						map [i,j].GetComponent<Terrain> ().enabled = true;
+				} else {
+					if (map [i, j].activeSelf) {
+						if (!onFirst) {
+							map [i, j].SetActive (false);
+						}
 					}
 				}
 			}
 		}
 	}
-
+		
 	void OnTriggerEnter(Collider other){
 		tempName = other.name.Split('-');
 		row = Int32.Parse (tempName [0]);
 		column = Int32.Parse (tempName [1]);
 
+		onFirst = false;
 	}
 
 }
