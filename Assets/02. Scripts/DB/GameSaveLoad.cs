@@ -34,15 +34,18 @@ public class GameSaveLoad : MonoBehaviour {
 				_tmpStr += code + ",";
 			}
 		}
+
 		PlayerPrefs.SetString("MyItems", _tmpStr); // 사용가능 아이템  string 저장
 
 		_tmpStr = null;
-		for (int code = 0; code < Config.objectName.Length; code ++) {  
-			if (Config.canUseObject[code]) {
+
+		for (int code = 0; code < Config.memoryChipName.Length; code ++) {  
+			if (Config.canUseMemoryChip[code]) {
 				_tmpStr += code + ","; // itemCode를 ' , ' 로 구분해서 저장
 			}
 		}
-		PlayerPrefs.SetString("MyObjects", _tmpStr); 
+
+		PlayerPrefs.SetString("MyMemoryChips", _tmpStr); 
 
 		currentStage = GameObject.Find ("GameInfo").GetComponent<InGameInfo> ().currentStage;
 		PlayerPrefs.SetInt("stage", currentStage);
@@ -73,12 +76,11 @@ public class GameSaveLoad : MonoBehaviour {
 			Config.canUseItem [itemCode] = true;
 		}
 
-		string[] myObjectCodes = PlayerPrefs.GetString ("MyObjects").Split (',');
+		string[] myMemoryChipCodes = PlayerPrefs.GetString ("MyMemoryChips").Split (',');
 
-		for (int i = 0; i < myObjectCodes.Length-1; i++) {
-			int objectCode = Int32.Parse(myObjectCodes[i]);
-			Config.canUseObject [objectCode] = true;
-
+		for (int i = 0; i < myMemoryChipCodes.Length-1; i++) {
+			int memoryChipCode = Int32.Parse(myMemoryChipCodes[i]);
+			Config.canUseMemoryChip [memoryChipCode] = true;
 		}
 
 		currentStage = PlayerPrefs.GetInt ("stage");

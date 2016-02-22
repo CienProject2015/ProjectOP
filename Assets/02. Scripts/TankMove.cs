@@ -3,8 +3,8 @@ using System.Collections;
 
 public class TankMove : MonoBehaviour {
 
-	public float speed = 15;
-	public float cycleSpeed = 15;
+	public float speed = 5;
+	public float cycleSpeed = 2;
 	private int leftWheelDiret, rightWheelDiret;
 	private int currentStage=0;
 
@@ -64,7 +64,7 @@ public class TankMove : MonoBehaviour {
 	}
 	void tank_start()
 	{
-		speed = 15;
+		speed = 5;
 	}
 
 	void OnTriggerEnter(Collider other){

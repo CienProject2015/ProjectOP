@@ -24,12 +24,10 @@ public class MapSearch : MonoBehaviour {
 
 	void MapSetting(){
 
-
 		for (int i = 1; i < mapRowMax; i++) {
 			for (int j = 1; j < mapColumnMax; j++) {
 
 				// 5개 load
-
 			
 				if(i == row -1  && j == column){
 					if (map [i,j] == null) {
