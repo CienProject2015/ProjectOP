@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class ItemArray : MonoBehaviour {
     ArrayList arr_item = new ArrayList();
@@ -22,6 +23,27 @@ public class ItemArray : MonoBehaviour {
     public GameObject Tank2;
     public GameObject Fade;
     public GameObject slide_panel;
+    public GameObject skyLight_canyon1;
+    public GameObject skyLight_canyon2;
+    public GameObject skyLight_bada1;
+    public GameObject skyLight_bada2;
+    public GameObject canyon1;
+    public GameObject canyon2;
+    public GameObject bada1;
+    public GameObject bada2;
+    public GameObject forest1_1;
+    public GameObject forest1_2;
+    public GameObject forest2;
+    public GameObject forest3_1;
+    public GameObject forest3_2;
+    public GameObject forest4;
+    public GameObject skyLight_forest1_1;
+    public GameObject skyLight_forest1_2;
+    public GameObject skyLight_forest2;
+    public GameObject skyLight_forest3_1;
+    public GameObject skyLight_forest3_2;
+    public GameObject skyLight_forest4;
+
 
     // Use this for initialization
     void Start () {
@@ -41,6 +63,167 @@ public class ItemArray : MonoBehaviour {
     void tankstart()
     {
         SendMessage("tank_start");
+    }
+
+    void canyon1Start()
+    {
+        canyon1.SetActive(true);
+        Invoke("canyon1Cancel", 3.0f);
+    }
+    void canyon2Start()
+    {
+        canyon2.SetActive(true);
+        Invoke("canyon2Cancel", 3.0f);
+    }
+    void bada1Start()
+    {
+        bada1.SetActive(true);
+        Invoke("bada1Cancel", 3.0f);
+    }
+    void bada2Start()
+    {
+        bada2.SetActive(true);
+        Invoke("bada2Cancel", 3.0f);
+    }
+    void forest1_1Start()
+    {
+        bada2.SetActive(true);
+        Invoke("bada2Cancel", 3.0f);
+    }
+    void forest1_2Start()
+    {
+        bada2.SetActive(true);
+        Invoke("bada2Cancel", 3.0f);
+    }
+    void forest2Start()
+    {
+        bada2.SetActive(true);
+        Invoke("bada2Cancel", 3.0f);
+    }
+    void forest3_1Start()
+    {
+        bada2.SetActive(true);
+        Invoke("bada2Cancel", 3.0f);
+    }
+    void forest3_2Start()
+    {
+        bada2.SetActive(true);
+        Invoke("bada2Cancel", 3.0f);
+    }
+    void forest4Start()
+    {
+            bada2.SetActive(true);
+            Invoke("bada2Cancel", 3.0f);
+    }
+    void canyon1Cancel()
+    {
+        canyon1.SetActive(false);
+        skyLight_canyon1.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
+    }
+    void canyon2Cancel()
+    {
+        canyon2.SetActive(false);
+        skyLight_canyon2.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
+    }
+    void bada1Cancel()
+    {
+        bada1.SetActive(false);
+        skyLight_bada1.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
+    }
+    void bada2Cancel()
+    {
+        bada2.SetActive(false);
+        skyLight_bada2.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
+    }
+    void forest1_1Cancel()
+    {
+        forest1_1.SetActive(false);
+        skyLight_forest1_1.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
+    }
+    void forest1_2Cancel()
+    {
+        forest1_2.SetActive(false);
+        skyLight_forest1_2.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
+    }
+    void forest2Cancel()
+    {
+        forest2.SetActive(false);
+        skyLight_forest2.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
+    }
+    void forest3_1Cancel()
+    {
+        forest3_1.SetActive(false);
+        skyLight_forest3_1.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
+    }
+    void forest3_2Cancel()
+    {
+        forest3_2.SetActive(false);
+        skyLight_forest3_2.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
+    }
+    void forest4Cancel()
+    {
+        forest4.SetActive(false);
+        skyLight_forest4.SetActive(false);
+        var UICamera = GameObject.Find("UI Camera");
+        UICamera.GetComponent<Camera>().enabled = true;
+        for (var i = 0; i < 30; i++)
+        {
+            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
+        }
     }
 
     void GainItem(Collider other){
@@ -180,6 +363,54 @@ public class ItemArray : MonoBehaviour {
                 }
                 tankstart();
             }
+            else if (name[1].Equals("PenguinTotem"))
+            {
+                if (name[2].Equals("canyon1"))
+                {
+                    skyLight_canyon1.SetActive(true);
+                    var UICamera = GameObject.Find("UI Camera");
+                    UICamera.GetComponent<Camera>().enabled = false;
+                    for (var i = 0; i < 30; i++)
+                    {
+                        Camera.main.transform.Rotate(new Vector3(-i, 0, 0));
+                    }
+                    Invoke("canyon1Start", 2.0f);
+                }
+                else if (name[2].Equals("canyon2"))
+                {
+                    skyLight_canyon2.SetActive(true);
+                    var UICamera = GameObject.Find("UI Camera");
+                    UICamera.GetComponent<Camera>().enabled = false;
+                    for (var i = 0; i < 30; i++)
+                    {
+                        Camera.main.transform.Rotate(new Vector3(-i, 0, 0));
+                    }
+                    Invoke("canyon2Start", 2.0f);
+                }
+                else if (name[2].Equals("bada1"))
+                {
+                    skyLight_bada1.SetActive(true);
+                    var UICamera = GameObject.Find("UI Camera");
+                    UICamera.GetComponent<Camera>().enabled = false;
+                    for (var i = 0; i < 30; i++)
+                    {
+                        Camera.main.transform.Rotate(new Vector3(-i, 0, 0));
+                    }
+                    Invoke("bada1Start", 2.0f);
+                }
+                else if (name[2].Equals("bada2"))
+                {
+                    skyLight_bada2.SetActive(true);
+                    var UICamera = GameObject.Find("UI Camera");
+                    UICamera.GetComponent<Camera>().enabled = false;
+                    for (var i = 0; i < 30; i++)
+                    {
+                        Camera.main.transform.Rotate(new Vector3(-i, 0, 0));
+                    }
+                    Invoke("bada2Start", 2.0f);
+                }
+                tankstart();
+            }
             else if (name[1].Equals("PenguinTotemOld"))
             {
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "세워져 있으나 많이 파손되어 있다. 별다른 기능이 없어 보인다");
@@ -228,12 +459,13 @@ public class ItemArray : MonoBehaviour {
                 //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아이템 " + other.gameObject.name + " 획득");
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "이상한 문양이 적힌 문서다. 해독할 수 없다.");
             }
-            else if (name[1].Equals("PenguinTotem"))
-            {
-                GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "Totem");
-            }
             tankstart();
         }
         //확인창 같은거 눌러서 tank_start시켜야 함
+    }
+
+    private void Invoke(object v1, int v2)
+    {
+        throw new NotImplementedException();
     }
 }
