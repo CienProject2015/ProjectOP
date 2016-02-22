@@ -16,6 +16,7 @@ public class ItemArray : MonoBehaviour {
     public GameObject Text_SheetMusic_hint;
     public GameObject Tank2;
     public GameObject Fade;
+    public GameObject slide_panel;
 
     // Use this for initialization
     void Start () {
@@ -188,7 +189,7 @@ public class ItemArray : MonoBehaviour {
             else if (name[1].Equals("IceSlide"))
             {
                 //맵 이동
-                tankstart();
+                slide_panel.SetActive(true);
             }
             else if (name[1].Equals("Adult"))
             {
