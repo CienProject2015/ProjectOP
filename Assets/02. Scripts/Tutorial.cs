@@ -164,8 +164,8 @@ public class Tutorial : MonoBehaviour {
 				noiseAndGrainMain.intensityMultiplier++;
 			}
 
-			if (timer == 36) {
-				Application.LoadLevel ("InGame");
+			if (timer == 40) {
+				Application.LoadLevel ("Obj_Scene");
 			}
 		}
 			

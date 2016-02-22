@@ -19,7 +19,22 @@ public class MapSearch : MonoBehaviour {
 			}
 		}
 
-		MapSetting ();
+		if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isItemTutorial) {
+			if (onFirst) {
+				for (int i = 1; i < mapRowMax; i++) {
+					for (int j = 1; j < mapColumnMax; j++) {
+						map [i, j].SetActive (false);
+					}
+				}
+				onFirst = false;
+			}
+			map [1, 1].SetActive (true);
+			map [1, 2].SetActive (true);
+			map [2, 1].SetActive (true);
+			map [2, 2].SetActive (true);
+		} else {
+			MapSetting ();
+		}
 	}
 
 	void MapSetting(){
