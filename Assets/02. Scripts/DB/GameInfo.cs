@@ -8,8 +8,10 @@ public class GameInfo : MonoBehaviour {
 
 	void Start(){
 		gameObject.GetComponent<GameSaveLoad> ().LoadGame ();
+	}
 
-		Config.itemSprite [0] = sprite[0];
-		Config.itemSprite [1] = sprite[1];
+	void Update(){
+		Config.itemSprite [0] = sprite [0];
+		Config.itemSprite [1] = sprite [1];
 	}
 }
