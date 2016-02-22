@@ -44,6 +44,7 @@ public class Tutorial : MonoBehaviour {
 		}
 
 		if (timer < 5) {
+			GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene = 1;
 			UICamera = GameObject.Find ("UI Camera");
 			UICamera.GetComponent<Camera> ().enabled = false;
 			//extensionButton = GameObject.Find ("ExtensionButton");
@@ -58,6 +59,7 @@ public class Tutorial : MonoBehaviour {
 			}
 		}
 		if (timer == 5) {
+			GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene = 2;
 			noiseAndGrainMain.intensityMultiplier = 0;
 			noiseAndGrainMain.enabled = false; 
 			blurMain.iterations = 10;
@@ -66,6 +68,7 @@ public class Tutorial : MonoBehaviour {
 		if (timer == 8)
 			blurMain.iterations --;
 		if (timer == 9) {
+			GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene = 3;
 			blurMain.enabled = false;
 			UICamera.GetComponent<Camera> ().enabled = true;
 
@@ -87,6 +90,7 @@ public class Tutorial : MonoBehaviour {
 			float distance = Vector3.Distance (tank2.transform.position, penguin.transform.position);
 	
 			if (distance < 10 ){
+				GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene = 11;
 				GameObject.Find ("Penguin").GetComponent<PenguinMove> ().onPenguinMove = false;
 				anim.SetFloat ("Speed", 0);
 				anim.SetBool ("Happy", true);
@@ -110,6 +114,7 @@ public class Tutorial : MonoBehaviour {
 			float distance = Vector3.Distance (tank2.transform.position, penguin.transform.position);
 
 			if (distance < 10 ){
+				GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene = 14;
 				GameObject.Find ("Penguin").GetComponent<PenguinMove> ().onPenguinMove = false;
 				anim.SetFloat ("Speed", 0);
 				anim.SetBool ("Happy", true);
@@ -130,6 +135,7 @@ public class Tutorial : MonoBehaviour {
 		}
 			
 		if (timer > 16 && timer < 19) {
+			GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene = 16;
 			penguin.transform.Rotate(new Vector3(0,100*Time.deltaTime, 0));
 			penguinSpeed = 10;
 		}

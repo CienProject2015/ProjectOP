@@ -10,6 +10,7 @@ public class TutorialTankMove : MonoBehaviour {
 	private int count = 0;
 
 	void Start () {
+		Physics.gravity  = new Vector3(0,-100f,0);
 		cycleSpeed = 20;
 	}
 

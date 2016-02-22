@@ -89,10 +89,17 @@ public class InventoryManager : MonoBehaviour {
 						M_Chip_Using_Question.SetActive (false);
 					}
 
-					if (gameObject.GetComponent<TutorialManager> ().isTutorial) {
-						if (gameObject.GetComponent<TutorialManager> ().isItemTutorial) {
-							GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("Item Image 1"));
-							GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("UseButton"));
+					if (gameObject.GetComponent<TutorialManager> ().isTutorial){
+						if (i == 0) {
+							if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene == 5.2f) {
+								GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene = 5.3f;
+								GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("UseButton"));
+							} else if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene == 5.3f) {
+								//GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("UseButton"));
+							}
+						} else {
+							GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene = 5.2f;
+							GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("UseButton"));
 						}
 					}
 				}
@@ -118,9 +125,13 @@ public class InventoryManager : MonoBehaviour {
 		GetItemInfo ();
 
 		if (gameObject.GetComponent<TutorialManager>().isTutorial && selectedItemSlotNum == 0) {
-			GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("UseButton"));
-			GameObject.Find ("ItemMenuCanvus").SetActive (false);
-			gameObject.SendMessage ("Scene6");
+			if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene == 5.3f) {
+				GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().currentScene = 5.4f;
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("Item Image 1"));
+				GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("UseButton"));
+				GameObject.Find ("ItemMenuCanvus").SetActive (false);
+				gameObject.SendMessage ("Scene6");
+			}
 		}
 	}
 

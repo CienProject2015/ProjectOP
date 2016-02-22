@@ -17,6 +17,7 @@ public class TutorialManager : MonoBehaviour {
 	public bool onScene13;
 	public bool onScene15;
 	public bool isItemTutorial;
+	public float currentScene;
 
 	private float deltaTime,timer;
 	bool timeCount = true;
@@ -38,10 +39,15 @@ public class TutorialManager : MonoBehaviour {
 
 		scene4Run = true;
 
+		currentScene = 0;
 
 	}
 
 	void Update () {
+
+		Debug.Log (currentScene);
+
+
 		if (isTutorial) {
 			if (timeCount) {
 				deltaTime += Time.deltaTime;
@@ -55,9 +61,9 @@ public class TutorialManager : MonoBehaviour {
 
 	public void timeAction(){
 		
-		if (timer == 8 && scene4Run) {
+		if (timer == 10 && scene4Run) {
 			timeCount = false;
-			timer = 9;
+			timer = 11;
 			Scene4 ();
 			scene4Run = false;
 		}
@@ -65,21 +71,24 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	public void Scene4(){
+		currentScene = 4;
 		gameObject.SendMessage ("ReceiveLog", "움직이지 않는다. 긴급키트를 사용하자.");
 		GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StartAlertAnim ();
+		currentScene = 5;
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find("ExtensionButton"));
 	}
 
 	public void Scene6(){
+		currentScene = 6;
 		gameObject.SendMessage ("ReceiveLog", "수리가 완료되었다. 작동확인을 해보자.");
 		GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StopAlertAnim ();
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find("ExtensionButton"));
-		isItemTutorial = false;
 		Invoke ("Scene7", 2);
 
 	}
 
 	public void Scene7(){
+		currentScene = 7;
 		gameObject.SendMessage ("ReceiveLog", "두 바퀴를 움직여 전진한다.");
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_FrontRightWheel"));
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_FrontLeftWheel"));
@@ -88,6 +97,7 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	public void Scene8(){
+		currentScene = 8;
 		onScene7 = false;
 		gameObject.SendMessage ("ReceiveLog", "오른쪽 바퀴를 움직여 좌회전한다.");
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("_FrontRightWheel"));
@@ -98,6 +108,7 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	public void Scene9(){
+		currentScene = 9;
 		onScene8 = false;
 		gameObject.SendMessage ("ReceiveLog", "왼쪽 바퀴를 움직여 우회전한다.");
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("_FrontRightWheel"));
@@ -106,6 +117,8 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	public void Scene10(){
+		currentScene = 10;
+		gameObject.SendMessage ("ReceiveLog", "뭐지...?");
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("_FrontLeftWheel"));
 		onScene9 = false;
 		onScene10 = true;
@@ -113,6 +126,7 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	public void Scene12(){
+		currentScene = 12;
 		GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StartAlertAnim ();
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("_FrontLeftWheel"));
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_BackRightWheel"));
@@ -122,6 +136,7 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	public void Scene13(){
+		currentScene = 13;
 		GameObject.Find ("Alert_Screen").GetComponent<AlertScreenAnim> ().StopAlertAnim ();
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("_BackRightWheel"));
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StopTwinkle (GameObject.Find ("_BackLeftWheel"));
@@ -130,15 +145,18 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	public void Scene15(){
+		currentScene = 15;
 		gameObject.SendMessage ("ReceiveLog", "반기는 것 같은데 이유를 알 수 없다.");
 		onScene15 = true;
 	}
 
 	public void Scene17(){
+		currentScene = 17;
 		gameObject.SendMessage ("ReceiveLog", "팽귄을 따라가자.");
 	}
 
 	public void Scene19(){
+		currentScene = 19;
 		isTutorial = false;
 	}
 }

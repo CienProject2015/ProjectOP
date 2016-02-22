@@ -10,7 +10,7 @@ public class TankMove : MonoBehaviour {
 
 
 	void Start () {
-
+		Physics.gravity  = new Vector3(0,-100f,0);
 
     }
 	

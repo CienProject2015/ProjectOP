@@ -3182,6 +3182,7 @@ MonoBehaviour:
   Text_SheetMusic_hint: {fileID: 0}
   Tank2: {fileID: 160376}
   Fade: {fileID: 0}
+  slide_panel: {fileID: 0}
 --- !u!124 &12403642
 Behaviour:
   m_ObjectHideFlags: 1
