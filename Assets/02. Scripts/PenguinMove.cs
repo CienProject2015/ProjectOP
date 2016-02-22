@@ -8,7 +8,7 @@ public class PenguinMove : MonoBehaviour {
     private Animator anim;
 	public GameObject tank2;
 	public GameObject spot;
-	private float distance, distanceMin = 10, distanceMax = 20;
+	private float distance, distanceMin = 20, distanceMax = 40;
 	float temp, timer = 0;
 	public bool isSpot = false, onRandomAnim=true;
 	int currentAnimNum =0;
@@ -21,13 +21,13 @@ public class PenguinMove : MonoBehaviour {
 
 	void Update () {
 		if(onPenguinMove){
-			transform.LookAt (tank2.transform);
 			anim.SetFloat ("Speed", speed);
 			distance = Vector3.Distance (tank2.transform.position, transform.position);
+			Debug.Log (distance);
 			if (distance >= distanceMin) {
 				isSpot = false;
 				onRandomAnim = true;
-				transform.LookAt (tank2.transform);
+				transform.LookAt (spot.transform);
 				transform.Translate (new Vector3(0,0,speed * Time.deltaTime));
 				
 				if (distance > distanceMax)
@@ -36,9 +36,9 @@ public class PenguinMove : MonoBehaviour {
 					speed = 5;
 			} else {
 				if (!isSpot) {
-					transform.LookAt (spot.transform);
 					transform.Translate (new Vector3(0,0,speed * Time.deltaTime));
 				} else {
+					transform.LookAt (tank2.transform);
 					speed = 0;	
 					if (onRandomAnim) {
 						anim.SetBool (choiceAnim (currentAnimNum), false);
