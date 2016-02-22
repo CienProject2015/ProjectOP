@@ -37,11 +37,9 @@ public class ItemArray : MonoBehaviour {
     public GameObject forest3_1;
     public GameObject forest3_2;
     public GameObject forest4;
-    public GameObject skyLight_forest1_1;
-    public GameObject skyLight_forest1_2;
+    public GameObject skyLight_forest1;
     public GameObject skyLight_forest2;
-    public GameObject skyLight_forest3_1;
-    public GameObject skyLight_forest3_2;
+    public GameObject skyLight_forest3;
     public GameObject skyLight_forest4;
 
 
@@ -68,52 +66,54 @@ public class ItemArray : MonoBehaviour {
     void canyon1Start()
     {
         canyon1.SetActive(true);
-        Invoke("canyon1Cancel", 3.0f);
+        Invoke("canyon1Cancel", 4.0f);
     }
     void canyon2Start()
     {
         canyon2.SetActive(true);
-        Invoke("canyon2Cancel", 3.0f);
+        Invoke("canyon2Cancel", 4.0f);
     }
     void bada1Start()
     {
         bada1.SetActive(true);
-        Invoke("bada1Cancel", 3.0f);
+        Invoke("bada1Cancel", 4.0f);
     }
     void bada2Start()
     {
         bada2.SetActive(true);
-        Invoke("bada2Cancel", 3.0f);
+        Invoke("bada2Cancel", 4.0f);
     }
     void forest1_1Start()
     {
-        bada2.SetActive(true);
-        Invoke("bada2Cancel", 3.0f);
+        forest1_1.SetActive(true);
+        Invoke("forest1_1Cancel", 4.0f);
+        Invoke("forest1_2Start", 4.0f);
     }
     void forest1_2Start()
     {
-        bada2.SetActive(true);
-        Invoke("bada2Cancel", 3.0f);
+        forest1_2.SetActive(true);
+        Invoke("forest1_2Cancel", 4.0f);
     }
     void forest2Start()
     {
-        bada2.SetActive(true);
-        Invoke("bada2Cancel", 3.0f);
+        forest2.SetActive(true);
+        Invoke("forest2Cancel", 4.0f);
     }
     void forest3_1Start()
     {
-        bada2.SetActive(true);
-        Invoke("bada2Cancel", 3.0f);
+        forest3_1.SetActive(true);
+        Invoke("forest3_1Cancel", 4.0f);
+        Invoke("forest3_2Start", 4.0f);
     }
     void forest3_2Start()
     {
-        bada2.SetActive(true);
-        Invoke("bada2Cancel", 3.0f);
+        forest3_2.SetActive(true);
+        Invoke("forest3_2Cancel", 4.0f);
     }
     void forest4Start()
     {
-            bada2.SetActive(true);
-            Invoke("bada2Cancel", 3.0f);
+        forest4.SetActive(true);
+        Invoke("forest4Cancel", 4.0f);
     }
     void canyon1Cancel()
     {
@@ -162,18 +162,11 @@ public class ItemArray : MonoBehaviour {
     void forest1_1Cancel()
     {
         forest1_1.SetActive(false);
-        skyLight_forest1_1.SetActive(false);
-        var UICamera = GameObject.Find("UI Camera");
-        UICamera.GetComponent<Camera>().enabled = true;
-        for (var i = 0; i < 30; i++)
-        {
-            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
-        }
     }
     void forest1_2Cancel()
     {
+        skyLight_forest1.SetActive(false);
         forest1_2.SetActive(false);
-        skyLight_forest1_2.SetActive(false);
         var UICamera = GameObject.Find("UI Camera");
         UICamera.GetComponent<Camera>().enabled = true;
         for (var i = 0; i < 30; i++)
@@ -195,18 +188,11 @@ public class ItemArray : MonoBehaviour {
     void forest3_1Cancel()
     {
         forest3_1.SetActive(false);
-        skyLight_forest3_1.SetActive(false);
-        var UICamera = GameObject.Find("UI Camera");
-        UICamera.GetComponent<Camera>().enabled = true;
-        for (var i = 0; i < 30; i++)
-        {
-            Camera.main.transform.Rotate(new Vector3(i, 0, 0));
-        }
     }
     void forest3_2Cancel()
     {
         forest3_2.SetActive(false);
-        skyLight_forest3_2.SetActive(false);
+        skyLight_forest3.SetActive(false);
         var UICamera = GameObject.Find("UI Camera");
         UICamera.GetComponent<Camera>().enabled = true;
         for (var i = 0; i < 30; i++)
@@ -409,6 +395,50 @@ public class ItemArray : MonoBehaviour {
                     }
                     Invoke("bada2Start", 2.0f);
                 }
+                else if (name[2].Equals("forest1"))
+                {
+                    skyLight_forest1.SetActive(true);
+                    var UICamera = GameObject.Find("UI Camera");
+                    UICamera.GetComponent<Camera>().enabled = false;
+                    for (var i = 0; i < 30; i++)
+                    {
+                        Camera.main.transform.Rotate(new Vector3(-i, 0, 0));
+                    }
+                    Invoke("forest1_1Start", 2.0f);
+                }
+                else if (name[2].Equals("forest2"))
+                {
+                    skyLight_forest2.SetActive(true);
+                    var UICamera = GameObject.Find("UI Camera");
+                    UICamera.GetComponent<Camera>().enabled = false;
+                    for (var i = 0; i < 30; i++)
+                    {
+                        Camera.main.transform.Rotate(new Vector3(-i, 0, 0));
+                    }
+                    Invoke("forest2Start", 2.0f);
+                }
+                else if (name[2].Equals("forest3"))
+                {
+                    skyLight_forest3.SetActive(true);
+                    var UICamera = GameObject.Find("UI Camera");
+                    UICamera.GetComponent<Camera>().enabled = false;
+                    for (var i = 0; i < 30; i++)
+                    {
+                        Camera.main.transform.Rotate(new Vector3(-i, 0, 0));
+                    }
+                    Invoke("forest3_1Start", 2.0f);
+                }
+                else if (name[2].Equals("forest4"))
+                {
+                    skyLight_forest4.SetActive(true);
+                    var UICamera = GameObject.Find("UI Camera");
+                    UICamera.GetComponent<Camera>().enabled = false;
+                    for (var i = 0; i < 30; i++)
+                    {
+                        Camera.main.transform.Rotate(new Vector3(-i, 0, 0));
+                    }
+                    Invoke("forest4Start", 2.0f);
+                }
                 tankstart();
             }
             else if (name[1].Equals("PenguinTotemOld"))
@@ -437,7 +467,6 @@ public class ItemArray : MonoBehaviour {
         }
         else if(name[0].Equals("Items"))
         {
-            Debug.Log("Gain Items");
             item.Add(other.gameObject.name);
             //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아이템 " + other.gameObject.name + " 획득");
             if (name[1].Equals("Penguin"))
@@ -448,6 +477,24 @@ public class ItemArray : MonoBehaviour {
             else if (name[1].Equals("MemoryChip"))
             {
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "메모리칩을 획득했다.");
+            }
+            else if (name[1].Equals("MemoryChipBroken"))
+            {
+                if (name[2].Equals("sup1"))
+                {
+                    foreach (string findname in item)
+                    {
+                        if (findname.Equals("Items_MemoryChipBroken_sup1"))
+                        {
+                            GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "조각난 메모리칩 6개를 모아 온전한 메모리칩을 획득하였다.");
+                            //메모리칩1개로 변경
+                        }
+                    }
+                }
+                else if (name[2].Equals("sup2"))
+                {
+
+                }
             }
             else if (name[1].Equals("Lighter"))
             {
