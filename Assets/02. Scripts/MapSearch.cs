@@ -12,12 +12,16 @@ public class MapSearch : MonoBehaviour {
 
 	bool onFirst = true;
 
-	void Update(){
+
+	void Awake(){
 		for (int i = 1; i < mapRowMax; i++) {
 			for (int j = 1; j < mapColumnMax; j++) {
 				map[i,j] = GameObject.Find ("MapAdmin").GetComponent<MapAdmin>().map[i,j];
 			}
 		}
+	}
+	void Update(){
+		
 
 		if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isItemTutorial) {
 			if (onFirst) {
@@ -41,7 +45,7 @@ public class MapSearch : MonoBehaviour {
 			for (int j = 1; j < mapColumnMax; j++) {
 
 				// 5개 load
-			/*
+			
 				if(i == row -1  && j == column){
 					if (map [i,j] == null) {
 						Debug.Log ("No Local");
@@ -72,14 +76,7 @@ public class MapSearch : MonoBehaviour {
 					} else {
 						map [i, j].SetActive (true);
 					}
-				}
-				*/
-				if (i == row && j == column) {
-					if (map [i, j] == null) {
-						Debug.Log ("No Local");
-					} else {
-						map [i, j].SetActive (true);
-					}
+
 				}else {
 					if (map [i, j].activeSelf) {
 						if (!onFirst) {
