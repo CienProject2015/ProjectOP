@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ItemArray : MonoBehaviour {
     ArrayList arr_item = new ArrayList();
-    IList item;
+    IList item;	
     int random;
     public GameObject obj_panel;
     public GameObject obj_act_panel;
@@ -171,12 +171,14 @@ public class ItemArray : MonoBehaviour {
             if (name[1].Equals("Penguin"))
             {
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "너무 귀엽다.");
+				GameObject.Find("_EventSystem").SendMessage("ItemObtain", 3);
                 //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아이템 " + other.gameObject.name + " 획득");
             }
             else if (name[1].Equals("Lighter"))
             {
                 //GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "아이템 " + other.gameObject.name + " 획득");
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "불을 붙이는 물건이군.");
+				GameObject.Find("_EventSystem").SendMessage("ItemObtain", 2);
             }
             else if (name[1].Equals("SheetMusic"))
             {
