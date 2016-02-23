@@ -36,6 +36,10 @@ public class ItemArray : MonoBehaviour {
     public GameObject skyLight_canyon2;
     public GameObject skyLight_bada1;
     public GameObject skyLight_bada2;
+    public GameObject skyLight_forest1;
+    public GameObject skyLight_forest2;
+    public GameObject skyLight_forest3;
+    public GameObject skyLight_forest4;
     public GameObject canyon1;
     public GameObject canyon2;
     public GameObject bada1;
@@ -46,10 +50,7 @@ public class ItemArray : MonoBehaviour {
     public GameObject forest3_1;
     public GameObject forest3_2;
     public GameObject forest4;
-    public GameObject skyLight_forest1;
-    public GameObject skyLight_forest2;
-    public GameObject skyLight_forest3;
-    public GameObject skyLight_forest4;
+
     public GameObject forestmemory1;
     public GameObject forestmemory2;
     public GameObject forestmemory3;
@@ -120,6 +121,9 @@ public class ItemArray : MonoBehaviour {
     public GameObject cavememory6;
     public GameObject cavememory7;
     public GameObject cavememory8;
+    public GameObject bada_panel;
+    public GameObject canyon_panel;
+    public GameObject forest_panel;
     int a = 1;
 
     // Use this for initialization
@@ -129,8 +133,11 @@ public class ItemArray : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        for (var i = 0; i < 30; i++)
+        {
+            GameObject.Find("CamerA").transform.Rotate(0, i, 0);
+        }
+    }
 
     void tankstop()
     {
@@ -579,6 +586,36 @@ public class ItemArray : MonoBehaviour {
         Invoke("cave_memory", 4.0f);
     }
 
+    void orr_start()
+    {
+        skyLight_canyon1.SetActive(true);
+        skyLight_canyon2.SetActive(true);
+        skyLight_bada1.SetActive(true);
+        skyLight_bada2.SetActive(true);
+        skyLight_forest1.SetActive(true);
+        skyLight_forest2.SetActive(true);
+        skyLight_forest3.SetActive(true);
+        skyLight_forest4.SetActive(true);
+        Invoke("orr_stop", 10.0f);
+        for (var i = 0; i < 30; i++)
+        {
+            GameObject.Find("CamerA").transform.Rotate(0, i, 0);
+        }
+
+    }
+
+    void orr_stop()
+    {
+        skyLight_canyon1.SetActive(false);
+        skyLight_canyon2.SetActive(false);
+        skyLight_bada1.SetActive(false);
+        skyLight_bada2.SetActive(false);
+        skyLight_forest1.SetActive(false);
+        skyLight_forest2.SetActive(false);
+        skyLight_forest3.SetActive(false);
+        skyLight_forest4.SetActive(false);
+    }
+
     void GainItem(Collider other){
         tankstop();
         string[] name = other.gameObject.name.Split('_');
@@ -599,6 +636,22 @@ public class ItemArray : MonoBehaviour {
             {
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "계곡을 따라 나무들이 드문드문 보인다. 몇 백 년은 되었을 법한 것을 보니 예전에도 이 곳은 추운 곳이었던 것 같다.");
                 tankstart();
+            }
+            else if (name[1].Equals("GoBada"))
+            {
+                bada_panel.SetActive(true);
+            }
+            else if (name[1].Equals("GoCanyon"))
+            {
+                canyon_panel.SetActive(true);
+            }
+            else if (name[1].Equals("GoForest"))
+            {
+                forest_panel.SetActive(true);
+            }
+            else if (name[1].Equals("orr"))
+            {
+                orr_start();
             }
             else if (name[1].Equals("StrangeFlower")){
                 GameObject.Find("_EventSystem").SendMessage("ReceiveLog", "펭귄이 야생화를 꺾어서 가져가고 싶어하는 눈치다.");
