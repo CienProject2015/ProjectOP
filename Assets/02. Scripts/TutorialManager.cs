@@ -132,7 +132,12 @@ public class TutorialManager : MonoBehaviour {
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_BackRightWheel"));
 		GameObject.Find ("_EventSystem").GetComponent<TutorialButtonGuide> ().StartTwinkle (GameObject.Find ("_BackLeftWheel"));
 		gameObject.SendMessage ("ReceiveLog", "이상한 생명체다. 도망가자.");
+		Invoke ("SendLog", 2.0f);
 		onScene12 = true;
+	}
+
+	private void SendLog(){
+		gameObject.SendMessage ("ReceiveLog", "뒷바퀴를 움직이면 후진이 된다.");
 	}
 
 	public void Scene13(){

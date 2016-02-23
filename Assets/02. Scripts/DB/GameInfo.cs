@@ -3,17 +3,11 @@ using System.Collections;
 
 public class GameInfo : MonoBehaviour {
 
-
+	public int currentStage;
 	public Sprite[] sprite;
 
-	void Start(){
-
-	}
-	void Update(){
-
-		Config.itemSprite [0] = sprite[0];
-		Config.itemSprite [1] = sprite[1];
-
-
+	void Awake(){
+		Config.itemSprite [0] = sprite [0];
+		Config.itemSprite [1] = sprite [1];
 	}
 }

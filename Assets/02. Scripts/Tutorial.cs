@@ -165,7 +165,7 @@ public class Tutorial : MonoBehaviour {
 			}
 
 			if (timer == 40) {
-				Application.LoadLevel ("Obj_Scene");
+				//Application.LoadLevel ("Obj_Scene");
 			}
 		}
 			

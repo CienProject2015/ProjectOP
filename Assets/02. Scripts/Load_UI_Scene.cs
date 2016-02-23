@@ -5,7 +5,7 @@ public class Load_UI_Scene : MonoBehaviour {
 
 	GameObject eventSystem;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		Application.LoadLevelAdditive ("Ingame_UI");
 
 	}

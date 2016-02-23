@@ -30,8 +30,6 @@ public class MapSearch : MonoBehaviour {
 			}
 			map [1, 1].SetActive (true);
 			map [1, 2].SetActive (true);
-			map [2, 1].SetActive (true);
-			map [2, 2].SetActive (true);
 		} else {
 			MapSetting ();
 		}
@@ -43,7 +41,7 @@ public class MapSearch : MonoBehaviour {
 			for (int j = 1; j < mapColumnMax; j++) {
 
 				// 5개 load
-			
+			/*
 				if(i == row -1  && j == column){
 					if (map [i,j] == null) {
 						Debug.Log ("No Local");
@@ -74,7 +72,15 @@ public class MapSearch : MonoBehaviour {
 					} else {
 						map [i, j].SetActive (true);
 					}
-				} else {
+				}
+				*/
+				if (i == row && j == column) {
+					if (map [i, j] == null) {
+						Debug.Log ("No Local");
+					} else {
+						map [i, j].SetActive (true);
+					}
+				}else {
 					if (map [i, j].activeSelf) {
 						if (!onFirst) {
 							map [i, j].SetActive (false);
