@@ -4415,8 +4415,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 867265604}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.1, y: 0.1}
-  m_AnchorMax: {x: 0.9, y: 0.9}
+  m_AnchorMin: {x: 0.1, y: 0.05}
+  m_AnchorMax: {x: 0.9, y: 0.95}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4441,24 +4441,20 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 98
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 169
+    m_MaxSize: 237
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Credit
-
-    .
-
-    .
-
-    .'
+  m_Text: "\uD06C\uB808\uB527\n\uAE30\uD68D\n\uB0A8\uC608\uC9C4\n\uAE40\uB3D9\uC9C4
+    \uAE40\uC120\uC815 \uC11C\uC601\uC6B4 \uC774\uC2B9\uC7AC \n\n\uADF8\uB798\uD53D\n\uC815\uC885\uD604\n\n\uD504\uB85C\uADF8\uB798\uBC0D\n\uC784\uB3D9\uBE48\n\uB178\uD6A8\uBE48
+    \uBC15\uD61C\uC9C0 \uC774\uD55C\uC6A9 \uCD5C\uC6D0\uC7AC"
 --- !u!222 &537461637
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6351,7 +6347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &867265604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6699,8 +6695,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1146799504}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9812,7 +9808,7 @@ RectTransform:
   m_Father: {fileID: 604966626}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11888,7 +11884,7 @@ RectTransform:
   m_Father: {fileID: 1647448939}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13451,8 +13447,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 274249413}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13724,7 +13720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1682975169
 RectTransform:
   m_ObjectHideFlags: 0
