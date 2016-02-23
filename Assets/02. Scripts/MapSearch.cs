@@ -12,16 +12,13 @@ public class MapSearch : MonoBehaviour {
 
 	bool onFirst = true;
 
-
-	void Awake(){
+	void Update(){
+		
 		for (int i = 1; i < mapRowMax; i++) {
 			for (int j = 1; j < mapColumnMax; j++) {
 				map[i,j] = GameObject.Find ("MapAdmin").GetComponent<MapAdmin>().map[i,j];
 			}
 		}
-	}
-	void Update(){
-		
 
 		if (GameObject.Find ("_EventSystem").GetComponent<TutorialManager> ().isItemTutorial) {
 			if (onFirst) {
