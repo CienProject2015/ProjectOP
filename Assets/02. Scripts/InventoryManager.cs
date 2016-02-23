@@ -151,4 +151,17 @@ public class InventoryManager : MonoBehaviour {
 	public void PlayM_Chip(){
 		Debug.Log ((selectedItemSlotNum - 16) + "번 슬롯의 메모리칩을 재생");
 	}
+
+	public void ItemObtain(int code){
+		if (inventoryList [15] == 0) {
+			for (int i = 0; i < 16; i++) {
+				if (inventoryList [i] == 0) {
+					inventoryList [i] = code;
+					break;
+				}
+			}
+		} else {
+			gameObject.SendMessage ("ReceiveLog", "인벤토리가 꽉 차있다.");
+		}
+	}
 }
